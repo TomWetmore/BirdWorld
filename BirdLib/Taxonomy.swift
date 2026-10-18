@@ -7,7 +7,18 @@
 
 import Foundation
 
-func makeTaxonomy(from taxa: [Taxon]) -> [Taxon] {
+public final class Taxonomy {
+
+    public let roots: [Taxon]
+
+    public init(taxa: [Taxon]) {
+        roots = makeTaxonomy(from: taxa)
+    }
+}
+
+/// Create a Taxonomy from an ordered list of Taxons.
+///
+private func makeTaxonomy(from taxa: [Taxon]) -> [Taxon] {
 
     var roots: [Taxon] = []
     var stack: [Taxon] = []
@@ -31,4 +42,13 @@ func makeTaxonomy(from taxa: [Taxon]) -> [Taxon] {
     }
 
     return roots
+}
+
+extension Taxonomy {
+
+    public func show(through level: TaxonLevel) {
+        for root in roots {
+            root.show(through: level)
+        }
+    }
 }

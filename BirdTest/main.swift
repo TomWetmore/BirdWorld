@@ -9,7 +9,7 @@
 import Foundation
 import BirdLib
 
-let taxon = Taxon(level: TaxonLevel(rawValue: "species") ?? .species, englishName: "Common Loon")
+let taxon = Taxon(level: TaxonLevel.species, englishName: "Common Loon")
 print(taxon)
 
 let url = URL(fileURLWithPath: "/Users/ttw4/Desktop/BirdWorld/Resources/taxa")
@@ -19,3 +19,15 @@ print("\(taxa.count)\n")
 for taxon in taxa {
     print(taxon)
 }
+
+//
+let taxonomy = Taxonomy(taxa: taxa)
+print("Showing taxonomy\n")
+for taxon in taxonomy.roots {
+    print(taxon)
+    for family in taxon.children {
+        print("    \(family)")
+    }
+}
+
+taxonomy.show(through: TaxonLevel.genus)
