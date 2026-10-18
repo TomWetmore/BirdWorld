@@ -1,0 +1,1991 @@
+order: Anseriformes
+
+family: Anatidae
+
+subfamily: Dendrocygninae
+
+genus: Dendrocygna
+BBWD: Black-bellied Whistling-Duck: Dendrocygna autumnalis: BBWD
+FuWD: Fulvous Whistling-Duck: Dendrocygna bicolor: FUWD
+
+subfamily: Anserinae
+
+genus: Anser
+EmGo: Emperor Goose: Anser canagicus: EMGO
+SnGo: Snow Goose: Anser caerulescens: SNGO
+RoGo: Ross's Goose: Anser rossii: ROGO
+GWGo: Greater White-fronted Goose: Anser albifrons: GWFG
+LWGo: Lesser White-fronted Goose: Anser erythropus: LWFG
+BeGo: Taiga Bean Goose: Anser fabalis: BEGO
+PFGo: Pink-footed Goose: Anser brachyrhynchus: PFGO
+
+genus: Branta
+Brnt: Brant: Branta bernicla: BRAN
+BaGo: Barnacle Goose: Branta leucopsis: BARG
+CkGo: Cackling Goose: Branta hutchinsii: CACG
+CaGo: Canada Goose: Branta canadensis: CANG
+
+genus: Cygnus
+MuSn: Mute Swan: Cygnus olor: MUSW
+TrSn: Trumpeter Swan: Cygnus buccinator: TRUS
+TuSn: Tundra Swan: Cygnus columbianus: TUSW
+WpSn: Whooper Swan: Cygnus cygnus: WHOS
+
+subfamily: Tadorninae
+genus: Tadorna
+CSdk: Common Shelduck: Tadorna tadorna
+RSdk: Ruddy Shelduck: Tadorna ferruginea
+
+subfamily: Anatinae
+genus: Cairina
+MuDk: Muscovy Duck: Cairina moschata: MUDU
+
+genus: Aix
+WoDk: Wood Duck: Aix sponsa: WODU
+
+genus: Sibirionetta
+BaTl: Baikal Teal: Sibirionetta formosa: BATE
+
+genus: Spatula
+Garg: Garganey: Spatula querquedula: GARG
+BWTl: Blue-winged Teal: Spatula discors: BWTE
+CiTl: Cinnamon Teal: Spatula cyanoptera: CITE
+NShv: Northern Shoveler: Spatula clypeata: NSHO
+
+genus: Mareca
+Gadw: Gadwall: Mareca strepera: GADW
+FaDk: Falcated Duck: Mareca falcata: FADU
+EWig: Eurasian Wigeon: Mareca penelope: EUWI
+AWig: American Wigeon: Mareca americana: AMWI
+
+genus: Anas
+SBDk: Eastern Spot-billed Duck: Anas zonorhyncha: SBDU
+Mall: Mallard: Anas platyrhynchos: MALL
+MxDk: Mexican Duck: Anas diazi
+ABDk: American Black Duck: Anas rubripes: ABDU
+MoDk: Mottled Duck: Anas fulvigula: MODU
+WPnt: White-cheeked Pintail: Anas bahamensis: WCHP
+NPnt: Northern Pintail: Anas acuta: NOPI
+GWTl: Green-winged Teal: Anas crecca: GWTE
+
+genus: Aythya
+Canv: Canvasback: Aythya valisineria: CANV
+Redh: Redhead: Aythya americana: REDH
+CPch: Common Pochard: Aythya ferina: CPOC
+RNDk: Ring-necked Duck: Aythya collaris: RNDU
+TfDk: Tufted Duck: Aythya fuligula: TUDU
+GScp: Greater Scaup: Aythya marila: GRSC
+LScp: Lesser Scaup: Aythya affinis: LESC
+
+genus: Polysticta
+StEi: Steller's Eider: Polysticta stelleri: STEI
+
+genus: Somateria
+SpEi: Spectacled Eider: Somateria fischeri: SPEI
+KiEi: King Eider: Somateria spectabilis: KIEI
+CoEi: Common Eider: Somateria mollissima: COEI
+
+genus: Histrionicus
+HaDk: Harlequin Duck: Histrionicus histrionicus: HADU
+
+genus: Melanitta
+SuSc: Surf Scoter: Melanitta perspicillata: SUSC
+VeSc: Velvet Scoter: Melanitta fusca
+WWSc: White-winged Scoter: Melanitta deglandi: WWSC
+CoSc: Common Scoter: Melanitta nigra
+BkSc: Black Scoter: Melanitta americana: BLSC
+
+genus: Clangula
+LTDk: Long-tailed Duck: Clangula hyemalis: LTDU
+
+genus: Bucephala
+Buff: Bufflehead: Bucephala albeola: BUFF
+CGld: Common Goldeneye: Bucephala clangula: COGO
+BGld: Barrow's Goldeneye: Bucephala islandica: BAGO
+
+genus: Mergellus
+Smew: Smew: Mergellus albellus: SMEW
+
+genus: Lophodytes
+HoMg: Hooded Merganser: Lophodytes cucullatus: HOME
+
+genus: Mergus
+CoMg: Common Merganser: Mergus merganser: COME
+RBMg: Red-breasted Merganser: Mergus serrator: RBME
+
+genus: Nomonyx
+MaDk: Masked Duck: Nomonyx dominicus: MADU
+
+genus: Oxyura
+RuDk: Ruddy Duck: Oxyura jamaicensis: RUDU
+
+order: Galliformes
+
+family: Cracidae
+genus: Ortalis
+PCha: Plain Chachalaca: Ortalis vetula: PLCH
+
+family: Odontophoridae
+genus: Oreortyx
+MtQu: Mountain Quail: Oreortyx pictus: MOUQ
+
+genus: Colinus
+NBob: Northern Bobwhite: Colinus virginianus: NOBO
+
+genus: Callipepla
+ScQu: Scaled Quail: Callipepla squamata: SCQU
+CaQu: California Quail: Callipepla californica: CAQU
+GaQu: Gambel's Quail: Callipepla gambelii: GAQU
+
+genus: Cyrtonyx
+MoQu: Montezuma Quail: Cyrtonyx montezumae: MONQ
+
+family: Phasianidae
+
+genus: Meleagris
+WTrk: Wild Turkey: Meleagris gallopavo: WITU
+
+genus: Bonasa
+RfGr: Ruffed Grouse: Bonasa umbellus: RUGR
+
+genus: Falcipennis
+SpGr: Spruce Grouse: Canachites canadensis: SPGR
+
+genus: Lagopus
+WiPt: Willow Ptarmigan: Lagopus lagopus: WIPT
+RoPt: Rock Ptarmigan: Lagopus muta: ROPT
+WTPt: White-tailed Ptarmigan: Lagopus leucura: WTPT
+
+genus: Centrocercus
+GrSG: Greater Sage-Grouse: Centrocercus urophasianus: GRSG
+GuSG: Gunnison Sage-Grouse: Centrocercus minimus: GUSG
+
+genus: Dendragapus
+DuGr: Dusky Grouse: Dendragapus obscurus: BLUG
+SoGr: Sooty Grouse: Dendragapus fuliginosus
+
+genus: Tympanuchus
+STGr: Sharp-tailed Grouse: Tympanuchus phasianellus: STGR
+GrPC: Greater Prairie-Chicken: Tympanuchus cupido: GRPC
+LsPC: Lesser Prairie-Chicken: Tympanuchus pallidicinctus: LEPC
+
+genus: Perdix
+GPar: Gray Partridge: Perdix perdix: GRAP
+
+genus: Phasianus
+RNPh: Ring-necked Pheasant: Phasianus colchicus: RNEP
+
+genus: Tetraogallus
+HSno: Himalayan Snowcock: Tetraogallus himalayensis: HISN
+
+genus: Alectoris
+Chuk: Chukar: Alectoris chukar: CHUK
+
+order: Phoenicopteriformes
+family: Phoenicopteridae
+
+genus: Phoenicopterus
+AFla: American Flamingo: Phoenicopterus ruber: GFLA
+
+order: Podicipediformes
+family: Podicipedidae
+
+genus: Tachybaptus
+LsGb: Least Grebe: Tachybaptus dominicus: LEGR
+
+genus: Podilymbus
+PBGb: Pied-billed Grebe: Podilymbus podiceps: PBGR
+
+genus: Podiceps
+HoGb: Horned Grebe: Podiceps auritus: HOGR
+RNGb: Red-necked Grebe: Podiceps grisegena: RNGR
+EaGb: Eared Grebe: Podiceps nigricollis: EAGR
+
+genus: Aechmophorus
+WeGb: Western Grebe: Aechmophorus occidentalis: WEGR
+ClGb: Clark's Grebe: Aechmophorus clarkii: CLGR
+
+order: Columbiformes
+family: Columbidae
+
+genus: Columba
+RoPg: Rock Pigeon: Columba livia: ROPI
+
+genus: Patagioenas
+SNPg: Scaly-naped Pigeon: Patagioenas squamosa: SNPI
+WCPg: White-crowned Pigeon: Patagioenas leucocephala: WCPI
+RBPg: Red-billed Pigeon: Patagioenas flavirostris: RBPI
+BTPg: Band-tailed Pigeon: Patagioenas fasciata: BTPI
+
+genus: Streptopelia
+OrTD: Oriental Turtle-Dove: Streptopelia orientalis: ORTD
+EuCD: Eurasian Collared-Dove: Streptopelia decaocto: EUCD
+RiTD: Ringed Turtle-Dove: Streptopelia risoria
+SpDv: Spotted Dove: Streptopelia chinensis: SPDO
+
+genus: Columbina
+InDv: Inca Dove: Columbina inca: INDO
+CoGD: Common Ground-Dove: Columbina passerina: COGD
+
+genus: Geotrygon
+RuQD: Ruddy Quail-Dove: Geotrygon montana: RUQD
+KWQD: Key West Quail-Dove: Geotrygon chrysia: KWQD
+
+genus: Leptotila
+WTDv: White-tipped Dove: Leptotila verreauxi: WTDO
+
+genus: Zenaida
+WWDv: White-winged Dove: Zenaida asiatica: WWDO
+ZeDv: Zenaida Dove: Zenaida aurita: ZEND
+MoDv: Mourning Dove: Zenaida macroura: MODO
+
+order: Cuculiformes
+
+family: Cuculidae
+
+subfamily: Crotophaginae
+genus: Crotophaga
+SBAn: Smooth-billed Ani: Crotophaga ani: SBAN
+GBAn: Groove-billed Ani: Crotophaga sulcirostris: GBAN
+
+subfamily: Neomorphinae
+genus: Geococcyx
+GRun: Greater Roadrunner: Geococcyx californianus: GRRO
+
+subfamily: Cuculinae
+genus: Cuculus
+CoCu: Common Cuckoo: Cuculus canorus: COCU
+OrCu: Oriental Cuckoo: Cuculus optatus: ORCU
+
+genus: Coccyzus
+YBCu: Yellow-billed Cuckoo: Coccyzus americanus: YBCU
+MaCu: Mangrove Cuckoo: Coccyzus minor: MACU
+BBCu: Black-billed Cuckoo: Coccyzus erythropthalmus: BBCU
+
+order: Caprimulgiformes
+family: Caprimulgidae
+subfamily: Chordeilinae
+
+genus: Chordeiles
+LNhw: Lesser Nighthawk: Chordeiles acutipennis: LENI
+CNhw: Common Nighthawk: Chordeiles minor: CONI
+ANhw: Antillean Nighthawk: Chordeiles gundlachii: ANNI
+
+subfamily: Caprimulginae
+
+genus: Nyctidromus
+CPau: Common Pauraque: Nyctidromus albicollis: COPA
+
+genus: Phalaenoptilus
+CPwl: Common Poorwill: Phalaenoptilus nuttallii: COPO
+
+genus: Antrostomus
+ChWW: Chuck-will's-widow: Antrostomus carolinensis: CWWI
+BCNj: Buff-collared Nightjar: Antrostomus ridgwayi: BCNI
+Whip: Eastern Whip-poor-will: Antrostomus vociferus: WPWI
+MWhp: Mexican Whip-poor-will: Antrostomus arizonae
+
+genus: Caprimulgus
+GyNj: Gray Nightjar: Caprimulgus indicus: GRNI
+
+order: Apodiformes
+family: Apodidae
+subfamily: Cypseloidinae
+
+genus: Cypseloides
+BkSf: Black Swift: Cypseloides niger: BLSW
+
+genus: Streptoprocne
+WCSf: White-collared Swift: Streptoprocne zonaris: WCSW
+
+subfamily: Chaeturinae
+
+genus: Chaetura
+ChSf: Chimney Swift: Chaetura pelagica: CHSW
+VxSf: Vaux's Swift: Chaetura vauxi: VASW
+
+genus: Hirundapus
+WTNt: White-throated Needletail: Hirundapus caudacutus: WTNE
+
+subfamily: Apodinae
+
+genus: Apus
+CoSf: Common Swift: Apus apus: COSW
+FTSf: Fork-tailed Swift: Apus pacificus: FTSW
+
+genus: Aeronautes
+WTSf: White-throated Swift: Aeronautes saxatalis: WTSW
+
+genus: Tachornis
+AnPS: Antillean Palm-Swift: Tachornis phoenicobia: ANPS
+
+family: Trochilidae
+subfamily: Trochilinae
+
+genus: Colibri
+MxVE: Mexican Violetear: Colibri thalassinus
+
+genus: Anthracothorax
+GMng: Green-breasted Mango: Anthracothorax prevostii: GNBM
+
+genus: Eugenes
+RivH: Rivoli's Hummingbird: Eugenes fulgens: MAHU
+
+genus: Heliomaster
+PStr: Plain-capped Starthroat: Heliomaster constantii: PCST
+
+genus: Lampornis
+BThH: Blue-throated Mountain-gem: Lampornis clemenciae: BTHH
+
+genus: Calothorax
+LucH: Lucifer Hummingbird: Calothorax lucifer: LUHU
+
+genus: Archilochus
+RThH: Ruby-throated Hummingbird: Archilochus colubris: RTHU
+BChH: Black-chinned Hummingbird: Archilochus alexandri: BCHU
+
+genus: Nesophlox
+BWst: Bahama Woodstar: Nesophlox evelynae: BAWO
+
+genus: Calypte
+AnnH: Anna's Hummingbird: Calypte anna: ANHU
+CosH: Costa's Hummingbird: Calypte costae: COHU
+
+genus: Selasphorus
+CalH: Calliope Hummingbird: Selasphorus calliope: CAHU
+RufH: Rufous Hummingbird: Selasphorus rufus: RUHU
+AllH: Allen's Hummingbird: Selasphorus sasin: ALHU
+BTaH: Broad-tailed Hummingbird: Selasphorus platycercus: BTAH
+BumH: Bumblebee Hummingbird: Selasphorus heloisa: BUHU
+
+genus: Cynanthus
+BBiH: Broad-billed Hummingbird: Cynanthus latirostris: BBIH
+
+genus: Basilinna
+WEaH: White-eared Hummingbird: Basilinna leucotis: WEHU
+XanH: Xantus's Hummingbird: Basilinna xantusii: XAHU
+
+genus: Leucolia
+VCrH: Violet-crowned Hummingbird: Leucolia violiceps: VCHU
+
+genus: Saucerottia
+BerH: Berylline Hummingbird: Saucerottia beryllina: BEHU
+
+genus: Amazilia
+CinH: Cinnamon Hummingbird: Amazilia rutila: CIHU
+
+order: Gruiformes
+family: Rallidae
+
+genus: Neocrex
+PBCr: Paint-billed Crake: Neocrex erythrops: PBCR
+
+genus: Pardirallus
+SpRa: Spotted Rail: Pardirallus maculatus: SPRA
+
+genus: Rallus
+RiRa: Ridgway's Rail: Rallus obsoletus
+KiRa: King Rail: Rallus elegans: KIRA
+ClRa: Clapper Rail: Rallus crepitans: CLRA
+VaRa: Virginia Rail: Rallus limicola: VIRA
+
+genus: Crex
+CoCr: Corn Crake: Crex crex: CORC
+
+genus: Porzana
+Sora: Sora: Porzana carolina: SORA
+
+genus: Gallinula
+CGal: Common Gallinule: Gallinula galeata: COMO
+
+genus: Fulica
+ECot: Eurasian Coot: Fulica atra: EUCO
+ACot: American Coot: Fulica americana: AMCO
+
+genus: Porphyrio
+PGal: Purple Gallinule: Porphyrio martinicus: PUGA
+
+genus: Coturnicops
+YeRa: Yellow Rail: Coturnicops noveboracensis: YERA
+
+genus: Laterallus
+BkRa: Black Rail: Laterallus jamaicensis: BLRA
+
+family: Aramidae
+
+genus: Aramus
+Limp: Limpkin: Aramus guarauna: LIMP
+
+family: Gruidae
+subfamily: Gruinae
+
+genus: Antigone
+SCrn: Sandhill Crane: Antigone canadensis: SACR
+
+genus: Grus
+CCrn: Common Crane: Grus grus: COMC
+WCrn: Whooping Crane: Grus americana: WHCR
+
+order: Charadriiformes
+family: Burhinidae
+
+genus: Burhinus
+DSTK: Double-striped Thick-knee: Burhinus bistriatus: DSTK
+
+family: Recurvirostridae
+
+genus: Himantopus
+BWSt: Black-winged Stilt: Himantopus himantopus: BWST
+BNSt: Black-necked Stilt: Himantopus mexicanus: BNST
+
+genus: Recurvirostra
+AAvo: American Avocet: Recurvirostra americana: AMAV
+
+family: Haematopodidae
+
+genus: Haematopus
+EOys: Eurasian Oystercatcher: Haematopus ostralegus: EUOY
+AOys: American Oystercatcher: Haematopus palliatus: AMOY
+BOys: Black Oystercatcher: Haematopus bachmani: BLOY
+
+family: Charadriidae
+subfamily: Vanellinae
+
+genus: Vanellus
+NLap: Northern Lapwing: Vanellus vanellus: NOLA
+
+subfamily: Charadriinae
+
+genus: Pluvialis
+BBPv: Black-bellied Plover: Pluvialis squatarola: BBPL
+EGPv: European Golden-Plover: Pluvialis apricaria: EUGP
+AGPv: American Golden-Plover: Pluvialis dominica: AMGP
+PGPv: Pacific Golden-Plover: Pluvialis fulva: PAGP
+
+genus: Charadrius
+EDot: Eurasian Dotterel: Charadrius morinellus: EUDO
+Kill: Killdeer: Charadrius vociferus: KILL
+CRPv: Common Ringed Plover: Charadrius hiaticula: CRPL
+SePv: Semipalmated Plover: Charadrius semipalmatus: SEPL
+PiPv: Piping Plover: Charadrius melodus: PIPL
+LRPv: Little Ringed Plover: Charadrius dubius: LRPL
+LSPv: Lesser Sand-Plover: Charadrius mongolus
+WiPv: Wilson's Plover: Charadrius wilsonia: WIPL
+CoPv: Collared Plover: Charadrius collaris: COPL
+MtPv: Mountain Plover: Charadrius montanus: MOPL
+SnPv: Snowy Plover: Charadrius nivosus: SNPL
+
+family: Jacanidae
+
+genus: Jacana
+NJac: Northern Jacana: Jacana spinosa: NOJA
+
+family: Scolopacidae
+subfamily: Numeniinae
+
+genus: Bartramia
+UpSa: Upland Sandpiper: Bartramia longicauda: UPSA
+
+genus: Numenius
+BTCl: Bristle-thighed Curlew: Numenius tahitiensis: BTCU
+Whim: Whimbrel: Numenius phaeopus: WHIM
+LiCl: Little Curlew: Numenius minutus: LICU
+EsCl: Eskimo Curlew: Numenius borealis: ESCU
+LBCl: Long-billed Curlew: Numenius americanus: LBCU
+FECl: Far Eastern Curlew: Numenius madagascariensis: FECU
+SBCl: Slender-billed Curlew: Numenius tenuirostris: SBCU
+EuCl: Eurasian Curlew: Numenius arquata: EUCU
+
+subfamily: Limosinae
+
+genus: Limosa
+BTGd: Bar-tailed Godwit: Limosa lapponica: BTGO
+BkGd: Black-tailed Godwit: Limosa limosa: BTGD
+HuGd: Hudsonian Godwit: Limosa haemastica: HUGO
+MaGd: Marbled Godwit: Limosa fedoa: MAGO
+
+subfamily: Arenariinae
+
+genus: Arenaria
+RTrn: Ruddy Turnstone: Arenaria interpres: RUTU
+BTrn: Black Turnstone: Arenaria melanocephala: BLTU
+
+genus: Calidris
+GKnt: Great Knot: Calidris tenuirostris: GRKN
+RKnt: Red Knot: Calidris canutus: REKN
+Surf: Surfbird: Calidris virgata: SURF
+Ruff: Ruff: Calidris pugnax: RUFF
+BrSa: Broad-billed Sandpiper: Calidris falcinellus: BBIS
+STSa: Sharp-tailed Sandpiper: Calidris acuminata: SPTS
+StSa: Stilt Sandpiper: Calidris himantopus: STSA
+CuSa: Curlew Sandpiper: Calidris ferruginea: CUSA
+TeSt: Temminck's Stint: Calidris temminckii: TEST
+LTSt: Long-toed Stint: Calidris subminuta: LTST
+SBSa: Spoon-billed Sandpiper: Calidris pygmea: SBSA
+RNSt: Red-necked Stint: Calidris ruficollis: RNST
+Sand: Sanderling: Calidris alba: SAND
+Dunl: Dunlin: Calidris alpina: DUNL
+RoSa: Rock Sandpiper: Calidris ptilocnemis: ROSA
+PuSa: Purple Sandpiper: Calidris maritima: PUSA
+BaSa: Baird's Sandpiper: Calidris bairdii: BASA
+LiSt: Little Stint: Calidris minuta: LIST
+LsSa: Least Sandpiper: Calidris minutilla: LESA
+WRSa: White-rumped Sandpiper: Calidris fuscicollis: WRSA
+BBSa: Buff-breasted Sandpiper: Calidris subruficollis: BBSA
+PeSa: Pectoral Sandpiper: Calidris melanotos: PESA
+SeSa: Semipalmated Sandpiper: Calidris pusilla: SESA
+WeSa: Western Sandpiper: Calidris mauri: WESA
+
+subfamily: Scolopacinae
+
+genus: Limnodromus
+SBDw: Short-billed Dowitcher: Limnodromus griseus: SBDO
+LBDw: Long-billed Dowitcher: Limnodromus scolopaceus: LBDO
+
+genus: Lymnocryptes
+JSnp: Jack Snipe: Lymnocryptes minimus: JASN
+
+genus: Scolopax
+EWod: Eurasian Woodcock: Scolopax rusticola: EUWO
+AWod: American Woodcock: Scolopax minor: AMWO
+
+genus: Gallinago
+PSnp: Pin-tailed Snipe: Gallinago stenura: PTSN
+CSnp: Common Snipe: Gallinago gallinago: COSN
+WSnp: Wilson's Snipe: Gallinago delicata: WISN
+
+subfamily: Tringinae
+
+genus: Xenus
+TeSa: Terek Sandpiper: Xenus cinereus: TESA
+
+genus: Actitis
+CoSa: Common Sandpiper: Actitis hypoleucos: COSA
+SpSa: Spotted Sandpiper: Actitis macularius: SPSA
+
+genus: Tringa
+GnSa: Green Sandpiper: Tringa ochropus: GRSA
+SoSa: Solitary Sandpiper: Tringa solitaria: SOSA
+GTat: Gray-tailed Tattler: Tringa brevipes: GTTA
+WTat: Wandering Tattler: Tringa incana: WATA
+LYel: Lesser Yellowlegs: Tringa flavipes: LEYE
+Will: Willet: Tringa semipalmata: WILL
+SpRs: Spotted Redshank: Tringa erythropus: SPRE
+CGrn: Common Greenshank: Tringa nebularia: COMG
+GYel: Greater Yellowlegs: Tringa melanoleuca: GRYE
+CoRs: Common Redshank: Tringa totanus: COMR
+WoSa: Wood Sandpiper: Tringa glareola: WOSA
+MaSa: Marsh Sandpiper: Tringa stagnatilis: MASA
+
+genus: Phalaropus
+WiPr: Wilson's Phalarope: Phalaropus tricolor: WIPH
+RNPr: Red-necked Phalarope: Phalaropus lobatus: RNPH
+RePr: Red Phalarope: Phalaropus fulicaria: REPH
+
+family: Glareolidae
+subfamily: Glareolinae
+
+genus: Glareola
+OPra: Oriental Pratincole: Glareola maldivarum: ORPR
+
+family: Stercorariidae
+
+genus: Stercorarius
+GSku: Great Skua: Stercorarius skua: GRSK
+SSku: South Polar Skua: Stercorarius maccormicki: SPSK
+PoJg: Pomarine Jaeger: Stercorarius pomarinus: POJA
+PaJg: Parasitic Jaeger: Stercorarius parasiticus: PAJA
+LTJg: Long-tailed Jaeger: Stercorarius longicaudus: LTJA
+
+family: Alcidae
+
+genus: Alle
+Dove: Dovekie: Alle alle: DOVE
+
+genus: Uria
+CoMr: Common Murre: Uria aalge: COMU
+TBMr: Thick-billed Murre: Uria lomvia: TBMU
+
+genus: Alca
+Razo: Razorbill: Alca torda: RAZO
+
+genus: Cepphus
+BGui: Black Guillemot: Cepphus grylle: BLGU
+PGui: Pigeon Guillemot: Cepphus columba: PIGU
+
+genus: Brachyramphus
+LBMl: Long-billed Murrelet: Brachyramphus perdix: LBMU
+MaMl: Marbled Murrelet: Brachyramphus marmoratus: MAMU
+KiMl: Kittlitz's Murrelet: Brachyramphus brevirostris: KIMU
+
+genus: Synthliboramphus
+ScMl: Scripp's Murrelet: Synthliboramphus scrippsi
+GuMl: Guadalupe Murrelet: Synthliboramphus hypoleucus: XAMU
+CrMl: Craveri's Murrelet: Synthliboramphus craveri: CRMU
+AnMl: Ancient Murrelet: Synthliboramphus antiquus: ANMU
+
+genus: Ptychoramphus
+CaAu: Cassin's Auklet: Ptychoramphus aleuticus: CAAU
+
+genus: Aethia
+PaAu: Parakeet Auklet: Aethia psittacula: PAAU
+LsAu: Least Auklet: Aethia pusilla: LEAU
+WhAu: Whiskered Auklet: Aethia pygmaea: WHAU
+CrAu: Crested Auklet: Aethia cristatella: CRAU
+
+genus: Cerorhinca
+RhAu: Rhinoceros Auklet: Cerorhinca monocerata: RHAU
+
+genus: Fratercula
+APuf: Atlantic Puffin: Fratercula arctica: ATPU
+HPuf: Horned Puffin: Fratercula corniculata: HOPU
+TPuf: Tufted Puffin: Fratercula cirrhata: TUPU
+
+family: Laridae
+subfamily: Larinae
+
+genus: Rissa
+BLKw: Black-legged Kittiwake: Rissa tridactyla: BLKI
+RLKw: Red-legged Kittiwake: Rissa brevirostris: RLKI
+
+genus: Pagophila
+IvGu: Ivory Gull: Pagophila eburnea: IVGU
+
+genus: Xema
+SaGu: Sabine's Gull: Xema sabini: SAGU
+
+genus: Chroicocephalus
+BoGu: Bonaparte's Gull: Chroicocephalus philadelphia: BOGU
+GHGu: Gray-hooded Gull: Chroicocephalus cirrocephalus
+BHGu: Black-headed Gull: Chroicocephalus ridibundus: BHGU
+
+genus: Hydrocoloeus
+LiGu: Little Gull: Hydrocoloeus minutus: LIGU
+
+genus: Rhodostethia
+RoGu: Ross's Gull: Rhodostethia rosea: ROGU
+
+genus: Leucophaeus
+GrGu: Gray Gull: Leucophaeus modestus
+LaGu: Laughing Gull: Leucophaeus atricilla: LAGU
+FrGu: Franklin's Gull: Leucophaeus pipixcan: FRGU
+
+genus: Larus
+BeGu: Belcher's Gull: Larus belcheri: BEGU
+BTGu: Black-tailed Gull: Larus crassirostris: BTGU
+HrGu: Heermann's Gull: Larus heermanni: HEEG
+MeGu: Mew Gull: Larus canus: MEGU
+RBGu: Ring-billed Gull: Larus delawarensis: RBGU
+WeGu: Western Gull: Larus occidentalis: WEGU
+YFGu: Yellow-footed Gull: Larus livens: YFGU
+CaGu: California Gull: Larus californicus: CAGU
+HeGu: Herring Gull: Larus argentatus: HERG
+YLGu: Yellow-legged Gull: Larus michahellis: YLGU
+ThGu: Thayer's Gull: Larus thayeri: THGU
+IcGu: Iceland Gull: Larus glaucoides: ICGU
+LBGu: Lesser Black-backed Gull: Larus fuscus: LBBG
+SBGu: Slaty-backed Gull: Larus schistisagus: SBGU
+GWGu: Glaucous-winged Gull: Larus glaucescens: GWGU
+GlGu: Glaucous Gull: Larus hyperboreus: GLGU
+GBGu: Great Black-backed Gull: Larus marinus: GBBG
+KeGu: Kelp Gull: Larus dominicanus: KEGU
+
+subfamily: Sterninae
+
+genus: Anous
+BrNd: Brown Noddy: Anous stolidus: BRNO
+BkNd: Black Noddy: Anous minutus: BLNO
+
+genus: Onychoprion
+SoTn: Sooty Tern: Onychoprion fuscatus: SOTE
+BrTn: Bridled Tern: Onychoprion anaethetus: BRTE
+AlTn: Aleutian Tern: Onychoprion aleuticus: ALTE
+
+genus: Sternula
+LsTn: Least Tern: Sternula antillarum: LETE
+
+genus: Phaetusa
+LBTn: Large-billed Tern: Phaetusa simplex: LBTE
+
+genus: Gelochelidon
+GBTn: Gull-billed Tern: Gelochelidon nilotica: GBTE
+
+genus: Hydroprogne
+CaTn: Caspian Tern: Hydroprogne caspia: CATE
+
+genus: Chlidonias
+BkTn: Black Tern: Chlidonias niger: BLTE
+WWTn: White-winged Tern: Chlidonias leucopterus: WWTE
+WhTn: Whiskered Tern: Chlidonias hybridus: WHST
+
+genus: Sterna
+RsTn: Roseate Tern: Sterna dougallii: ROST
+CoTn: Common Tern: Sterna hirundo: COTE
+ArTn: Arctic Tern: Sterna paradisaea: ARTE
+FoTn: Forster's Tern: Sterna forsteri: FOTE
+
+genus: Thalasseus
+RyTn: Royal Tern: Thalasseus maximus: ROYT
+SaTn: Sandwich Tern: Thalasseus sandvicensis: SATE
+ElTn: Elegant Tern: Thalasseus elegans: ELTE
+
+subfamily: Rynchopinae
+
+genus: Rynchops
+BSkm: Black Skimmer: Rynchops niger: BLSK
+
+order: Phaethontiformes
+family: Phaethontidae
+
+genus: Phaethon
+WTTp: White-tailed Tropicbird: Phaethon lepturus: WTTR
+RBTp: Red-billed Tropicbird: Phaethon aethereus: RBTR
+RTTp: Red-tailed Tropicbird: Phaethon rubricauda: RTTR
+
+order: Gaviiformes
+family: Gaviidae
+
+genus: Gavia
+RTLn: Red-throated Loon: Gavia stellata: RTLO
+ArLn: Arctic Loon: Gavia arctica
+PaLn: Pacific Loon: Gavia pacifica: PALO
+CoLn: Common Loon: Gavia immer: COLO
+YBLn: Yellow-billed Loon: Gavia adamsii: YBLO
+
+order: Procellariiformes
+family: Diomedeidae
+
+genus: Thalassarche
+YNAl: Yellow-nosed Albatross: Thalassarche chlororhynchos: YNAL
+WCAl: White-capped Albatross: Thalassarche cauta: SHAL
+BBAl: Black-browed Albatross: Thalassarche melanophris: BBAL
+
+genus: Diomedea
+WaAl: Wandering Albatross: Diomedea exulans: WAAL
+
+genus: Phoebastria
+LaAl: Laysan Albatross: Phoebastria immutabilis: LAAL
+BFAl: Black-footed Albatross: Phoebastria nigripes: BFAL
+STAl: Short-tailed Albatross: Phoebastria albatrus: STAL
+
+family: Oceanitidae
+genus: Oceanites
+WiSP: Wilson's Storm-Petrel: Oceanites oceanicus: WISP
+
+genus: Pelagodroma
+WFSP: White-faced Storm-Petrel: Pelagodroma marina: WFSP
+
+family: Hydrobatidae
+
+genus: Hydrobates
+EuSP: European Storm-Petrel: Hydrobates pelagicus: EUSP
+FTSP: Fork-tailed Storm-Petrel: Hydrobates furcatus: FTSP
+LcSP: Leach's Storm-Petrel: Hydrobates leucorhous: LESP
+AsSP: Ashy Storm-Petrel: Hydrobates homochroa: ASSP
+BRSP: Band-rumped Storm-Petrel: Hydrobates castro: BSTP
+WRSP: Wedge-rumped Storm-Petrel: Hydrobates tethys: WRSP
+BkSP: Black Storm-Petrel: Hydrobates melania: BLSP
+LsSP: Least Storm-Petrel: Hydorbates microsoma: LSTP
+
+family: Procellariidae
+
+genus: Fulmarus
+NFul: Northern Fulmar: Fulmarus glacialis: NOFU
+
+genus: Pterodroma
+TrPe: Trindade Petrel: Pterodroma arminjoniana
+HePe: Herald Petrel: Pterodroma heraldica: HEPE
+MuPe: Murphy's Petrel: Pterodroma ultima: MUPE
+MoPe: Mottled Petrel: Pterodroma inexpectata: MOPE
+BePe: Bermuda Petrel: Pterodroma cahow: BEPE
+BCPe: Black-capped Petrel: Pterodroma hasitata: BCPE
+CoPe: Cook's Petrel: Pterodroma cookii: COOP
+SjPe: Stejneger's Petrel: Pterodroma longirostris: STPE
+
+genus: Bulweria
+BuPe: Bulwer's Petrel: Bulweria bulwerii: BUPE
+
+genus: Calonectris
+CoSh: Cory's Shearwater: Calonectris diomedea: COSH
+CVSh: Cape Verde Shearwater: Calonectris edwardsii
+
+genus: Ardenna
+WTSh: Wedge-tailed Shearwater: Ardenna pacificus: WTSH
+BuSh: Buller's Shearwater: Ardenna bulleri: BULS
+STSh: Short-tailed Shearwater: Ardenna tenuirostris: SRTS
+SoSh: Sooty Shearwater: Ardenna griseus: SOSH
+GrSh: Great Shearwater: Ardenna gravis: GRSH
+PFSh: Pink-footed Shearwater: Ardenna creatopus: PFSH
+FFSh: Flesh-footed Shearwater: Ardenna carneipes: FFSH
+
+genus: Puffinus
+MxSh: Manx Shearwater: Puffinus puffinus: MASH
+BVSh: Black-vented Shearwater: Puffinus opisthomelas: BVSH
+AuSh: Audubon's Shearwater: Puffinus lherminieri: AUSH
+BaSh: Barolo Shearwater: Puffinus baroli: LISH
+
+order: Ciconiiformes
+family: Ciconiidae
+
+genus: Mycteria
+WStk: Wood Stork: Mycteria americana: WOST
+
+order: Suliformes
+
+family: Fregatidae
+
+genus: Fregata
+LFri: Lesser Frigatebird: Fregata ariel: LEFR
+MFri: Magnificent Frigatebird: Fregata magnificens: MAFR
+GFri: Great Frigatebird: Fregata minor: GFRI
+
+family: Sulidae
+
+genus: Sula
+MaBb: Masked Booby: Sula dactylatra: MABO
+BFBb: Blue-footed Booby: Sula nebouxii: BFBO
+BrBb: Brown Booby: Sula leucogaster: BRBO
+RFBb: Red-footed Booby: Sula sula: RFBO
+
+genus: Morus
+NGan: Northern Gannet: Morus bassanus: NOGA
+
+family: Anhingidae
+
+genus: Anhinga
+Anhi: Anhinga: Anhinga anhinga: ANHI
+
+family: Phalacrocoracidae
+
+genus: Phalacrocorax
+BrCm: Brandt's Cormorant: Urile penicillatus: BRAC
+RFCm: Red-faced Cormorant: Urile urile: RFCO
+PeCm: Pelagic Cormorant: Urile pelagicus: PECO
+GrCm: Great Cormorant: Phalacrocorax carbo: GRCO
+DCCm: Double-crested Cormorant: Nannopterum auritus: DCCO
+NeCm: Neotropic Cormorant: Nannopterum brasilianus: NECO
+
+order: Pelecaniformes
+
+family: Pelecanidae
+
+genus: Pelecanus
+APel: American White Pelican: Pelecanus erythrorhynchos: AWPE
+BPel: Brown Pelican: Pelecanus occidentalis: BRPE
+
+family: Ardeidae
+
+genus: Botaurus
+ABit: American Bittern: Botaurus lentiginosus: AMBI
+
+genus: Ixobrychus
+YBit: Yellow Bittern: Ixobrychus sinensis: YEBI
+LBit: Least Bittern: Ixobrychus exilis: LEBI
+
+genus: Ardea
+GBHn: Great Blue Heron: Ardea herodias: GBHE
+GrEg: Great Egret: Ardea alba: GREG
+
+genus: Egretta
+ChEg: Chinese Egret: Egretta eulophotes: CHEG
+LiEg: Little Egret: Egretta garzetta: LIEG
+WRHn: Western Reef-Heron: Egretta gularis: WERH
+SnEg: Snowy Egret: Egretta thula: SNEG
+LBHn: Little Blue Heron: Egretta caerulea: LBHE
+TrHn: Tricolored Heron: Egretta tricolor: TRHE
+ReEg: Reddish Egret: Egretta rufescens: REEG
+
+genus: Bubulcus
+CaEg: Cattle Egret: Bubulcus ibis: CAEG
+
+genus: Ardeola
+ChPH: Chinese Pond-Heron: Ardeola bacchus: CHPH
+
+genus: Butorides
+GnHn: Green Heron: Butorides virescens: GRHE
+
+genus: Nycticorax
+BCNH: Black-crowned Night-Heron: Nycticorax nycticorax: BCNH
+
+genus: Nyctanassa
+YCNH: Yellow-crowned Night-Heron: Nyctanassa violacea: YCNH
+
+family: Threskiornithidae
+
+subfamily: Threskiornithinae
+
+genus: Eudocimus
+WhIb: White Ibis: Eudocimus albus: WHIB
+ScIb: Scarlet Ibis: Eudocimus ruber: SCIB
+
+genus: Plegadis
+GlIb: Glossy Ibis: Plegadis falcinellus: GLIB
+WFIb: White-faced Ibis: Plegadis chihi: WFIB
+
+subfamily: Plataleinae
+
+genus: Platalea
+RSpn: Roseate Spoonbill: Platalea ajaja: ROSP
+
+order: Cathartiformes
+
+family: Cathartidae
+
+genus: Gymnogyps
+CCon: California Condor: Gymnogyps californianus: CACO
+
+genus: Coragyps
+BVul: Black Vulture: Coragyps atratus: BLVU
+
+genus: Cathartes
+TVul: Turkey Vulture: Cathartes aura: TUVU
+
+order: Accipitriformes
+
+family: Pandionidae
+
+genus: Pandion
+Ospr: Osprey: Pandion haliaetus: OSPR
+
+family: Accipitridae
+
+subfamily: Elaninae
+
+genus: Elanus
+WTKt: White-tailed Kite: Elanus leucurus: WTKI
+
+subfamily: Gypaetinae
+
+genus: Chondrohierax
+HBKt: Hook-billed Kite: Chondrohierax uncinatus: HBKI
+
+genus: Elanoides
+STKt: Swallow-tailed Kite: Elanoides forficatus: STKI
+
+subfamily: Accipitrinae
+
+genus: Aquila
+GEag: Golden Eagle: Aquila chrysaetos: GOEA
+
+genus: Circus
+NHar: Northern Harrier: Circus hudsonius: NOHA
+
+genus: Accipiter
+SSHw: Sharp-shinned Hawk: Accipiter striatus: SSHA
+CoHw: Cooper's Hawk: Accipiter cooperii: COHA
+NGos: Northern Goshawk: Accipiter gentilis: NOGO
+
+genus: Haliaeetus
+BEag: Bald Eagle: Haliaeetus leucocephalus: BAEA
+WEag: White-tailed Eagle: Haliaeetus albicilla: WTEA
+SEag: Steller's Sea-Eagle: Haliaeetus pelagicus: STSE
+
+genus: Ictinia
+MiKt: Mississippi Kite: Ictinia mississippiensis: MIKI
+
+genus: Geranospiza
+CrHw: Crane Hawk: Geranospiza caerulescens: CRHA
+
+genus: Rostrhamus
+SnKt: Snail Kite: Rostrhamus sociabilis: SNKI
+
+genus: Buteogallus
+CoBH: Common Black Hawk: Buteogallus anthracinus: COBH
+
+genus: Rupornis
+RoHw: Roadside Hawk: Rupornis magnirostris: ROHA
+
+genus: Parabuteo
+HaHw: Harris's Hawk: Parabuteo unicinctus: HASH
+
+genus: Geranoaetus
+WTHw: White-tailed Hawk: Geranoaetus albicaudatus: WTHA
+
+genus: Buteo
+GrHw: Gray Hawk: Buteo nitidus: GRHA
+RSHw: Red-shouldered Hawk: Buteo lineatus: RSHA
+BWHw: Broad-winged Hawk: Buteo platypterus: BWHA
+STHw: Short-tailed Hawk: Buteo brachyurus: STHA
+SwHw: Swainson's Hawk: Buteo swainsoni: SWHA
+ZTHw: Zone-tailed Hawk: Buteo albonotatus: ZTHA
+RTHw: Red-tailed Hawk: Buteo jamaicensis: RTHA
+RLHw: Rough-legged Hawk: Buteo lagopus: RLHA
+FeHw: Ferruginous Hawk: Buteo regalis: FEHA
+
+order: Strigiformes
+
+family: Tytonidae
+
+genus: Tyto
+BrOw: Barn Owl: Tyto alba: BANO
+
+family: Strigidae
+
+genus: Otus
+OrSO: Oriental Scops-Owl: Otus sunia: ORSO
+
+genus: Psiloscops
+FlOw: Flammulated Owl: Psiloscops flammeolus: FLOW
+
+genus: Megascops
+WhOw: Whiskered Screech-Owl: Megascops trichopsis: WHSO
+WSOw: Western Screech-Owl: Megascops kennicottii: WESO
+ESOw: Eastern Screech-Owl: Megascops asio: EASO
+
+genus: Bubo
+GHOw: Great Horned Owl: Bubo virginianus: GHOW
+SnOw: Snowy Owl: Bubo scandiacus: SNOW
+
+genus: Surnia
+NHOw: Northern Hawk Owl: Surnia ulula: NHOW
+
+genus: Glaucidium
+NPOw: Northern Pygmy-Owl: Glaucidium gnoma: NOPO
+
+genus: Micrathene
+ElOw: Elf Owl: Micrathene whitneyi: ELOW
+
+genus: Athene
+BuOw: Burrowing Owl: Athene cunicularia: BUOW
+
+genus: Ciccaba
+MoOw: Mottled Owl: Ciccaba virgata: MOOW
+
+genus: Strix
+SpOw: Spotted Owl: Strix occidentalis: SPOW
+BaOw: Barred Owl: Strix varia: BADO
+GGOw: Great Gray Owl: Strix nebulosa: GGOW
+
+genus: Asio
+LEOw: Long-eared Owl: Asio otus: LEOW
+StOw: Stygian Owl: Asio stygius: STOW
+SEOw: Short-eared Owl: Asio flammeus: SEOW
+
+genus: Aegolius
+BoOw: Boreal Owl: Aegolius funereus: BOOW
+NSOw: Northern Saw-whet Owl: Aegolius acadicus: NSWO
+
+order: Trogoniformes
+
+family: Trogonidae
+
+subfamily: Trogoninae
+
+genus: Trogon
+ElTg: Elegant Trogon: Trogon elegans: ELTR
+
+genus: Euptilotis
+EaTg: Eared Quetzal: Euptilotis neoxenus
+
+order: Coraciiformes
+
+family: Alcedinidae
+
+subfamily: Cerylinae
+
+genus: Megaceryle
+RKnf: Ringed Kingfisher: Megaceryle torquata: RIKI
+BKnf: Belted Kingfisher: Megaceryle alcyon: BEKI
+
+genus: Chloroceryle
+GKnf: Green Kingfisher: Chloroceryle americana: GKIN
+
+order: Piciformes
+
+family: Picidae
+
+subfamily: Jynginae
+
+genus: Jynx
+EWry: Eurasian Wryneck: Jynx torquilla: EUWR
+
+subfamily: Picinae
+
+genus: Melanerpes
+LeWo: Lewis's Woodpecker: Melanerpes lewis: LEWO
+RHWo: Red-headed Woodpecker: Melanerpes erythrocephalus: RHWO
+AcWo: Acorn Woodpecker: Melanerpes formicivorus: ACWO
+GiWo: Gila Woodpecker: Melanerpes uropygialis: GIWO
+GFWo: Golden-fronted Woodpecker: Melanerpes aurifrons: GFWO
+RBWo: Red-bellied Woodpecker: Melanerpes carolinus: RBWO
+
+genus: Sphyrapicus
+WiSs: Williamson's Sapsucker: Sphyrapicus thyroideus: WISA
+YBSs: Yellow-bellied Sapsucker: Sphyrapicus varius: YBSA
+RNSs: Red-naped Sapsucker: Sphyrapicus nuchalis: RNSA
+RBSs: Red-breasted Sapsucker: Sphyrapicus ruber: RBSA
+
+genus: Picoides
+ATWo: American Three-toed Woodpecker: Picoides dorsalis: ATTW
+BBWo: Black-backed Woodpecker: Picoides arcticus: BBWO
+
+genus: Dendrocopos
+GSWo: Great Spotted Woodpecker: Dendrocopos major: GSWO
+
+genus: Dryobates
+DoWo: Downy Woodpecker: Dryobates pubescens: DOWO
+NuWo: Nuttall's Woodpecker: Dryobates nuttallii: NUWO
+LBWo: Ladder-backed Woodpecker: Dryobates scalaris: LBWO
+RCWo: Red-cockaded Woodpecker: Dryobates borealis: RCWO
+HaWo: Hairy Woodpecker: Dryobates villosus: HAWO
+WHWo: White-headed Woodpecker: Dryobates albolarvatus: WHWO
+AzWo: Arizona Woodpecker: Dryobates arizonae: ARWO
+
+genus: Colaptes
+NFlk: Northern Flicker: Colaptes auratus: NOFL
+GFlk: Gilded Flicker: Colaptes chrysoides: GIFL
+
+genus: Dryocopus
+PiWo: Pileated Woodpecker: Dryocopus pileatus: PIWO
+
+genus: Campephilus
+IBWo: Ivory-billed Woodpecker: Campephilus principalis: IBWO
+
+order: Falconiformes
+
+family: Falconidae
+
+subfamily: Herpetotherinae
+
+genus: Micrastur
+CoFF: Collared Forest-Falcon: Micrastur semitorquatus: COFF
+
+subfamily: Falconinae
+
+genus: Caracara
+CCar: Crested Caracara: Caracara cheriway: CRCA
+
+genus: Falco
+EKes: Eurasian Kestrel: Falco tinnunculus: EUKE
+AKes: American Kestrel: Falco sparverius: AMKE
+RFFa: Red-footed Falcon: Falco vespertinus
+Merl: Merlin: Falco columbarius: MERL
+EHob: Eurasian Hobby: Falco subbuteo: EHOB
+ApFa: Aplomado Falcon: Falco femoralis: APFA
+Gyrf: Gyrfalcon: Falco rusticolus: GYRF
+PeFa: Peregrine Falcon: Falco peregrinus: PEFA
+PrFa: Prairie Falcon: Falco mexicanus: PRFA
+
+order: Psittaciformes
+
+family: Psittacidae
+
+subfamily: Arinae
+
+genus: Myiopsitta
+MoPk: Monk Parakeet: Myiopsitta monachus: MOPA
+
+genus: Psittacara
+GnPk: Green Parakeet: Psittacara holochlorus: GREP
+
+genus: Rhynchopsitta
+TBPt: Thick-billed Parrot: Rhynchopsitta pachyrhyncha: TBPA
+
+genus: Brotogeris
+WWPk: White-winged Parakeet: Brotogeris versicolurus: WWPA
+
+genus: Amazona
+RCPt: Red-crowned Parrot: Amazona viridigenalis: RCPA
+
+family: Psittaculidae
+
+subfamily: Loriinae
+
+genus: Melopsittacus
+Budg: Budgerigar: Melopsittacus undulatus: BUDG
+
+order: Passeriformes
+
+family: Tityridae
+
+genus: Tityra
+MTit: Masked Tityra: Tityra semifasciata: MATI
+
+genus: Pachyramphus
+RBec: Rose-throated Becard: Pachyramphus aglaiae: RTBE
+
+family: Tyrannidae
+
+subfamily: Elaeniinae
+
+genus: Camptostoma
+NBTy: Northern Beardless-Tyrannulet: Camptostoma imberbe: NOBT
+
+genus: Myiopagis
+GEla: Greenish Elaenia: Myiopagis viridicata: GREL
+
+genus: Elaenia
+CEla: Caribbean Elaenia: Elaenia martinica: CAEL
+
+subfamily: Tyranninae
+
+genus: Myiarchus
+DCFy: Dusky-capped Flycatcher: Myiarchus tuberculifer: DCFL
+ATFy: Ash-throated Flycatcher: Myiarchus cinerascens: ATFL
+NuFy: Nutting's Flycatcher: Myiarchus nuttingi: NUFL
+GCFy: Great Crested Flycatcher: Myiarchus crinitus: GCFL
+BCFy: Brown-crested Flycatcher: Myiarchus tyrannulus: BCFL
+LSFy: La Sagra's Flycatcher: Myiarchus sagrae: LSFL
+
+genus: Pitangus
+GKis: Great Kiskadee: Pitangus sulphuratus: GKIS
+
+genus: Myiodynastes
+SBFy: Sulphur-bellied Flycatcher: Myiodynastes luteiventris: SBFL
+
+genus: Legatus
+PiFy: Piratic Flycatcher: Legatus leucophaius: PIFL
+
+genus: Empidonomus
+VaFy: Variegated Flycatcher: Empidonomus varius: VAFL
+
+genus: Tyrannus
+TrKb: Tropical Kingbird: Tyrannus melancholicus: TRKI
+CoKb: Couch's Kingbird: Tyrannus couchii: COKI
+CaKb: Cassin's Kingbird: Tyrannus vociferans: CAKI
+TBKb: Thick-billed Kingbird: Tyrannus crassirostris: TBKI
+WeKb: Western Kingbird: Tyrannus verticalis: WEKI
+EaKb: Eastern Kingbird: Tyrannus tyrannus: EAKI
+GyKb: Gray Kingbird: Tyrannus dominicensis: GRAK
+STFy: Scissor-tailed Flycatcher: Tyrannus forficatus: STFL
+FTFy: Fork-tailed Flycatcher: Tyrannus savana: FTFL
+
+subfamily: Fluvicolinae
+
+genus: Mitrephanes
+TfFy: Tufted Flycatcher: Mitrephanes phaeocercus: TUFL
+
+genus: Contopus
+OSFy: Olive-sided Flycatcher: Contopus cooperi: OSFL
+GrPw: Greater Pewee: Contopus pertinax: GRPE
+WWPw: Western Wood-Pewee: Contopus sordidulus: WEWP
+EWPw: Eastern Wood-Pewee: Contopus virens: EAWP
+
+genus: Empidonax
+YBFy: Yellow-bellied Flycatcher: Empidonax flaviventris: YBFL
+AcFy: Acadian Flycatcher: Empidonax virescens: ACFL
+AlFy: Alder Flycatcher: Empidonax alnorum: ALFL
+WiFy: Willow Flycatcher: Empidonax traillii: WIFL
+LsFy: Least Flycatcher: Empidonax minimus: LEFL
+HaFy: Hammond's Flycatcher: Empidonax hammondii: HAFL
+GyFy: Gray Flycatcher: Empidonax wrightii: GRFL
+DuFy: Dusky Flycatcher: Empidonax oberholseri: DUFL
+PSFy: Pacific-slope Flycatcher: Empidonax difficilis: PSFL
+CoFy: Cordilleran Flycatcher: Empidonax occidentalis: COFL
+BBFy: Buff-breasted Flycatcher: Empidonax fulvifrons: BBFL
+
+genus: Sayornis
+BPbe: Black Phoebe: Sayornis nigricans: BLPH
+EPbe: Eastern Phoebe: Sayornis phoebe: EAPH
+SPbe: Say's Phoebe: Sayornis saya: SAPH
+
+genus: Pyrocephalus
+VeFy: Vermilion Flycatcher: Pyrocephalus rubinus: VEFL
+
+family: Vireonidae
+
+genus: Vireo
+BCVi: Black-capped Vireo: Vireo atricapilla: BCVI
+WEVi: White-eyed Vireo: Vireo griseus: WEVI
+TBVi: Thick-billed Vireo: Vireo crassirostris: TBVI
+BeVi: Bell's Vireo: Vireo bellii: BEVI
+GyVi: Gray Vireo: Vireo vicinior: GRVI
+HuVi: Hutton's Vireo: Vireo huttoni: HUVI
+YTVi: Yellow-throated Vireo: Vireo flavifrons: YTVI
+CaVi: Cassin's Vireo: Vireo cassinii: CAVI
+BHVi: Blue-headed Vireo: Vireo solitarius: BHVI
+PlVi: Plumbeous Vireo: Vireo plumbeus: PLVI
+PhVi: Philadelphia Vireo: Vireo philadelphicus: PHVI
+WaVi: Warbling Vireo: Vireo gilvus: WAVI
+REVi: Red-eyed Vireo: Vireo olivaceus: REVI
+YGVi: Yellow-green Vireo: Vireo flavoviridis: YGVI
+BWVi: Black-whiskered Vireo: Vireo altiloquus: BWVI
+YuVi: Yucatan Vireo: Vireo magister: YUVI
+
+family: Laniidae
+
+genus: Lanius
+BShr: Brown Shrike: Lanius cristatus: BRSH
+LShr: Loggerhead Shrike: Lanius ludovicianus: LOSH
+NShr: Northern Shrike: Lanius borealis: NSHR
+
+
+family: Corvidae
+genus: Perisoreus
+GrJy: Canada Jay: Perisoreus canadensis: GRAJ
+
+genus: Psilorhinus
+BrJy: Brown Jay: Psilorhinus morio: BRJA
+
+genus: Cyanocorax
+GnJy: Green Jay: Cyanocorax yncas: GREJ
+
+genus: Gymnorhinus
+PiJy: Pinyon Jay: Gymnorhinus cyanocephalus: PIJA
+
+genus: Cyanocitta
+StJy: Steller's Jay: Cyanocitta stelleri: STJA
+BlJy: Blue Jay: Cyanocitta cristata: BLJA
+
+genus: Aphelocoma
+FSJy: Florida Scrub-Jay: Aphelocoma coerulescens: FLSJ
+ISJy: Island Scrub-Jay: Aphelocoma insularis: ISSJ
+CSJy: California Scrub-Jay: Aphelocoma californica: WESJ
+WSJy: Woodhouse's Scrub-Jay: Aphelocoma woodhouseii
+MxJy: Mexican Jay: Aphelocoma wollweberi: MEJA
+
+genus: Nucifraga
+CNut: Clark's Nutcracker: Nucifraga columbiana: CLNU
+
+genus: Pica
+BBMp: Black-billed Magpie: Pica hudsonia: BBMA
+YBMp: Yellow-billed Magpie: Pica nuttalli: YBMA
+
+genus: Corvus
+EJdw: Eurasian Jackdaw: Corvus monedula: EUJA
+ACro: American Crow: Corvus brachyrhynchos: AMCR
+NCro: Northwestern Crow: Corvus caurinus: NOCR
+FCro: Fish Crow: Corvus ossifragus: FICR
+ChRv: Chihuahuan Raven: Corvus cryptoleucus: CHRA
+CRav: Common Raven: Corvus corax: CORA
+
+family: Remizidae
+genus: Auriparus
+Verd: Verdin: Auriparus flaviceps: VERD
+
+family: Paridae
+genus: Poecile
+CaCh: Carolina Chickadee: Poecile carolinensis: CACH
+BCCh: Black-capped Chickadee: Poecile atricapillus: BCCH
+MtCh: Mountain Chickadee: Poecile gambeli: MOCH
+MxCh: Mexican Chickadee: Poecile sclateri: MECH
+CBCh: Chestnut-backed Chickadee: Poecile rufescens: CBCH
+BoCh: Boreal Chickadee: Poecile hudsonicus: BOCH
+GHCh: Gray-headed Chickadee: Poecile cinctus: GHCH
+
+genus: Baeolophus
+BrTm: Bridled Titmouse: Baeolophus wollweberi: BRTI
+OaTm: Oak Titmouse: Baeolophus inornatus: OATI
+JuTm: Juniper Titmouse: Baeolophus ridgwayi: JUTI
+TfTm: Tufted Titmouse: Baeolophus bicolor: TUTI
+BCTm: Black-crested Titmouse: Baeolophus atricristatus: BCTI
+
+family: Alaudidae
+genus: Alauda
+SLrk: Eurasian SkyLark: Alauda arvensis: SKLA
+
+genus: Eremophila
+HLrk: Horned Lark: Eremophila alpestris: HOLA
+
+family: Locustellidae
+genus: Locustella
+MiGW: Middendorff's Grasshopper-Warbler: Locustella ochotensis: MIGW
+LanW: Lanceolated Warbler: Locustella lanceolata: LANW
+
+family: Hirundinidae
+subfamily: Hirundininae
+genus: Riparia
+BkSw: Bank Swallow: Riparia riparia: BANS
+
+genus: Tachycineta
+TrSw: Tree Swallow: Tachycineta bicolor: TRES
+BaSw: Bahama Swallow: Tachycineta cyaneoviridis: BAHS
+VGSw: Violet-green Swallow: Tachycineta thalassina: VGSW
+
+genus: Stelgidopteryx
+NRSw: Northern Rough-winged Swallow: Stelgidopteryx serripennis: NRWS
+
+genus: Progne
+BMar: Brown-chested Martin: Progne tapera: BCMA
+PMar: Purple Martin: Progne subis: PUMA
+SMar: Southern Martin: Progne elegans: SOMA
+GMar: Gray-breasted Martin: Progne chalybea: GYBM
+CMar: Cuban Martin: Progne cryptoleuca: CUMA
+
+genus: Hirundo
+BrSw: Barn Swallow: Hirundo rustica: BARS
+
+genus: Delichon
+CHMr: Common House-Martin: Delichon urbicum: COHM
+
+genus: Petrochelidon
+ClSw: Cliff Swallow: Petrochelidon pyrrhonota: CLSW
+CvSw: Cave Swallow: Petrochelidon fulva: CASW
+
+family: Aegithalidae
+genus: Psaltriparus
+Bush: Bushtit: Psaltriparus minimus: BUSH
+
+family: Phylloscopidae
+genus: Phylloscopus
+WodW: Wood Warbler: Phylloscopus sibilatrix: WOWA
+DusW: Dusky Warbler: Phylloscopus fuscatus: DUWA
+YBrW: Yellow-browed Warbler: Phylloscopus inornatus: YBWA
+ArcW: Arctic Warbler: Phylloscopus borealis: ARWA
+
+family: Pycnonotidae
+genus: Pycnonotus
+RBul: Red-whiskered Bulbul: Pycnonotus jocosus: RWBU
+
+family: Sylviidae
+genus: Chamaea
+Wtit: Wrentit: Chamaea fasciata: WREN
+
+family: Regulidae
+genus: Regulus
+RCKl: Ruby-crowned Kinglet: Regulus calendula: RCKI
+GCKl: Golden-crowned Kinglet: Regulus satrapa: GCKI
+
+family: Bombycillidae
+genus: Bombycilla
+BWax: Bohemian Waxwing: Bombycilla garrulus: BOWA
+CWax: Cedar Waxwing: Bombycilla cedrorum: CEDW
+
+family: Ptiliogonatidae
+genus: Ptiliogonys
+GySF: Gray Silky-flycatcher: Ptilogonys cinereus: GRSF
+
+genus: Phainopepla
+Phai: Phainopepla: Phainopepla nitens: PHAI
+
+family: Sittidae
+subfamily: Sittinae
+genus: Sitta
+RBNh: Red-breasted Nuthatch: Sitta canadensis: RBNU
+WBNh: White-breasted Nuthatch: Sitta carolinensis: WBNU
+PyNh: Pygmy Nuthatch: Sitta pygmaea: PYNU
+BHNh: Brown-headed Nuthatch: Sitta pusilla: BHNU
+
+family: Certhiidae
+subfamily: Certhiinae
+genus: Certhia
+BCrp: Brown Creeper: Certhia americana: BRCR
+
+family: Polioptilidae
+genus: Polioptila
+BGGn: Blue-gray Gnatcatcher: Polioptila caerulea: BGGN
+BTGn: Black-tailed Gnatcatcher: Polioptila melanura: BTGN
+CaGn: California Gnatcatcher: Polioptila californica: CAGN
+BCGn: Black-capped Gnatcatcher: Polioptila nigriceps: BCGN
+
+family: Troglodytidae
+genus: Salpinctes
+RoWn: Rock Wren: Salpinctes obsoletus: ROWR
+genus: Catherpes
+CnWn: Canyon Wren: Catherpes mexicanus: CANW
+
+genus: Troglodytes
+HoWn: House Wren: Troglodytes aedon: HOWR
+PaWn: Pacific Wren: Troglodytes pacificus
+WiWn: Winter Wren: Troglodytes hiemalis: WIWR
+
+genus: Cistothorus
+SeWn: Sedge Wren: Cistothorus platensis: SEWR
+MaWn: Marsh Wren: Cistothorus palustris: MAWR
+
+genus: Thryothorus
+CaWn: Carolina Wren: Thryothorus ludovicianus: CARW
+
+genus: Thryomanes
+BeWn: Bewick's Wren: Thryomanes bewickii: BEWR
+
+genus: Campylorhynchus
+CcWn: Cactus Wren: Campylorhynchus brunneicapillus: CACW
+
+family: Mimidae
+genus: Melanotis
+BlMk: Blue Mockingbird: Melanotis caerulescens: BLMO
+genus: Dumetella
+GCat: Gray Catbird: Dumetella carolinensis: GRCA
+
+genus: Toxostoma
+CBTr: Curve-billed Thrasher: Toxostoma curvirostre: CBTH
+BrTr: Brown Thrasher: Toxostoma rufum: BRTH
+LBTr: Long-billed Thrasher: Toxostoma longirostre: LBTH
+BeTr: Bendire's Thrasher: Toxostoma bendirei: BETH
+CaTr: California Thrasher: Toxostoma redivivum: CATH
+LCTr: LeConte's Thrasher: Toxostoma lecontei: LCTH
+CrTr: Crissal Thrasher: Toxostoma crissale: CRTH
+
+genus: Oreoscoptes
+SaTr: Sage Thrasher: Oreoscoptes montanus: SATH
+
+genus: Mimus
+BMck: Bahama Mockingbird: Mimus gundlachii: BAMO
+NMck: Northern Mockingbird: Mimus polyglottos: NOMO
+
+family: Sturnidae
+genus: Sturnus
+EStr: European Starling: Sturnus vulgaris: EUST
+
+genus: Acridotheres
+CMyn: Crested Myna: Acridotheres cristatellus: CRMY
+
+family: Cinclidae
+genus: Cinclus
+ADip: American Dipper: Cinclus mexicanus: AMDI
+
+family: Turdidae
+genus: Sialia
+EBlu: Eastern Bluebird: Sialia sialis: EABL
+WBlu: Western Bluebird: Sialia mexicana: WEBL
+MBlu: Mountain Bluebird: Sialia currucoides: MOBL
+
+genus: Myadestes
+TSol: Townsend's Solitaire: Myadestes townsendi: TOSO
+
+genus: Catharus
+OBNT: Orange-billed Nightingale-Thrush: Catharus aurantiirostris: OBNT
+Veer: Veery: Catharus fuscescens: VEER
+GCTh: Gray-cheeked Thrush: Catharus minimus: GCTH
+BiTh: Bicknell's Thrush: Catharus bicknelli: BITH
+SwTh: Swainson's Thrush: Catharus ustulatus: SWTH
+HeTh: Hermit Thrush: Catharus guttatus: HETH
+
+genus: Hylocichla
+WoTh: Wood Thrush: Hylocichla mustelina: WOTH
+
+genus: Turdus
+MiTh: Mistle Thrush: Turdus viscivorus
+EuBk: Eurasian Blackbird: Turdus merula: EUBL
+EyTh: Eyebrowed Thrush: Turdus obscurus: EYTH
+DuTh: Dusky Thrush: Turdus naumanni: DUTH
+Fiel: Fieldfare: Turdus pilaris: FIEL
+Redw: Redwing: Turdus iliacus: REDW
+CRob: Clay-colored Thrush: Turdus grayi: CCRO
+WRob: White-throated Thrush: Turdus assimilis: WTRO
+RRob: Rufous-backed Robin: Turdus rufopalliatus: RBRO
+ARob: American Robin: Turdus migratorius: AMRO
+
+genus: Ixoreus
+VaTh: Varied Thrush: Ixoreus naevius: VATH
+
+genus: Ridgwayia
+AzTh: Aztec Thrush: Ridgwayia pinicola: AZTH
+
+family: Muscicapidae
+genus: Muscicapa
+GSFy: Gray-streaked Flycatcher: Muscicapa griseisticta: GSFL
+ABFy: Asian Brown Flycatcher: Muscicapa dauurica: ABFL
+DSFy: Dark-sided Flycatcher: Muscicapa sibirica: DSFL
+
+genus: Larvivora
+SRob: Siberian Blue Robin: Larvivora cyane: SBRO
+
+genus: Cyanecula
+Blue: Bluethroat: Cyanecula svecica: BLUE
+
+genus: Calliope
+SRub: Siberian Rubythroat: Calliope calliope: SIRU
+
+genus: Tarsiger
+RFBt: Red-flanked Bluetail: Tarsiger cyanurus: RFBL
+
+genus: Ficedula
+NaFy: Narcissus Flycatcher: Ficedula narcissina: NAFL
+MuFy: Mugimaki Flycatcher: Ficedula mugimaki: MUFL
+TaFy: Taiga Flycatcher: Ficedula albicilla
+
+genus: Saxicola
+Scht: Stonechat: Saxicola torquatus: STON
+
+genus: Oenanthe
+NWht: Northern Wheatear: Oenanthe oenanthe: NOWH
+
+family: Peucedramidae
+genus: Peucedramus
+OliW: Olive Warbler: Peucedramus taeniatus: OLWA
+
+family: Prunellidae
+genus: Prunella
+SAcc: Siberian Accentor: Prunella montanella: SIAC
+
+family: Passeridae
+genus: Passer
+HoSp: House Sparrow: Passer domesticus: HOSP
+ETSp: Eurasian Tree Sparrow: Passer montanus: ETSP
+
+family: Motacillidae
+genus: Motacilla
+YWag: Eastern Yellow Wagtail: Motacilla tschutschensis: EYWA
+CWag: Citrine Wagtail: Motacilla citreola: CIWA
+GWag: Gray Wagtail: Motacilla cinerea: GRAW
+WWag: White Wagtail: Motacilla alba: WHWA
+
+genus: Anthus
+TPip: Tree Pipit: Anthus trivialis: TRPI
+OPip: Olive-backed Pipit: Anthus hodgsoni: OBPI
+PPip: Pechora Pipit: Anthus gustavi: PEPI
+RPip: Red-throated Pipit: Anthus cervinus: RTPI
+APip: American Pipit: Anthus rubescens: AMPI
+SPip: Sprague's Pipit: Anthus spragueii: SPPI
+
+family: Fringillidae
+subfamily: Fringillinae
+genus: Fringilla
+CChf: Common Chaffinch: Fringilla coelebs: COCH
+Bram: Brambling: Fringilla montifringilla: BRAM
+
+subfamily: Carduelinae
+genus: Coccothraustes
+EvGs: Evening Grosbeak: Coccothraustes vespertinus: EVGR
+Hawf: Hawfinch: Coccothraustes coccothraustes: HAWF
+
+genus: Carpodacus
+CRos: Common Rosefinch: Carpodacus erythrinus: CORO
+
+genus: Pinicola
+PiGs: Pine Grosbeak: Pinicola enucleator: PIGR
+
+genus: Pyrrhula
+EBul: Eurasian Bullfinch: Pyrrhula pyrrhula: EUBU
+
+genus: Leucosticte
+GCFn: Gray-crowned Rosy-Finch: Leucosticte tephrocotis: GCRF
+BkRF: Black Rosy-Finch: Leucosticte atrata: BLRF
+BCRF: Brown-capped Rosy-Finch: Leucosticte australis: BCRF
+
+genus: Haemorhous
+HoFn: House Finch: Haemorhous mexicanus: HOFI
+PuFn: Purple Finch: Haemorhous purpureus: PUFI
+CaFn: Cassin's Finch: Haemorhous cassinii: CAFI
+
+genus: Acanthis
+CRed: Common Redpoll: Acanthis flammea: CORE
+HRed: Hoary Redpoll: Acanthis hornemanni: HORE
+
+genus: Loxia
+ReCs: Red Crossbill: Loxia curvirostra: RECR
+CaCs: Cassia Crossbill: Loxia sinesciuris
+WWCs: White-winged Crossbill: Loxia leucoptera: WWCR
+
+genus: Spinus
+ESis: Eurasian Siskin: Spinus spinus: EUSI
+PSis: Pine Siskin: Spinus pinus: PISI
+LeGf: Lesser Goldfinch: Spinus psaltria: LEGO
+LaGf: Lawrence's Greenfinch: Spinus lawrencei: ORGR
+AmGf: American Goldfinch: Spinus tristis: AMGO
+
+family: Calcariidae
+genus: Calcarius
+LaLs: Lapland Longspur: Calcarius lapponicus: LALO
+CCLs: Chestnut-collared Longspur: Calcarius ornatus: CCLO
+SmLs: Smith's Longspur: Calcarius pictus: SMLO
+
+genus: Rhynchophanes
+McLs: McCown's Longspur: Rhynchophanes mccownii: MCLO
+
+genus: Plectrophenax
+SnBn: Snow Bunting: Plectrophenax nivalis: SNBU
+McBn: McKay's Bunting: Plectrophenax hyperboreus: MKBU
+
+family: Emberizidae
+genus: Emberiza
+PiBn: Pine Bunting: Emberiza leucocephalos: PIBU
+LiBn: Little Bunting: Emberiza pusilla: LIBU
+RuBn: Rustic Bunting: Emberiza rustica: RUBU
+YTBn: Yellow-throated Bunting: Emberiza elegans: YTBU
+YBBn: Yellow-breasted Bunting: Emberiza aureola: YBBU
+GyBn: Gray Bunting: Emberiza variabilis: GRBU
+PlBn: Pallas's Bunting: Emberiza pallasi: PALB
+ReBn: Reed Bunting: Emberiza schoeniclus: REBU
+
+family: Passerellidae
+genus: Peucaea
+RWSp: Rufous-winged Sparrow: Peucaea carpalis: RWSP
+BoSp: Botteri's Sparrow: Peucaea botterii: BOSP
+CaSp: Cassin's Sparrow: Peucaea cassinii: CASP
+BcSp: Bachman's Sparrow: Peucaea aestivalis: BACS
+
+genus: Ammodramus
+GrSp: Grasshopper Sparrow: Ammodramus savannarum: GRSP
+
+genus: Arremonops
+OlSp: Olive Sparrow: Arremonops rufivirgatus: OLSP
+
+genus: Amphispiza
+FSSp: Five-striped Sparrow: Amphispiza quinquestriata: FSSP
+BTSp: Black-throated Sparrow: Amphispiza bilineata: BTSP
+
+genus: Chondestes
+LkSp: Lark Sparrow: Chondestes grammacus: LASP
+
+genus: Calamospiza
+LkBn: Lark Bunting: Calamospiza melanocorys: LARB
+
+genus: Spizella
+ChSp: Chipping Sparrow: Spizella passerina: CHSP
+CCSp: Clay-colored Sparrow: Spizella pallida: CCSP
+BCSp: Black-chinned Sparrow: Spizella atrogularis: BCSP
+FiSp: Field Sparrow: Spizella pusilla: FISP
+BrSp: Brewer's Sparrow: Spizella breweri: BRSP
+WoSp: Worthen's Sparrow: Spizella wortheni: WOSP
+
+genus: Passerella
+FxSp: Fox Sparrow: Passerella iliaca: FOSP
+
+genus: Spizelloides
+ATSp: American Tree Sparrow: Spizelloides arborea: ATSP
+
+genus: Junco
+DEJn: Dark-eyed Junco: Junco hyemalis: DEJU
+YEJn: Yellow-eyed Junco: Junco phaeonotus: YEJU
+
+genus: Zonotrichia
+WCSp: White-crowned Sparrow: Zonotrichia leucophrys: WCSP
+GCSp: Golden-crowned Sparrow: Zonotrichia atricapilla: GCSP
+HaSp: Harris's Sparrow: Zonotrichia querula: HASP
+WTSp: White-throated Sparrow: Zonotrichia albicollis: WTSP
+
+genus: Artemisiospiza
+SgSp: Sagebrush Sparrow: Artemisiospiza nevadensis: SAGS
+BeSp: Bell's Sparrow: Artemisiospiza belli: BESP
+
+genus: Pooecetes
+VeSp: Vesper Sparrow: Pooecetes gramineus: VESP
+
+genus: Ammospiza
+LCSp: LeConte's Sparrow: Ammospiza leconteii: LCSP
+SsSp: Seaside Sparrow: Ammospiza maritimus: SESP
+NSSp: Nelson's Sparrow: Ammospiza nelsoni: NSTS
+SSSp: Saltmarsh Sparrow: Ammospiza caudacutus: SSTS
+
+genus: Centronyx
+BaSp: Baird's Sparrow: Centronyx bairdii: BAIS
+HeSp: Henslow's Sparrow: Centronyx henslowii: HESP
+
+genus: Passerculus
+SvSp: Savannah Sparrow: Passerculus sandwichensis: SAVS
+
+genus: Melospiza
+SoSp: Song Sparrow: Melospiza melodia: SOSP
+LiSp: Lincoln's Sparrow: Melospiza lincolnii: LISP
+SwSp: Swamp Sparrow: Melospiza georgiana: SWSP
+
+genus: Melozone
+CnTw: Canyon Towhee: Melozone fuscus: CANT
+ATow: Abert's Towhee: Melozone aberti: ABTO
+CaTw: California Towhee: Melozone crissalis: CALT
+
+genus: Aimophila
+RCSp: Rufous-crowned Sparrow: Aimophila ruficeps: RCSP
+
+genus: Pipilo
+GTow: Green-tailed Towhee: Pipilo chlorurus: GTTO
+STow: Spotted Towhee: Pipilo maculatus: SPTO
+ETow: Eastern Towhee: Pipilo erythrophthalmus: EATO
+
+family: Spindalidae
+genus: Spindalis
+WSpi: Westeen Spindalis: Spindalis zena: WESP
+
+family: Icteriidae
+genus: Icteria
+YBCh: Yellow-breasted Chat: Icteria virens: YBCH
+
+family: Icteridae
+subfamily: Xanthocephalinae
+genus: Xanthocephalus
+YHBk: Yellow-headed Blackbird: Xanthocephalus xanthocephalus: YHBL
+
+subfamily: Dolichonychinae
+genus: Dolichonyx
+Bobo: Bobolink: Dolichonyx oryzivorus: BOBO
+
+subfamily: Sturnellinae
+genus: Sturnella
+EMea: Eastern Meadowlark: Sturnella magna: EAME
+WMea: Western Meadowlark: Sturnella neglecta: WEME
+
+subfamily: Icterinae
+genus: Icterus
+BVOr: Black-vented Oriole: Icterus wagleri: BVOR
+OrOr: Orchard Oriole: Icterus spurius: OROR
+HoOr: Hooded Oriole: Icterus cucullatus: HOOR
+StOr: Streak-backed Oriole: Icterus pustulatus: SBAO
+BuOr: Bullock's Oriole: Icterus bullockii: BUOR
+SpOr: Spot-breasted Oriole: Icterus pectoralis: SBOR
+AlOr: Altamira Oriole: Icterus gularis: ALOR
+AuOr: Audubon's Oriole: Icterus graduacauda: AUOR
+BaOr: Baltimore Oriole: Icterus galbula: BAOR
+ScOr: Scott's Oriole: Icterus parisorum: SCOR
+
+subfamily: Agelaiinae
+genus: Agelaius
+RWBk: Red-winged Blackbird: Agelaius phoeniceus: RWBL
+TrBk: Tricolored Blackbird: Agelaius tricolor: TRBL
+TSBk: Tawny-shouldered Blackbird: Agelaius humeralis: TSBL
+
+genus: Molothrus
+ShCw: Shiny Cowbird: Molothrus bonariensis: SHCO
+BrCw: Bronzed Cowbird: Molothrus aeneus: BROC
+BHCw: Brown-headed Cowbird: Molothrus ater: BHCO
+
+genus: Euphagus
+RuBk: Rusty Blackbird: Euphagus carolinus: RUBL
+BrBk: Brewer's Blackbird: Euphagus cyanocephalus: BRBL
+
+genus: Quiscalus
+CoGk: Common Grackle: Quiscalus quiscula: COGR
+BTGk: Boat-tailed Grackle: Quiscalus major: BTGR
+GTGk: Great-tailed Grackle: Quiscalus mexicanus: GTGR
+
+family: Parulidae
+genus: Seiurus
+Oven: Ovenbird: Seiurus aurocapilla: OVEN
+
+genus: Helmitheros
+WEaW: Worm-eating Warbler: Helmitheros vermivorum: WEWA
+
+genus: Parkesia
+LWth: Louisiana Waterthrush: Parkesia motacilla: LOWA
+NWth: Northern Waterthrush: Parkesia noveboracensis: NOWA
+
+genus: Vermivora
+GWiW: Golden-winged Warbler: Vermivora chrysoptera: GWWA
+BWiW: Blue-winged Warbler: Vermivora cyanoptera: BWWA
+
+genus: Mniotilta
+BAWW: Black-and-white Warbler: Mniotilta varia: BAWW
+
+genus: Protonotaria
+ProW: Prothonotary Warbler: Protonotaria citrea: PROW
+
+genus: Limnothlypis
+SwaW: Swainson's Warbler: Limnothlypis swainsonii: SWWA
+
+genus: Oreothlypis
+CChW: Crescent-chested Warbler: Oreothlypis superciliosa: CCWA
+TenW: Tennessee Warbler: Oreothlypis peregrina: TEWA
+OCrW: Orange-crowned Warbler: Oreothlypis celata: OCWA
+ColW: Colima Warbler: Oreothlypis crissalis: COLW
+LucW: Lucy's Warbler: Oreothlypis luciae: LUWA
+NshW: Nashville Warbler: Oreothlypis ruficapilla: NAWA
+VirW: Virginia's Warbler: Oreothlypis virginiae: VIWA
+
+genus: Oporornis
+ConW: Connecticut Warbler: Oporornis agilis: CONW
+
+genus: Geothlypis
+GYth: Gray-crowned Yellowthroat: Geothlypis poliocephala: GCYE
+McgW: MacGillivray's Warbler: Geothlypis tolmiei: MGWA
+MouW: Mourning Warbler: Geothlypis philadelphia: MOWA
+KenW: Kentucky Warbler: Geothlypis formosa: KEWA
+CYth: Common Yellowthroat: Geothlypis trichas: COYE
+
+genus: Setophaga
+HodW: Hooded Warbler: Setophaga citrina: HOWA
+ARed: American Redstart: Setophaga ruticilla: AMRE
+KirW: Kirtland's Warbler: Setophaga kirtlandii: KIWA
+CMyW: Cape May Warbler: Setophaga tigrina: CMWA
+CerW: Cerulean Warbler: Setophaga cerulea: CERW
+NPar: Northern Parula: Setophaga americana: NOPA
+TPar: Tropical Parula: Setophaga pitiayumi: TRPA
+MagW: Magnolia Warbler: Setophaga magnolia: MAWA
+BBrW: Bay-breasted Warbler: Setophaga castanea: BBWA
+BkbW: Blackburnian Warbler: Setophaga fusca: BLBW
+YelW: Yellow Warbler: Setophaga petechia: YWAR
+CSiW: Chestnut-sided Warbler: Setophaga pensylvanica: CSWA
+BkpW: Blackpoll Warbler: Setophaga striata: BLPW
+BBlW: Black-throated Blue Warbler: Setophaga caerulescens: BTBW
+PlmW: Palm Warbler: Setophaga palmarum: PAWA
+PinW: Pine Warbler: Setophaga pinus: PIWA
+YRmW: Yellow-rumped Warbler: Setophaga coronata: YRWA
+YThW: Yellow-throated Warbler: Setophaga dominica: YTWA
+PraW: Prairie Warbler: Setophaga discolor: PRAW
+GraW: Grace's Warbler: Setophaga graciae: GRWA
+BGyW: Black-throated Gray Warbler: Setophaga nigrescens: BTYW
+TwnW: Townsend's Warbler: Setophaga townsendi: TOWA
+HerW: Hermit Warbler: Setophaga occidentalis: HEWA
+GChW: Golden-cheeked Warbler: Setophaga chrysoparia: GCWA
+BGnW: Black-throated Green Warbler: Setophaga virens: BTNW
+
+genus: Basileuterus
+FTaW: Fan-tailed Warbler: Basileuterus lachrymosus: FTWA
+RCaW: Rufous-capped Warbler: Basileuterus rufifrons: RCWA
+GCrW: Golden-crowned Warbler: Basileuterus culicivorus: GCRW
+
+genus: Cardellina
+CanW: Canada Warbler: Wilsonia canadensis: CAWA
+WilW: Wilson's Warbler: Wilsonia pusilla: WIWA
+RFaW: Red-faced Warbler: Cardellina rubrifrons: RFWA
+
+genus: Myioborus
+PRed: Painted Redstart: Myioborus pictus: PARE
+SRed: Slate-throated Redstart: Myioborus miniatus: STRE
+
+family: Cardinalidae
+genus: Piranga
+HeTg: Hepatic Tanager: Piranga flava: HETA
+SuTg: Summer Tanager: Piranga rubra: SUTA
+ScTg: Scarlet Tanager: Piranga olivacea: SCTA
+WeTg: Western Tanager: Piranga ludoviciana: WETA
+FCTg: Flame-colored Tanager: Piranga bidentata: FCTA
+
+genus: Rhodothraupis
+CCGs: Crimson-collared Grosbeak: Rhodothraupis celaeno: CCGR
+
+genus: Cardinalis
+NCrd: Northern Cardinal: Cardinalis cardinalis: NOCA
+Pyrr: Pyrrhuloxia: Cardinalis sinuatus: PYRR
+
+genus: Pheucticus
+YeGs: Yellow Grosbeak: Pheucticus chrysopeplus: YEGR
+RBGs: Rose-breasted Grosbeak: Pheucticus ludovicianus: RBGR
+BHGs: Black-headed Grosbeak: Pheucticus melanocephalus: BHGR
+
+genus: Cyanocompsa
+BlBn: Blue Bunting: Cyanocompsa parellina: BLBU
+
+genus: Passerina
+BlGs: Blue Grosbeak: Passerina caerulea: BLGR
+LzBn: Lazuli Bunting: Passerina amoena: LAZB
+InBn: Indigo Bunting: Passerina cyanea: INBU
+PaBn: Painted Bunting: Passerina ciris: PABU
+
+genus: Spiza
+Dick: Dickcissel: Spiza americana: DICK
+
+family: Thraupidae
+subfamily: Coerebinae
+genus: Coereba
+Bana: Bananaquit: Coereba flaveola: BANA
+
+genus: Tiaris
+YFGq: Yellow-faced Grassquit: Tiaris olivaceus: YFGR
+BFGq: Black-faced Grassquit: Tiaris bicolor: BFGR
+
+subfamily: Sporophilinae
+genus: Sporophila
+WSee: White-collared Seedeater: Sporophila torqueola: WCSE
+
+VOpo: Virginia Opossum: Didelphis virginiana
+EGSq: Eastern Gray Squirrel: Sciurus carolinensis
+ReSq: Red Squirrel: Tamiasciurus hudsonicus
+NFSq: Northern Flying Squirrel: Glaucomys sabrinus
+WChk: Woodchuck: Marmota monax
+EChp: Eastern Chipmunk: Tamias striatus
+ABvr: American Beaver: Castor canadensis
+MJMs: Meadow Jumping Mouse: Zapus hudsonius
+MVol: Meadow Vole: Microtus pennsylvanicus
+WVol: Woodland Vole: Microtus pinetorum
+SVol: Southern Red-backed Vole: Myodes gapperi
+CMsk: Common Muskrat: Ondatra zibethicus
+WFMs: WHite-footed Deermouse: Permyscus leucopus
+HoMs: House Mouse: Mus musculus
+BRat: Brown Rat: Rattus norvegicus
+NPor: North American Porcupine: Erethizon dorsatus
+SHar: Snowshoe Hare: Lepus americanus
+ECtl: Eastern Cottontail: Sylvilagus floridanus
+Coyo: Coyote: Canis latrans
+GFox: Gray Fox: Urocyon cinereoargenteus
+RFox: Red Fox: Vulpes vulpes
+HSea: Harbor Seal: Phoca vitulina
+NOtt: North American River Otter: Lontra canadensis
+Fish: Fisher: Martes pennanti
+Ermn: Ermine: Mustela ermina
+LTWs: Long-tailed Weasel: Mustela frenata
+AMnk: American Mink: Neovison vison
+SSkn: Striped Skunk: Mephitis mephitis
+Racc: Raccoon: Procyon lotor
+WTDr: White-tailed Deer: Odocoileus virginianus
