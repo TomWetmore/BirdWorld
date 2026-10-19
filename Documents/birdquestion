@@ -1,0 +1,149 @@
+
+An official, fully cited zoological species name consists of four primary components: the generic name, the specific epithet, the taxonomic authority, and the date of publication.
+While a species name is commonly written as a simple two-word "binomial," its formal designation under the International Code of Zoological Nomenclature (ICZN) requires additional metadata to ensure absolute clarity and historical tracking.
+
+The 4 Elements of a Full Zoological Name
+
+
+Element	Description	Formatting Rules	Example: Balaena mysticetus Linnaeus, 1758
+1. Generic Name	Indicates the genus to which the animal belongs.	Capitalized and italicized (or underlined if handwritten).	Balaena
+2. Specific Epithet	Distinguishes the specific species within that genus.	Lowercase and italicized.	mysticetus
+3. Author (Authority)	The surname of the scientist who first formally described the species.	Regular text (not italicized). Written in full for animals.	Linnaeus
+4. Year of Publication	The year the original scientific description was validly published.	Separated from the author by a comma.	1758
+
+
+The Rule of Parentheses (Taxonomic Changes)
+
+The placement of parentheses around the author and date indicates whether the species remains in its original genus or has been moved:
+• Without Parentheses: Balaena mysticetus Linnaeus, 1758
+	• Meaning: This species is still classified under the genus Balaena, exactly as Carl Linnaeus originally designated it in 1758.
+• With Parentheses: Homo sapiens (Linnaeus, 1758)
+	• Meaning: Linnaeus originally described the species in 1758, but he placed it under a different genus at the time (in this case, he originally classified humans as Simia satyrus or alongside other groups before modern reorganization). The parentheses acknowledge his original description while indicating a subsequent taxonomic move.
+
+Optional Subspecies Element (Trinomen)
+
+If a zoological name refers to a specific subspecies, a third italicized word is appended directly after the specific epithet (creating a trinominal name).
+• Example: Canis lupus familiaris (the domestic dog)
+If you are writing a paper or working on a taxonomy project, I can help you format specific names or explain how to handle abbreviations like sp. and spp.. What group of animals are you focusing on?
+• 
+AJE editing
+How to Write Scientific Names of Plants and Animals - AJE
+In plant names, the taxonomic authority is abbreviated (e.g., Panicum virgatum L., where the L is the abbreviation for Linnaeus). ...
+• 
+Wikipedia
+Binomial nomenclature - Wikipedia
+Definition: Formal system (binomial nomenclature) giving each species a two-part scientific name using Latin grammatical forms (ge...
+• 
+International Commission on Zoological Nomenclature
+The Code Online | International Commission on Zoological Nomenclature
+Definition and Scope: Regulates scientific names of animal taxa, establishing principles of binominal nomenclature, priority, homo...
+Show all
+
+The AOU also shows the history of the scientific names. Is there a standard for this?
+
+Yes, there is a global standard for documenting and formatting the chronological history of scientific names, known broadly as a synonymy list (or taxonomic history).
+While organizations like the American Ornithological Society (AOS)—historically the AOU—tailor their layout to fit publication constraints, they follow universal conventions governed by the International Code of Zoological Nomenclature (ICZN) and community consensus.
+The standard splits into two distinct types of lists: true synonymies (actual name changes) and chresonymies (a record of how names were historically used or misused).
+
+1. Chronological Layout (The Timeline)
+
+A standard synonymy list is strictly formatted chronologically by date of publication, starting with the original description and tracing every subsequent reclassification, misspelling, or invalid description.
+text
+Genomys albus Smith, 1920: 14 (Original description)
+Genomys albus: Jones, 1935: 45 (Subsequent citation/usage)
+Albomys albus: Miller, 1950: 202 (New generic combination)
+Albomys nitidus Johnson, 1965: 12 (Junior synonym applied to this species)
+Use code with caution.
+
+2. The Punctuation Standard (Crucial Distinctions)
+
+The most important part of the standard is the strict use of punctuation to separate true authors of a name from authors who just used the name.
+• No Colons (True Authority): If a name is written as Albomys albus Smith, 1920, it means Smith is the person who created and described that species.
+• With a Colon (Subsequent Usage): If it is written as Albomys albus: Jones, 1935, the colon signals that Jones did not name the species; he was just a researcher who published a paper about it in 1935 using that name. (Sometimes a period, semicolon, or the word "of" is used instead of a colon, depending on the journal's style guide).
+
+3. Standards for Types of "Synonyms"
+
+When the AOS tracks a name's history, it categorizes how names are related using standard Latin terms or symbols:
+
+Concept	What It Means	Standard Notation
+Objective Synonym	Two names based on the exact same physical type specimen (e.g., an author renames a species because the first name was illegal).	syn. obj.
+Subjective Synonym	Two names based on different specimens, but scientists later decide they belong to the same species.	syn. subj.
+Basionym	The original name a species was given before being moved to a new genus (primarily a botanical term, but used conceptually in zoology).	Original combination
+Misidentifications	When a historical author completely misidentified an animal and called it by the wrong name.	Written as [Name] auct. non [Original Author] (meaning "of authors, not of the original creator")
+
+
+Why This Standard Matters
+
+Without these exact punctuation and chronological standards, biodiversity databases and checklists could not track historical data accurately. A system like the AOS Check-list uses this standard to allow researchers to look at a bird's name in an 1890 paper and immediately trace it forward to the official name used today.
+If you'd like, I can pull up an actual entry from the AOS Check-list and break down its specific history line-by-line to show you how these punctuation rules work in practice. Would that be helpful?
+• 
+International Commission on Zoological Nomenclature
+Frequently Asked Questions
+bee species is Apis mellifera Linnaeus, 1758. The binominal part of the name is in italics or some other distinguishing font or un...
+• 
+American Ornithological Society
+American Ornithological Society (AOS) Council Statement on ...
+The AOS (and previously its predecessor, the American Ornithologists' Union) has long been recognized as the authority for registe...
+• 
+AJE editing
+How to Write Scientific Names of Plants and Animals - AJE
+Sep 14, 2022 — In animals, the surname is written out in full followed by the date when it was first described (e.g., Balaena mysticetus Linnaeus...
+Show all
+
+
+The AOS Check-list of North American Birds compiles comprehensive history logs for complex species.
+The Fork-tailed Flycatcher (Tyrannus savana) provides a classic example. By tracking its historical entry across the AOU/AOS archives, you can see exactly how the punctuation rules dictate the timeline.
+
+The Historical Log Entry
+
+In a standard taxonomic history for this bird, the chronology reads like this:
+1.766 Muscicapa Tyrannus Linnaeus, Syst. Nat., ed. 12, 1: 325.
+1.825 Milvulus tyrannus: Swainson, Zool. Journ., 2: 123.
+1.886 Milvulus tyrannus (Linnaeus) — AOU Check-list, ed. 1: 247.
+1.910 Muscivora tyrannus (Linnaeus) — AOU Check-list, ed. 3: 204.
+1.983 Tyrannus savana Vieillot, Hist. Nat. Ois. Amer. Sept. 1: 72.
+1.985 Tyrannus savana Vieillot — AOU Check-list, ed. 6: 472.
+
+Line-by-Line Punctuation Breakdown
+
+
+Line 1: The Basionym (Original Description)
+
+1.766 Muscicapa Tyrannus Linnaeus, Syst. Nat., ed. 12, 1: 325.
+• The Punctuation: Linnaeus has no parentheses around it, and there is no colon after the species name.
+• What it means: Carl Linnaeus is the definitive biological author who first named and described this bird in his 1766 book Systema Naturae. He originally assigned it to the genus Muscicapa.
+
+Line 2: The Subsequent Usage (Chresonymy)
+
+1.825 Milvulus tyrannus: Swainson, Zool. Journ., 2: 123.
+• The Punctuation: Note the colon (:) between tyrannus and Swainson.
+• What it means: The colon explicitly dictates that Swainson did not invent this species. Instead, he moved it into the genus Milvulus in his 1825 paper. The colon stops researchers from accidentally crediting Swainson as the original discoverer.
+
+Line 3: The First AOU Baseline
+
+1.886 Milvulus tyrannus (Linnaeus) — AOU Check-list, ed. 1: 247.
+• The Punctuation: Linnaeus is now wrapped in parentheses.
+• What it means: When the AOU published its very first checklist in 1886, they accepted Swainson’s generic change (Milvulus). The parentheses tell you: "Linnaeus named this bird, but he did not call it Milvulus—someone else moved it here later."
+
+Line 4: Another Move
+
+1.910 Muscivora tyrannus (Linnaeus) — AOU Check-list, ed. 3: 204.
+• The Punctuation: Parentheses remain around Linnaeus, but the genus changes to Muscivora.
+• What it means: By 1910, ornithologists decided the bird belonged to the genus Muscivora. Linnaeus gets original credit, but the parentheses keep reminding you that Muscivora was not his original idea.
+
+Lines 5 & 6: The Modern Shift (Correcting History)
+
+1.983 Tyrannus savana Vieillot, Hist. Nat. Ois. Amer. Sept. 1: 72.
+1.985 Tyrannus savana Vieillot — AOU Check-list, ed. 6: 472.
+• The Punctuation: Linnaeus completely vanishes from the authority line, replaced by Vieillot without parentheses.
+• What it means: In the 1980s, taxonomists discovered that Linnaeus's original 1766 description was fundamentally flawed or legally invalid under code rules for this specific population. A French ornithologist named Louis Pierre Vieillot had independently published a valid description of the bird in 1808 as Tyrannus savana. Because Vieillot originally placed it in Tyrannus and it is still in Tyrannus, his name features no parentheses. The AOU officially adopted this in 1885.
+Would you like to look at another example involving hybrids, or explore how the AOS formats misidentifications where historical authors published data on the entirely wrong bird?
+• 
+darwiniana.org
+Ornithology -- AOU Introduction
+Checklist, Common Name, Scientific Name, Original Name, Describer. 1886, Fork-tailed Flycatcher, Milvulus tyrannus, Muscicapa Tyra...
+• 
+American Ornithological Society
+AOU Checklist of North and Middle American Birds
+The American Ornithological Society's (AOS) Checklist is the official source on the taxonomy of birds found in North and Middle Am...
+

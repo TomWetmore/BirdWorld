@@ -61,6 +61,21 @@
 			path = BirdLib;
 			sourceTree = "<group>";
 		};
+		2604FEF83085A267009696AF /* Checklists */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Checklists;
+			sourceTree = "<group>";
+		};
+		2604FEFA3085A267009696AF /* Documents */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Documents;
+			sourceTree = "<group>";
+		};
+		2604FEFC3085A267009696AF /* Resources */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +96,9 @@
 		000000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
+				2604FEF83085A267009696AF /* Checklists */,
+				2604FEFA3085A267009696AF /* Documents */,
+				2604FEFC3085A267009696AF /* Resources */,
 				2604FB1030840D47009696AF /* BirdLib */,
 				000000000000000000000010 /* BirdTest */,
 				2604FD01308412AA009696AF /* Frameworks */,
