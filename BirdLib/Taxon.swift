@@ -3,55 +3,17 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 17 October 2026.
-//  Last changed on 18 October 2026
+//  Last changed on 19 October 2026
 //
 
 import Foundation
 
-/// Allowed levels in Taxonomies. (May need to add more.)
-///
-public enum TaxonLevel: Int {
 
-    case order = 0
-    case suborder
-    case family
-    case subfamily
-    case genus
-    case subgenus
-    case species
-    case subspecies
-}
 
-extension TaxonLevel {
-
-    var depth: Int {
-        switch self {
-        case .order:      0
-        case .suborder:   1
-        case .family:     2
-        case .subfamily:  3
-        case .genus:      4
-        case .subgenus:   5
-        case .species:    6
-        case .subspecies: 7
-        }
-    }
-
-    public var name: String {
-        switch self {
-        case .order:      "order"
-        case .suborder:   "suborder"
-        case .family:     "family"
-        case .subfamily:  "subfamily"
-        case .genus:      "genus"
-        case .subgenus:   "subgenus"
-        case .species:    "species"
-        case .subspecies: "subspecies"
-        }
-    }
-}
-
-/// Taxon.
+/// Taxon is the fundamental type used by the Bird World. Each Taxon represents one element
+/// of a taxonomy tree. Each Taxon has a TaxonLevel (e.g., order, family, species), and a name.
+/// Taxa at different levels are not yet there own types, though some may become so in the
+/// future. More properties may be added to Taxon as applications arise.
 ///
 public final class Taxon: CustomStringConvertible {
 
@@ -59,11 +21,14 @@ public final class Taxon: CustomStringConvertible {
     public let code: String? // Wetmore four-letter code for species/groups.
     public let englishName: String?
     public let scientificName: String?
-    public let bandingCode: String?  // "Official" USFWS banding code.
+    public let bandingCode: String?  // USFWS banding code.
 
     public weak var parent: Taxon? = nil
     public var children: [Taxon] = []
 
+    /// Create a Taxon. Only level is required, though without at least one name property,
+    /// it will not be very interesting.
+    ///
     public init(level: TaxonLevel, code: String? = nil, englishName: String? = nil,
                 scientificName: String? = nil, bandingCode: String? = nil) {
 
@@ -75,43 +40,80 @@ public final class Taxon: CustomStringConvertible {
     }
 }
 
-/// Methods that show Taxa.
+/// Methods that show a Taxon.
 ///
 extension Taxon {
 
-    /// Description of the Taxon.
+    /// The description of a single Taxon, made up of the level and the name.
     ///
     public var description: String {
-        "\(level.name): \(name)\n"
+        "\(level.rawValue): \(name)\n"
     }
 
-    /// Display name of the Taxon.
+    /// The display name of a Taxon. Shows whatever name properties are available.
     ///
     public var name: String {
+
         switch (scientificName, englishName) {
         case let (scientific?, english?):
             return "\(scientific): \(english)"
+
         case let (scientific?, nil):
             return scientific
+
         case let (nil, english?):
             return english
+            
         case (nil, nil):
             return "no name"
         }
     }
-}
 
-extension Taxon {
-
+    /// Show the Taxonomy at this Taxon and below.
+    ///
     public func show(through level: TaxonLevel, indent: Int = 0) {
 
-        guard self.level.rawValue <= level.rawValue else { return }
-
+        // Don't show Taxa below the chosen level.
+        guard self.level.depth <= level.depth else {
+            return
+        }
         print("\(String(repeating: " ", count: indent))\(self)")
-
+        // Recurse to the children of this Taxon.
         for child in children {
             child.show(through: level, indent: indent + 4)
         }
     }
 }
 
+/// Levels in Taxonomies. Note the back ticks on "class". This allows "class" to be
+/// used as an identifier.
+///
+public enum TaxonLevel: String, CaseIterable {
+
+    case `class`
+    case order
+    case suborder
+    case family
+    case subfamily
+    case genus
+    case subgenus
+    case species
+    case subspecies
+
+    /// Return the depth of a Taxon, class at the top, subspecies at the bottom.
+    var depth: Int {
+
+        switch self {
+
+        case .class:       0
+        case .order:      10
+        case .suborder:   20
+        case .family:     30
+        case .subfamily:  40
+        case .genus:      50
+        case .subgenus:   60
+        case .species:    70
+        case .subspecies: 80
+        }
+    }
+}

@@ -3,78 +3,34 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 17 October 2026.
-//  Last changed on 18 October 2026.
+//  Last changed on 19 October 2026.
 //
 
 import Foundation
 
-
-
+/// Read taxa from a delimited file.
+///
 public func readTaxa(from url: URL) throws -> [Taxon] {
 
-    let text = try String(contentsOf: url, encoding: .utf8)
+    let rows = try readDelimitedFile(url)
     var taxa: [Taxon] = []
 
-    for (index, rawLine) in text.components(separatedBy: .newlines).enumerated() {
+    for (index, fields) in rows.enumerated() {
 
-        let line = rawLine.trimmingCharacters(in: .whitespaces)
+        if let level = TaxonLevel(rawValue: fields[0]) {
 
-        // Ignore blank lines.
-        guard !line.isEmpty else {
-            continue
-        }
-
-        let fields = line
-            .split(separator: ":", omittingEmptySubsequences: false)
-            .map { $0.trimmingCharacters(in: .whitespaces) }
-
-        guard fields.count >= 2 else {
-            throw TaxaFileError.invalidLine(index + 1, line)
-        }
-
-        switch fields[0] {
-
-        case "order":
             try requireFieldCount(fields, 2, line: index + 1)
-            taxa.append(Taxon(
-                level: .order,
-                englishName: nil,
-                scientificName: fields[1],
-                bandingCode: nil))
 
-        case "family":
-            try requireFieldCount(fields, 2, line: index + 1)
             taxa.append(Taxon(
-                level: .family,
-                code: nil,
-                englishName: nil,
-                scientificName: fields[1],
-                bandingCode: nil))
+                level: level,
+                scientificName: fields[1]))
 
-        case "subfamily":
-            try requireFieldCount(fields, 2, line: index + 1)
-            taxa.append(Taxon(
-                level: .subfamily,
-                code: nil,
-                englishName: nil,
-                scientificName: fields[1],
-                bandingCode: nil))
-
-        case "genus":
-            try requireFieldCount(fields, 2, line: index + 1)
-            taxa.append(Taxon(
-                level: .genus,
-                code: nil,
-                englishName: nil,
-                scientificName: fields[1],
-                bandingCode: nil))
-
-        default:
-            // Species:
-            // code: English name: scientific name [: banding code]
+        } else {
 
             guard fields.count == 3 || fields.count == 4 else {
-                throw TaxaFileError.invalidLine(index + 1, line)
+                throw TaxaFileError.invalidLine(
+                    index + 1,
+                    fields.joined(separator: ":"))
             }
 
             taxa.append(Taxon(
@@ -90,7 +46,7 @@ public func readTaxa(from url: URL) throws -> [Taxon] {
 }
 
 enum TaxaFileError: Error {
-    
+
     case invalidLine(Int, String)
     case wrongFieldCount(Int, Int, Int)
 }

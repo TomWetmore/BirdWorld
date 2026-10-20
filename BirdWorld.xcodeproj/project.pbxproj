@@ -29,6 +29,7 @@
 		2604FB1430840D7A009696AF /* Exceptions for "BirdLib" folder in "BirdLib" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				DelimitedFile.swift,
 				ReadTaxa.swift,
 				Taxon.swift,
 				Taxonomy.swift,
@@ -38,6 +39,7 @@
 		2604FB1530840D9C009696AF /* Exceptions for "BirdLib" folder in "BirdTest" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				DelimitedFile.swift,
 				ReadTaxa.swift,
 				Taxon.swift,
 				Taxonomy.swift,

@@ -3,13 +3,13 @@
 // BirdTest
 //
 // Created by Thomas Wetmore on 17 October 2026.
-// Last changed on 18 October 2026.
+// Last changed on 19 October 2026.
 //
 
 import Foundation
 import BirdLib
 
-let taxon = Taxon(level: TaxonLevel.species, englishName: "Common Loon")
+let taxon = Taxon(level: .species, englishName: "Common Loon")
 print(taxon)
 
 let url = URL(fileURLWithPath: "/Users/ttw4/Desktop/BirdWorld/Resources/taxa")
@@ -30,4 +30,4 @@ for taxon in taxonomy.roots {
     }
 }
 
-taxonomy.show(through: TaxonLevel.genus)
+taxonomy.show(through: .genus)

@@ -1,8 +1,9 @@
 //
-//  MakeTaxonomy.swift
+//  Taxonomy.swift
 //  BirdLib
 //
-//  Created by Thomas Wetmore on 10/18/26.
+//  Created by Thomas Wetmore on 18 October 2026.
+//  Last changed on 19 October 2026.
 //
 
 import Foundation
