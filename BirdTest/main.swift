@@ -21,7 +21,7 @@ for taxon in taxa {
 }
 
 //
-let taxonomy = Taxonomy(taxa: taxa)
+let taxonomy = try Taxonomy(taxa: taxa)
 print("Showing taxonomy\n")
 for taxon in taxonomy.roots {
     print(taxon)
@@ -31,3 +31,7 @@ for taxon in taxonomy.roots {
 }
 
 taxonomy.show(through: .genus)
+
+let species = taxonomy.codeIndex["CoLn"]
+print(species!)
+

@@ -8,11 +8,11 @@
 
 import Foundation
 
-/// Read taxa from a delimited file.
+/// Read Taxa from a colon-delimited file.
 ///
 public func readTaxa(from url: URL) throws -> [Taxon] {
 
-    let rows = try readDelimitedFile(url)
+    let rows: [[String]] = try readDelimitedFile(url)
     var taxa: [Taxon] = []
 
     for (index, fields) in rows.enumerated() {

@@ -40,6 +40,12 @@ public final class Taxon: CustomStringConvertible {
     }
 }
 
+extension Taxon {
+    var species: [Taxon] {
+        [self].species
+    }
+}
+
 /// Methods that show a Taxon.
 ///
 extension Taxon {
