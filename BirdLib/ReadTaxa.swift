@@ -3,7 +3,7 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 17 October 2026.
-//  Last changed on 19 October 2026.
+//  Last changed on 22 October 2026.
 //
 
 import Foundation
@@ -12,14 +12,17 @@ import Foundation
 ///
 public func readTaxa(from url: URL) throws -> [Taxon] {
 
-    let rows: [[String]] = try readDelimitedFile(url)
+    let file = try DelimitedFile(url)
     var taxa: [Taxon] = []
 
-    for (index, fields) in rows.enumerated() {
+    while let line = try file.getFields() {
+
+        let fields = line.fields
+        let lineNumber = line.number
 
         if let level = Level(rawValue: fields[0]) {
 
-            try requireFieldCount(fields, 2, line: index + 1)
+            try requireFieldCount(fields, 2, line: lineNumber)
 
             taxa.append(Taxon(
                 level: level,
@@ -29,7 +32,7 @@ public func readTaxa(from url: URL) throws -> [Taxon] {
 
             guard fields.count == 3 || fields.count == 4 else {
                 throw TaxaFileError.invalidLine(
-                    index + 1,
+                    lineNumber,
                     fields.joined(separator: ":"))
             }
 
@@ -51,7 +54,7 @@ enum TaxaFileError: Error {
     case wrongFieldCount(Int, Int, Int)
 }
 
-private func requireFieldCount(_ fields: [String], _ expected: Int, line: Int) throws {
+func requireFieldCount(_ fields: [String], _ expected: Int, line: Int) throws {
 
     guard fields.count == expected else {
         throw TaxaFileError.wrongFieldCount(line, expected, fields.count)

@@ -3,7 +3,7 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 18 October 2026.
-//  Last changed on 29 October 2026.
+//  Last changed on 22 October 2026.
 //
 
 import Foundation
@@ -42,14 +42,12 @@ private func makeTaxonomy(from taxa: [Taxon]) -> [Taxon] {
               last.level.depth >= taxon.level.depth {
             stack.removeLast()
         }
-
         if let parent = stack.last {
             parent.children.append(taxon)
             taxon.parent = parent
         } else {
             roots.append(taxon)
         }
-
         stack.append(taxon)
     }
 
@@ -157,7 +155,7 @@ extension Taxonomy {
                 species.code,
                 into: &codeIndex,
                 for: species,
-                field: "four-letter code",
+                field: "four-lettter code",
                 requirement: requirements.code
             )
 
@@ -198,6 +196,25 @@ extension Taxonomy {
     }
     func taxon(bandingCode: String) -> Taxon? {
         return bandingCodeIndex[bandingCode]
+    }
+}
+
+/// Lookup methods.
+///
+extension Taxonomy {
+
+    /// Try to find a Species Taxon from the Taxonomy using the indexes.
+    ///
+    func getSpecies(_ string: String) -> Taxon? {
+        // Use code first
+        var species = codeIndex[string]
+        if species == nil {
+            species = englishNameIndex[string]
+        }
+        if species == nil {
+            species = scientificNameIndex[string]
+        }
+        return species
     }
 }
 

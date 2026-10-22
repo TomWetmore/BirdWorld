@@ -1,0 +1,384 @@
+
+o: t wetmore
+d: 18 oct 2026
+CaGo: 40+ inc flyby fk seven
+ABDk: 40+ var
+Mall: 10+ most stage
+NPnt: 8 stage
+GWTl: 35+ inc stage & seven ocean
+Buff: 1 m flyby seven ocean
+LTDk: 3 flyby seven ocean
+CoEi: 30+ seven ocean
+WWSc: 90+ seven ocean
+SuSc: 15+ seven ocean
+BkSc: 60+ seven ocean
+RBMg: 26+ inc 1 stage, fk 25+ seven ocen
+RTLn: 4+ seven ocean
+CoLn: 1+ seven ocean
+HoGb: 2+ seven ocean
+NGan: 30+ seven ocean
+DCCm: 300+ inc migr fks
+GBHn: 1 flyby north marsh
+GrEg: 158+ most south marsh
+SnEg: 1 stage
+NHar: 2 inc m main pan, south scrub
+BEag: 2 ad eagle tree
+BBPv: 32+ inc 20+ main pan, 12+ others
+SePv: 6+ main pan
+GYel: 12+ var most pans
+LYel: 5 inc 2 main pan, 3 sm pan
+PeSa: 3+ main pan
+Dunl: 50+ inc 35+ main pan, 15+ stage
+LsSa: 2+ edge main pan
+SeSa: 8+ main pan
+RBGu: 60+ inc 45+ north marsh, rest seven`
+HeGu: mn most seven`
+GBGu: 2-3 seven`
+RoPg: 80+ n/refuge
+DoWo: h n/goodno
+BlJy: 6+ rdside var
+ACro: 3-4 rdside var
+TrSw: 6+ o/cross
+BCCh: 4-5 h rdside
+GCKl: 2-3 h rdside
+RBNh: 6+ inc 3+ x/north field, 3+ pines
+ARob: 10+ rdside
+NMck: 4-5 inc wardens, seven
+GCat: 2-3 h rdside
+APip: 2+ flyby main pan early am
+YRmW: 35+ thruout
+ETow: 2-3 h rdside
+SoSp: 10+ rdside inc singing n/refuge`
+WTSp: 12+ h rdside
+NCrd: 3+ h rdside
+HoSp: h n/refuge
+AmGf: 5+ inc north pool olook
+RWBk: 5-6 inc x/north field
+
+o: m goetsches, s grinley
+d: 18 oct 2026
+Canada Goose :  41
+Mallard :  7
+American Black Duck :  35
+Northern Pintail :  2
+Common Eider :  145
+Surf Scoter :  90
+White-winged Scoter :  120
+Black Scoter :  110
+Long-tailed Duck :  2
+Bufflehead :  1
+Red-breasted Merganser :  36
+Mourning Dove :  1
+Black-bellied Plover :  116
+Semipalmated Plover :  23
+Greater Yellowlegs :  60
+Dunlin :  133
+Semipalmated Sandpiper :  45
+Red-throated Loon :  5
+Common Loon :  2
+Northern Gannet :  250
+Double-crested Cormorant :  10
+Snowy Egret :  2
+Great Egret :  43
+Great Blue Heron :  1
+Northern Harrier :  2
+Peregrine Falcon :  2
+Eastern Phoebe :  1
+American Robin :  2
+Field Sparrow :  2
+Dark-eyed Junco :  1
+White-throated Sparrow :  1
+Savannah Sparrow :  1
+Song Sparrow :  1
+Yellow-rumped Warbler :  12
+
+o: a sanford
+d: 18 oct 2026
+Canada Goose :  6
+Mallard :  2
+American Black Duck :  11
+Green-winged Teal :  1
+White-winged Scoter :  2
+Black Scoter :  1
+Red-breasted Merganser :  1
+Black-bellied Plover :  34
+Semipalmated Plover :  2
+Greater Yellowlegs :  13
+Dunlin :  5
+Herring Gull :  3
+Double-crested Cormorant :  14
+Great Egret :  4
+Great Blue Heron :  2
+Northern Harrier :  1
+Downy Woodpecker :  2
+Hairy Woodpecker :  1
+Blue Jay :  4
+American Crow :  1
+Black-capped Chickadee :  2
+Ruby-crowned Kinglet :  4
+Golden-crowned Kinglet :  3
+Red-breasted Nuthatch :  1
+European Starling :  7
+Gray Catbird :  1
+Northern Mockingbird :  6
+Hermit Thrush :  1
+American Robin :  6
+House Finch :  1
+Pine Siskin :  18
+American Goldfinch :  1
+Dark-eyed Junco :  3
+White-throated Sparrow :  3
+Savannah Sparrow :  9
+Song Sparrow :  1
+Yellow-rumped Warbler: 30
+Northern Cardinal :  1
+
+o: e labato
+d: 18 oct 2026
+Canada Goose :  17
+Mallard
+American Black Duck
+Northern Pintail
+Common Eider
+Surf Scoter
+White-winged Scoter
+Black Scoter
+Red-breasted Merganser
+Black-bellied Plover :  3
+Greater Yellowlegs :  12
+Bonaparte's Gull :  1 seven
+ Herring Gull
+Great Black-backed Gull :  2
+Red-throated Loon :  1
+Double-crested Cormorant
+Great Egret :  4
+Eastern Phoebe :  1
+Blue Jay :  5
+Black-capped Chickadee :  5
+Tufted Titmouse :  1
+Ruby-crowned Kinglet :  2
+Golden-crowned Kinglet :  1
+White-breasted Nuthatch :  1
+Red-breasted Nuthatch :  1
+Gray Catbird :  3
+Northern Mockingbird :  2
+American Robin :  3
+House Sparrow :  2
+House Finch :  6
+American Goldfinch :  2
+Dark-eyed Junco :  2
+White-crowned Sparrow :  1
+White-throated Sparrow :  2
+Savannah Sparrow :  3
+Song Sparrow :  10
+Eastern Towhee :  1
+Nashville Warbler :  1 gate
+Blackpoll Warbler :  1
+Yellow-rumped Warbler :  40
+Dickcissel :  1 n/hellcat xwiing
+
+o: s zhang
+d: 18 oct 2026
+Canada Goose :  12
+Gadwall :  3
+Mallard :  40
+American Black Duck :  20
+Northern Pintail :  20
+Green-winged Teal :  30
+Greater Scaup :  fk 25
+Common Eider :  150
+Surf Scoter :  200
+White-winged Scoter :  200
+Black Scoter :  400
+Long-tailed Duck :  2
+Bufflehead :  1
+Red-breasted Merganser :  180 inc mn fks o/land
+Mourning Dove :  1
+Black-bellied Plover :  150
+American Golden-Plover :  1
+Semipalmated Plover :  40
+Long-billed Dowitcher :  2
+Greater Yellowlegs :  30
+Red Knot :  2
+Sanderling :  40
+Dunlin :  100
+Semipalmated Sandpiper :  8
+Razorbill :  1
+Bonaparte's Gull :  6
+Ring-billed Gull :  20
+Herring Gull :  60
+Great Black-backed Gull :  12
+Pied-billed Grebe :  2
+Horned Grebe :  3
+Red-throated Loon :  110 steady movement p.m.
+Common Loon :  4
+Northern Gannet :  40
+Double-crested Cormorant :  200
+Snowy Egret :  2
+Great Egret :  8
+Great Blue Heron :  1
+Northern Harrier :  1
+Northern Saw-whet Owl :  2
+Red-bellied Woodpecker :  2
+Downy Woodpecker :  4
+Northern Flicker :  2
+Blue Jay :  8
+American Crow :  2
+Common Raven :  8
+Black-capped Chickadee :  5
+Tree Swallow :  2
+Ruby-crowned Kinglet :  9
+Golden-crowned Kinglet :  6
+Red-breasted Nuthatch :  3
+Gray Catbird :  4
+Northern Mockingbird :  1
+Hermit Thrush :  1
+American Robin :  8
+American Pipit :  2
+House Finch :  1
+Pine Siskin :  8
+American Goldfinch :  2
+Lapland Longspur :  1
+Dark-eyed Junco :  4
+White-throated Sparrow :  10
+Savannah Sparrow :  6
+Song Sparrow :  10
+Swamp Sparrow :  5
+Red-winged Blackbird :  2
+Blackpoll Warbler :  2
+Yellow-rumped Warbler :  80
+
+o: m&n drury
+d: 18 oct 2026
+Canada Goose :  60
+Mallard :  8
+American Black Duck :  50
+Northern Pintail :  27
+Green-winged Teal :  8
+Greater Scaup :  20 seven ocean
+Common Eider :  30
+Surf Scoter :  5
+White-winged Scoter :  75
+Black Scoter :  100
+Long-tailed Duck :  2
+Bufflehead :  2 seven
+Red-breasted Merganser :  85 seven
+Mourning Dove :  1
+Black-bellied Plover :  65
+Semipalmated Plover :  32
+Greater Yellowlegs :  11
+Red Knot :  2 seven rks
+Dunlin :  25
+Ring-billed Gull :  2
+Herring Gull :  120
+Great Black-backed Gull :  4
+Horned Grebe :  2 seven
+Red-throated Loon :  8+ seven
+Common Loon :  12 seven
+Northern Gannet :  5 seven
+Double-crested Cormorant :  88
+Snowy Egret :  1
+Great Egret :  1
+Great Blue Heron :  3
+Cooper's Hawk :  1 pines
+Northern Harrier :  2
+Red-bellied Woodpecker :  1 pines
+Downy Woodpecker :  1
+Blue Jay :  2
+American Crow :  1
+Tree Swallow :  6 seven beach
+Ruby-crowned Kinglet :  2 pines
+Golden-crowned Kinglet :  10 pines
+Red-breasted Nuthatch :  1 pines
+Gray Catbird :  1
+Northern Mockingbird :  2
+American Robin :  3
+White-throated Sparrow :  1
+Song Sparrow :  1
+Red-winged Blackbird :  1 rdside stage
+Yellow-rumped Warbler :  11 pines
+
+o: s santino
+d: 18 oct 2026
+Canada Goose :  16
+Mallard :  3
+American Black Duck :  8
+Northern Pintail :  5
+Green-winged Teal :  10
+Black-bellied Plover :  54
+Semipalmated Plover :  4
+Greater Yellowlegs :  14
+Dunlin :  7
+Herring Gull :  4
+Double-crested Cormorant :  510
+Great Egret :  3
+Great Blue Heron :  1
+Cooper's Hawk :  1
+Northern Harrier :  1
+Belted Kingfisher :  1
+Eastern Phoebe :  1
+Blue Jay :  3
+Black-capped Chickadee :  1
+Tree Swallow :  1
+Ruby-crowned Kinglet :  4
+Golden-crowned Kinglet :  2
+European Starling :  6
+Gray Catbird :  1
+Northern Mockingbird :  2
+American Robin :  7
+Pine Siskin :  1
+American Goldfinch :  5
+White-throated Sparrow :  4
+Savannah Sparrow :  5
+Song Sparrow :  1
+Blackpoll Warbler :  1
+Yellow-rumped Warbler :  19
+
+o: g depalma
+d: 18 oct 2026
+Canada Goose :  28
+Mallard :  18
+American Black Duck :  31
+Northern Pintail :  39
+Green-winged Teal :  5
+Common Eider :  15
+Surf Scoter :  4
+White-winged Scoter :  14
+Black Scoter :  75
+Red-breasted Merganser :  6
+Black-bellied Plover :  9 main pan
+Greater Yellowlegs :  14
+Dunlin :  29 main pan
+Ring-billed Gull :  3
+Herring Gull :  35
+Great Black-backed Gull :  5
+Pied-billed Grebe :  2
+Horned Grebe :  1 seven
+Red-throated Loon :  1 seven
+Double-crested Cormorant :  200 flyby fks
+Snowy Egret :  1
+Great Egret :  16
+Great Blue Heron :  1
+Northern Harrier :  1
+Red-bellied Woodpecker :  1 hellcat bwalk
+Northern Flicker :  3
+Eastern Phoebe :  3
+Blue Jay :  8
+Black-capped Chickadee :  1
+Ruby-crowned Kinglet :  7
+Golden-crowned Kinglet :  1
+Red-breasted Nuthatch :  1
+Gray Catbird :  3
+Northern Mockingbird :  3
+American Robin :  11
+House Finch :  4
+Pine Siskin :  2 wardens, five bwalk
+American Goldfinch :  4
+Dark-eyed Junco :  1
+White-throated Sparrow :  6
+Nelson's Sparrow :  1 ramp
+Savannah Sparrow :  2
+Song Sparrow :  5
+Swamp Sparrow :  1
+Yellow-rumped Warbler :  35
+Northern Cardinal :  1

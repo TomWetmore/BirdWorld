@@ -29,9 +29,12 @@
 		2604FB1430840D7A009696AF /* Exceptions for "BirdLib" folder in "BirdLib" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				AdditionRecords.swift,
+				AnnualRecords.swift,
+				BirdRecord.swift,
+				Day.swift,
 				DelimitedFile.swift,
 				ReadTaxa.swift,
-				Sighting.swift,
 				Species.swift,
 				Taxon.swift,
 				Taxonomy.swift,
@@ -41,9 +44,12 @@
 		2604FB1530840D9C009696AF /* Exceptions for "BirdLib" folder in "BirdTest" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				AdditionRecords.swift,
+				AnnualRecords.swift,
+				BirdRecord.swift,
+				Day.swift,
 				DelimitedFile.swift,
 				ReadTaxa.swift,
-				Sighting.swift,
 				Species.swift,
 				Taxon.swift,
 				Taxonomy.swift,
@@ -82,6 +88,11 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		265601C03089F81A00828CDD /* Java */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Java;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +113,7 @@
 		000000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
+				265601C03089F81A00828CDD /* Java */,
 				2604FEF83085A267009696AF /* Checklists */,
 				2604FEFA3085A267009696AF /* Documents */,
 				2604FEFC3085A267009696AF /* Resources */,
