@@ -17,7 +17,7 @@ public func readTaxa(from url: URL) throws -> [Taxon] {
 
     for (index, fields) in rows.enumerated() {
 
-        if let level = TaxonLevel(rawValue: fields[0]) {
+        if let level = Level(rawValue: fields[0]) {
 
             try requireFieldCount(fields, 2, line: index + 1)
 

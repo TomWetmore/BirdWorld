@@ -31,6 +31,8 @@
 			membershipExceptions = (
 				DelimitedFile.swift,
 				ReadTaxa.swift,
+				Sighting.swift,
+				Species.swift,
 				Taxon.swift,
 				Taxonomy.swift,
 			);
@@ -41,6 +43,8 @@
 			membershipExceptions = (
 				DelimitedFile.swift,
 				ReadTaxa.swift,
+				Sighting.swift,
+				Species.swift,
 				Taxon.swift,
 				Taxonomy.swift,
 			);

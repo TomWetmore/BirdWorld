@@ -3,7 +3,7 @@
 // BirdTest
 //
 // Created by Thomas Wetmore on 17 October 2026.
-// Last changed on 19 October 2026.
+// Last changed on 21 October 2026.
 //
 
 import Foundation
@@ -34,4 +34,9 @@ taxonomy.show(through: .genus)
 
 let species = taxonomy.codeIndex["CoLn"]
 print(species!)
+let family = species!.parent!.parent!
+[family].show(through: .species, indent: 4)
+let order = family.parent!
+[family, order].show(through: .genus, indent: 1)
+taxonomy.roots.families.forEach { print($0) }
 

@@ -3,21 +3,18 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 17 October 2026.
-//  Last changed on 19 October 2026
+//  Last changed on 21 October 2026
 //
 
 import Foundation
 
-
-
-/// Taxon is the fundamental type used by the Bird World. Each Taxon represents one element
-/// of a taxonomy tree. Each Taxon has a TaxonLevel (e.g., order, family, species), and a name.
-/// Taxa at different levels are not yet there own types, though some may become so in the
-/// future. More properties may be added to Taxon as applications arise.
+/// Taxon is a fundamental type in the Bird World. Each Taxon represents one element in a
+/// Taxonomy. Each Taxon has a Level (e.g., order, family, species), and a name. Taxa at
+/// different levels are not yet there own types, though some may become so in the future.
 ///
 public final class Taxon: CustomStringConvertible {
 
-    public let level: TaxonLevel
+    public let level: Level
     public let code: String? // Wetmore four-letter code for species/groups.
     public let englishName: String?
     public let scientificName: String?
@@ -29,7 +26,7 @@ public final class Taxon: CustomStringConvertible {
     /// Create a Taxon. Only level is required, though without at least one name property,
     /// it will not be very interesting.
     ///
-    public init(level: TaxonLevel, code: String? = nil, englishName: String? = nil,
+    public init(level: Level, code: String? = nil, englishName: String? = nil,
                 scientificName: String? = nil, bandingCode: String? = nil) {
 
         self.level = level
@@ -41,8 +38,16 @@ public final class Taxon: CustomStringConvertible {
 }
 
 extension Taxon {
+
+    // All species Taxa at or below a Taxon.
     var species: [Taxon] {
         [self].species
+    }
+
+    /// All genera Taxa at or below a Taxon.
+    ///
+    var genera: [Taxon] {
+        [self].genera
     }
 }
 
@@ -53,10 +58,10 @@ extension Taxon {
     /// The description of a single Taxon, made up of the level and the name.
     ///
     public var description: String {
-        "\(level.rawValue): \(name)\n"
+        "\(level.rawValue): \(name)"
     }
 
-    /// The display name of a Taxon. Shows whatever name properties are available.
+    /// The display name of a Taxon. Shows the available.
     ///
     public var name: String {
 
@@ -77,7 +82,7 @@ extension Taxon {
 
     /// Show the Taxonomy at this Taxon and below.
     ///
-    public func show(through level: TaxonLevel, indent: Int = 0) {
+    public func show(through level: Level, indent: Int = 0) {
 
         // Don't show Taxa below the chosen level.
         guard self.level.depth <= level.depth else {
@@ -91,10 +96,9 @@ extension Taxon {
     }
 }
 
-/// Levels in Taxonomies. Note the back ticks on "class". This allows "class" to be
-/// used as an identifier.
+/// Taxon levels. The back ticks on "class" allow it to be used as an identifier.
 ///
-public enum TaxonLevel: String, CaseIterable {
+public enum Level: String, CaseIterable {
 
     case `class`
     case order
