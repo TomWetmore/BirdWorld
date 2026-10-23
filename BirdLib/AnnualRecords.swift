@@ -8,17 +8,13 @@
 
 import Foundation
 
+import Foundation
+
 public func readAnnualRecords(from url: URL, taxonomy: Taxonomy) throws -> [BirdRecord] {
 
     let file = try DelimitedFile(url)
     var records: [BirdRecord] = []
-
-    enum State {
-        case expectingSpecies
-        case readingRecords(species: Taxon)
-    }
-
-    var state = State.expectingSpecies
+    var currentKind: RecordKind? = nil
 
     // Loop over all lines in the file.
     //
@@ -27,8 +23,33 @@ public func readAnnualRecords(from url: URL, taxonomy: Taxonomy) throws -> [Bird
         let fields = line.fields
         let lineNumber = line.number
 
+        // Determine whether this is a heading or a sighting.
+        if isHeading(fields) {
+
+            let key = fields[0]
+
+            if let species = taxonomy.getSpecies(key) {
+                currentKind = .species(species)
+            } else if let group = taxonomy.getGroup(key) {
+                currentKind = .group(group)
+            } else {
+                throw RecordFileError.invalidLine(
+                    lineNumber, "Unknown bird: \(key)")
+            }
+
+        } else {
+
+            // A sighting must follow a species or group heading.
+            guard let kind = currentKind else {
+                throw RecordFileError.invalidLine(
+                    lineNumber, "Sighting before species heading")
+            }
+
+            // Parse date, notes, and observer from fields.
+            // Construct BirdRecord(kind: kind, ...)
+            // Append to records.
+        }
     }
 
-    return []
-
+    return records
 }

@@ -1,0 +1,132 @@
+spLn: Loon species: Gavia
+apLn: Arctic or Pacific Loon: ArLn, PaLn
+spGb: Grebe species: Podicipedidae
+wcGb: Western or Clark's Grebe: WeGb, ClGb
+spSh: Shearwater species: Calonectris, Puffinus, Ardenna
+wlSP: Wilson's or Leach's Storm-Petrel: WiSP, LcSP
+spSP: Storm-Petrel species: Hydrobatidae
+spCm: Cormorant species: Phalacrocorax
+spNH: Black- or Yellow-crowned Night Heron: BCNH, YCNH
+spEg: Egret species: SnEg, GrEg
+spHn: Heron species: Ardeidae
+spIb: Ibis species: WhIb, GlIb, WFIb
+sVul: Vulture species: TVul, BVul
+sWDk: Whistling Duck species: Dendrocygna
+srGo: Snow or Ross's Goose: SnGo, RoGo
+spGo: Goose species: Branta, Anser
+spSn: Swan species: Cygnus
+sWig: Wigeon species: EWig, AWig
+spTl: Teal species: GWTl, BWTl, CiTl
+sAna: Anas species: Anas
+sScp: Scaup species: GScp, LScp
+sAyt: Aythya species: Aythya
+spEi: Eider species: Somateria, Polysticta
+dkSc: Dark scoter species: SuSc, BkSc
+spSc: Scoter species: Melanitta
+sGld: Goldeneye species: CGld, BGld
+spMg: Merganser species: Mergus, Lophodytes
+spDk: Duck species: Anatinae
+spKt: Kite species: Rostrhamus, Elanus, Ictinia, Elanoides
+lgAc: Large Accipiter species: CoHw, NGos
+sAcc: Accipter species: Accipiter
+sBut: Buteo species: Buteo
+sEag: Eagle species: BEag, GEag
+sCrn: Crane species: SCrn, WCrn
+spHw: Hawk species: Buteo, NHar, Accipiter
+smFa: Small falcon species: AKes, Merl
+lgFa: Large falcon species: Gyrf, PeFa, PrFa
+spFa: Falcon species: Falco
+spGr: Grouse species: Bonasa, Falcipennis, Dendragapus, Tympanuchus
+spPt: Ptarmigan species: WiPt, RoPt, WTPt
+spQu: Quail species: Colinus, Callipepla
+ckRa: Clapper or King Rail: ClRa, KiRa
+spRa: Rail species: Coturnicops, Rallus, Porzana, Laterallus
+sGPv: Golden-Plover species: AGPv, PGPv
+spPv: Plover species: Charadriinae
+sOys: Oystercatcher species: AOys, BOys
+sYel: Yellowlegs species: GYel, LYel
+sTri: Tringid sandpiper: Tringa
+spCl: Curlew species: Numenius
+spGd: Godwit species: Limosa
+sTrn: Turnstone species: Arenaria
+peep: Peep sandpiper: LsSa, SeSa, WeSa, WRSa, BaSa
+wbSa: White-rumped or Baird's Sandpiper: WRSa, BaSa
+sCal: Calidris species: Calidris
+spSa: Sandpiper species: Scolopacinae
+spDw: Dowitcher species: Limnodromus
+spPr: Phalarope species: Phalaropus
+sSku: Skua species: GSku, SSku
+spJg: Jaeger species: PoJg, PaJg, LTJg
+spGu: Gull species: Larus, Rissa
+caTn: Common or Arctic Tern: CoTn, ArTn
+sStr: Sterna species: Sterna
+spTn: Tern species: Sterna, Chlidonias
+lgTn: Large Tern species: CaTn, RyTn
+spMr: Murre species: Uria
+lgAl: Large Alcid species: Uria, Alca
+sGui: Guillemot species: PGui, BGui
+spMl: Murrelet species: Brachyramphus
+spAu: Auklet species: Ptychoramphus
+sPuf: Puffin species: Fratercula
+smAl: Small Alcid species: Fratercula, Dove, PGui, BGui
+spAl: Alcid species: Alcidae
+lgSf: Large swift species: Cypseloides, Apus
+roaH: Rufous or Allen's Hummingbird: RufH, AllH
+sSel: Selasphorus species: Selasphorus
+spcH: Hummingbird species: Archilochus, Calypte, Selasphorus
+spCu: Cuckoo species: Coccyzus
+slOw: Short-eared or Long-eared Owl: SEOw, LEOw
+spOw: Owl species: Tyto, Otus, Bubo, Megascops, Surnia, Athene, Strix, Asio, Aegolius
+spWo: Woodpecker species: Picoides, Colaptes, Dryocopus
+sWPw: Wood-Pewee species: WWPw, EWPw
+trFy: "Traill's" Flycatcher: AlFy, WiFy
+sEmp: Empidonax species: Empidonax
+sPbe: Phoebe species: Sayornis
+sMyi: Myiarchus species: Myiarchus
+spKb: Kingbird species: Tyrannus
+spFy: Flycatcher species: Contopus, Empidonax, Sayornis, Myiarchus, Tyrannus
+sShr: Shrike species: Lanius
+soVi: "Solitary" Vireo: BHVi, CaVi
+wpVi: Warbling or Philadelpha Warbler: WaVi, PhVi
+spVi: Vireo species: Vireo
+sCro: Crow species: Corvus
+sCor: Corvus species: Corvus
+ccSw: Cliff or Cave Swallow: ClSw, CvSw
+spSw: Swallow species: Tachycineta, Stelgidopteryx, Riparia, Petrochelidon, Hirundo
+bcCh: Black-capped or Carolina Chickadee: BCCh, CaCh
+bgCh: Black-capped or Gray-headed Chickadee: BCCh, GHCh
+bbCh: Black-capped or Boreal Chickadee: BCCh, BoCh
+spCh: Chickadee species: Poecile
+spNh: Nuthatch species: Sitta
+spWn: Wren species: Troglodytidae
+spKl: Kinglet species: GCKl, RCKl
+sBlu: Bluebird species: EBlu, WBlu, MBlu
+gbTh: Gray-cheeked or Bicknell's Thrush: GCTh, BiTh
+sCat: Catharus species: Catharus
+spTh: Thrush species: Turdidae
+sPip: Pipit species: APip, SPip
+sWax: Waxwing species: BWax, CWax
+sWiW: Blue-winged or Golden-winged Warbler: BWiW, GWiW
+sVrm: Vermivora species: Vermivora
+sWth: Waterthrush species: NWth, LWth
+sOpo: Oporornis species: Oporornis
+spcW: Warbler species: Parulidae
+spTg: Tanager species: Piranga
+sTow: Towhee species: Pipilo
+sSSp: Saltmarsh or Nelson's Sparrow: NSSp, SSSp
+sAmm: Ammodramus species: Ammodramus
+sZon: Zonotrichia species: Zonotrichia
+spSp: Sparrow species: Spizella, Pooecetes, Chondestes, Passerculus, Ammodramus, Passerella, Melospiza, Zonotrichia
+sJun: Junco species: Junco
+spLs: Longspur species: Calcarius
+sMea: Meadowlark species: EMea, WMea
+spGk: Grackle species: CoGk, BTGk, GTGk
+spCs: Crossbill species: ReCs, WWCs
+sRed: Redpoll species: CRed, HRed
+wPas: Winter passerine: Calcarius, SnBn, HLrk
+spBk: Blackbird species: RWBk, RuBk, BrBk, BHCw, CoGk
+spOr: Oriole species: BaOr, BuOr, OrOr
+spFn: Carpodacus species: Carpodacus
+phFn: Purple or House Finch: PuFn, HoFn
+wiFn: Winter finch: Acanthis, PSis, Loxia, Carpodacus, Haemorhous
+

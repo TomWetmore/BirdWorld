@@ -216,6 +216,10 @@ extension Taxonomy {
         }
         return species
     }
+
+    func getGroup(_ string: String) -> BirdGroup? {
+        return nil
+    }
 }
 
 

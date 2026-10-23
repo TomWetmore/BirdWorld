@@ -31,6 +31,7 @@
 			membershipExceptions = (
 				AdditionRecords.swift,
 				AnnualRecords.swift,
+				BirdGroup.swift,
 				BirdRecord.swift,
 				Day.swift,
 				DelimitedFile.swift,
@@ -46,6 +47,7 @@
 			membershipExceptions = (
 				AdditionRecords.swift,
 				AnnualRecords.swift,
+				BirdGroup.swift,
 				BirdRecord.swift,
 				Day.swift,
 				DelimitedFile.swift,
