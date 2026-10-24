@@ -3,7 +3,7 @@
 // BirdTest
 //
 // Created by Thomas Wetmore on 17 October 2026.
-// Last changed on 22 October 2026.
+// Last changed on 24 October 2026.
 //
 
 import Foundation
@@ -35,6 +35,9 @@ func quickTest() throws {
     // Get the Taxonomy for this text.
     let taxonomy = try Taxonomy(taxa: newTaxa)
     print("GOT THE TAXONOMY IN THE MAIN FUNCTION")
+
+    // Order the species in the Taxonomy.
+    taxonomy.roots.assignOrder(at: .species)
 
     // Get the BirdRecords from an additions file.
     let records = try readAdditionRecords(from: additionsURL, taxonomy: taxonomy)

@@ -3,7 +3,7 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 17 October 2026.
-//  Last changed on 21 October 2026
+//  Last changed on 24 October 2026
 //
 
 import Foundation
@@ -19,6 +19,7 @@ public final class Taxon: CustomStringConvertible {
     public let englishName: String?
     public let scientificName: String?
     public let bandingCode: String?  // USFWS banding code.
+    public var order: Int? = nil
 
     public weak var parent: Taxon? = nil
     public var children: [Taxon] = []
@@ -58,7 +59,11 @@ extension Taxon {
     /// The description of a single Taxon, made up of the level and the name.
     ///
     public var description: String {
-        "\(level.rawValue): \(name)"
+        if let order {
+            "\(order). \(level.rawValue): \(name)"
+        } else {
+            "\(level.rawValue): \(name)"
+        }
     }
 
     /// The display name of a Taxon. Shows the available.

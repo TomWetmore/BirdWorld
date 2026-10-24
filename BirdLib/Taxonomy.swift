@@ -3,7 +3,7 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 18 October 2026.
-//  Last changed on 22 October 2026.
+//  Last changed on 24 October 2026.
 //
 
 import Foundation
@@ -14,6 +14,7 @@ public final class Taxonomy {
     public let species: [Taxon]
 
     public init(taxa: [Taxon]) throws {
+        
         roots = makeTaxonomy(from: taxa)
         species = roots.species
         try makeIndexes(SpeciesRequirements())
@@ -54,56 +55,7 @@ private func makeTaxonomy(from taxa: [Taxon]) -> [Taxon] {
     return roots
 }
 
-extension Array<Taxon> {
 
-    /// Return the species at or below a Taxon in an Array<Taxon>.
-    public var species: [Taxon] {
-        return taxa(of: .species)
-    }
-
-    /// Return the genera at or below a Taxon in an Array<Taxon>.
-    ///
-    public var genera: [Taxon] {
-        return taxa(of: .genus)
-    }
-
-    /// Return the genera at or below a Taxon in an Array<Taxon>.
-    ///
-    public var families: [Taxon] {
-        return taxa(of: .family)
-    }
-
-    /// Return all Taxa at a specific level at or below a Taxon in an Array<Taxon>.
-    ///
-    func taxa(of level: Level) -> [Taxon] {
-
-        var result: [Taxon] = []
-
-        func visit(_ taxon: Taxon) {
-            if taxon.level == level {
-                result.append(taxon)
-                return
-            }
-            guard taxon.level.depth < level.depth else {
-                return
-            }
-            for child in taxon.children {
-                visit(child)
-            }
-        }
-        for taxon in self {
-            visit(taxon)
-        }
-        return result
-    }
-
-    /// Show the forest of Taxa through the specified level.
-    public func show(through level: Level, indent: Int = 0) {
-        for taxon in self {
-            taxon.show(through: level, indent: indent)
-        }
-    }
-}
 
 /// Taxonomy indexing.
 ///

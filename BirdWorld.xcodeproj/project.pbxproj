@@ -38,6 +38,7 @@
 				ReadTaxa.swift,
 				Species.swift,
 				Taxon.swift,
+				TaxonArray.swift,
 				Taxonomy.swift,
 			);
 			target = 2604FB0B30840CB8009696AF /* BirdLib */;
@@ -54,6 +55,7 @@
 				ReadTaxa.swift,
 				Species.swift,
 				Taxon.swift,
+				TaxonArray.swift,
 				Taxonomy.swift,
 			);
 			target = 000000000000000100000000 /* BirdTest */;

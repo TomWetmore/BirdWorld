@@ -3,7 +3,7 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 22 October 2026.
-//  Last changed on 22 October 2026.
+//  Last changed on 24 October 2026.
 //
 
 import Foundation
@@ -14,8 +14,7 @@ public struct Day: Hashable, Comparable, CustomStringConvertible {
 
     public let number: Int
 
-    /// Construct a Day from a year, month, and day.
-    /// Returns nil for an invalid date.
+    /// Construct a Day from a year, month, and day. Return nil if invalid.
     ///
     public init?(year: Int, month: Int, day: Int) {
 
