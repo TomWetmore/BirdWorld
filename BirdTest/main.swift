@@ -3,37 +3,28 @@
 // BirdTest
 //
 // Created by Thomas Wetmore on 17 October 2026.
-// Last changed on 24 October 2026.
+// Last changed on 25 October 2026.
 //
 
 import Foundation
 import BirdLib
 
+let taxaURL = URL(fileURLWithPath: "/Users/ttw4/Desktop/BirdWorld/Resources/taxa")
+let additionsURL = URL(fileURLWithPath: "/Users/ttw4/Desktop/BirdWorld/Resources/additions.txt")
+let groupsURL = URL(fileURLWithPath: "/Users/ttw4/Desktop/BirdWorld/Resources/groups")
+
 func main () {
     do {
-        print("HELLO, GOT HERE")
-        try quickTest()
+        try testOne()
     } catch {
         print("Caught top error: \(error)")
     }
 }
 
-let taxaURL = URL(fileURLWithPath: "/Users/ttw4/Desktop/BirdWorld/Resources/taxa")
-let additionsURL = URL(fileURLWithPath: "/Users/ttw4/Desktop/BirdWorld/Resources/additions.txt")
 
-let taxa = try readTaxa(from: taxaURL)
-print("READ THE TAXA")
+func testOne() throws {
 
-let taxonomy = try Taxonomy(taxa: taxa)
-print("GOT THE TAXONOMY IN LINE")
-
-func quickTest() throws {
-
-    // Get the Taxa for this test.
-    let newTaxa = try readTaxa(from: taxaURL)
-
-    // Get the Taxonomy for this text.
-    let taxonomy = try Taxonomy(taxa: newTaxa)
+    let taxonomy = try loadTaxonomy(from: taxaURL, groupsURL: groupsURL)
     print("GOT THE TAXONOMY IN THE MAIN FUNCTION")
 
     // Order the species in the Taxonomy.
@@ -48,9 +39,6 @@ func quickTest() throws {
     }
     print("\(records.count)")
 
-    // 2. Open Quick file from an additions file.
-    // 3. Run the loop.
-    // 4. Check the results
 }
 
 main()

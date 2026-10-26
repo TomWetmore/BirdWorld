@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum RequirementType {
+enum Requirement {
 
     case mustbe
     case cannotbe
@@ -19,13 +19,13 @@ enum RequirementType {
 ///
 public struct SpeciesRequirements {
 
-    var code: RequirementType = .canbe
-    var englishName: RequirementType = .mustbe
-    var scientificName: RequirementType = .mustbe
-    var bandingCode: RequirementType = .canbe
+    var code: Requirement = .canbe
+    var englishName: Requirement = .mustbe
+    var scientificName: Requirement = .mustbe
+    var bandingCode: Requirement = .canbe
 
-    init(code: RequirementType = .canbe, englishName: RequirementType = .mustbe,
-        scientificName: RequirementType = .mustbe, bandingCode: RequirementType = .canbe) {
+    init(code: Requirement = .canbe, englishName: Requirement = .mustbe,
+        scientificName: Requirement = .mustbe, bandingCode: Requirement = .canbe) {
         self.code = code
         self.englishName = englishName
         self.scientificName = scientificName

@@ -33,7 +33,7 @@ extension BirdGroup {
 
 /// Read a file with group information and return an array of BirdGroups.
 ///
-func readBirdGroups(url: URL, taxonomy: Taxonomy) throws -> [BirdGroup] {
+func readGroups(url: URL, taxonomy: Taxonomy) throws -> [BirdGroup] {
 
     let file = try DelimitedFile(url)
     var groups: [BirdGroup] = []

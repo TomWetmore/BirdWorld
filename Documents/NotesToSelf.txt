@@ -1,0 +1,23 @@
+BirdWorld deals with Taxonomies and BirdRecords, sometimes separately and sometimes together.
+
+A Taxonomy is composed of a tree of Taxa using parent and children property links.
+
+All Taxa in a Taxonomy are Taxon objects. I believe that Taxon will eventually become the super-class of types like Species, Families, Genus, and so on.
+
+A Taxonomy is created by reading a Taxonomy file, buiding the Taxonomy tree, and indexing it with a few Dictionaries.
+
+If the Taxonomy is to be used to support BirdRecords, BirdGroup information must be added to the Taxonomy.
+
+In some uses the Taxa in a Taxonomy need to be "ordered". This seems to mean that taxa need a integer order property.
+
+The "backing store" of Taxonomies and BirdRecords are DelimitedFiles of a few formats.
+
+BirdWorld is currently envisioned to be a number of command line programs.
+
+A future enhancement could be a Mac App with a SwiftUI interface. The command line programs could become pages in such an app.
+
+The obvious applications of BirdWorld are managing birding records.
+
+A more difficult to describe application is studying the evoloution of Taxonomies over time.
+
+A general prupose function for creating Taxonomies is desireable. Such a function would know whether or not a group file is reaquired. All the command line programs would use this function to get started.
