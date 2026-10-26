@@ -53,31 +53,34 @@ func readGroups(url: URL, taxonomy: Taxonomy) throws -> [BirdGroup] {
         let name = fields[1]
         let contents = fields[2]
 
-        // Split contents into fields.
-        let codes = contents.split(whereSeparator: \.isWhitespace).map(String.init)
+        // Split contents into parts; each part refers to a single taxon.
+        let parts = contents.split {
+            $0.isWhitespace || $0 == ","
+        }.map(String.init)
 
-        // Look up each species.
-        var species: [Taxon] = []
-
-        for code in codes {
-            guard let taxon = taxonomy.getSpecies(code) else {
+        // Look up each taxon.
+        var taxa: [Taxon] = []
+        // For each
+        for part in parts {
+            guard let taxon = taxonomy.getSpecies(part)
+                    ?? taxonomy.higherTaxonIndex[part] else {
                 throw RecordFileError.invalidLine(
-                    line, "Unknown species in group: \(code)")
+                    line, "Unknown taxon in group: \(part)")
             }
-            species.append(taxon)
+            taxa.append(taxon)
         }
 
-        // Find the highest order number.
+        // Get the species in the taxons, making sure there are some.
+        let species = taxa.species
         guard !species.isEmpty else {
-            throw RecordFileError.invalidLine(
-                line, "Empty bird group: \(key)")
+            throw RecordFileError.invalidLine(line, "Empty bird group: \(key)")
         }
-        guard let order = species.compactMap(\.order).max(),
-              species.allSatisfy({ $0.order != nil }) else {
-            throw RecordFileError.invalidLine(
-                line, "Missing order number in bird group: \(key)")
+        // Make sure all species have an order and find the highest order.
+        guard species.allSatisfy({ $0.order != nil }),
+            let order = species.compactMap(\.order).max() else {
+            throw RecordFileError.invalidLine(line, "Missing order number in bird group: \(key)")
         }
-        let group = BirdGroup(code: key, name: name, taxa: species, order: order)
+        let group = BirdGroup(code: key, name: name, taxa: taxa, order: order)
         groups.append(group)
     }
     return groups

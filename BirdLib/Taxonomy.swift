@@ -3,7 +3,7 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 18 October 2026.
-//  Last changed on 24 October 2026.
+//  Last changed on 26 October 2026.
 //
 
 import Foundation
@@ -16,19 +16,25 @@ public final class Taxonomy {
     public init(taxa: [Taxon], useGroups: Bool = false) throws {
 
         roots = makeTaxonomy(from: taxa)
+        roots.assignOrder(at: .species)
         species = roots.species
         try makeIndexes(SpeciesRequirements(), useGroups: useGroups)
     }
 
     // Stored indexes.
     //
-    public var englishNameIndex: [String : Taxon] = [:]
-    public var scientificNameIndex: [String : Taxon] = [:]
-    public var codeIndex: [String : Taxon] = [:]
-    public var bandingCodeIndex: [String : Taxon] = [:]
+    public private(set) var englishNameIndex: [String : Taxon] = [:]
+    public private(set) var scientificNameIndex: [String : Taxon] = [:]
+    public private(set) var codeIndex: [String : Taxon] = [:]
+    public private(set) var bandingCodeIndex: [String : Taxon] = [:]
 
     // Fleshed out if BirdGroups are used.
-    public var higherTaxonIndex: [String : Taxon] = [:]
+    public private(set) var higherTaxonIndex: [String : Taxon] = [:]
+
+    public private(set) var groups: [BirdGroup] = []
+
+    public private(set) var groupCodeIndex: [String: BirdGroup] = [:]
+    public private(set) var groupNameIndex: [String: BirdGroup] = [:]
 
 }
 
@@ -184,15 +190,56 @@ extension Taxonomy {
     }
 }
 
+extension Taxonomy {
+
+    /// Add bird groups and build their indexes.
+    func addGroups(_ groups: [BirdGroup]) throws {
+
+        for group in groups {
+            guard groupCodeIndex[group.code] == nil else {
+                throw RecordFileError.invalidLine(
+                    0, "Duplicate bird group code: \(group.code)")
+            }
+
+            guard groupNameIndex[group.name] == nil else {
+                throw RecordFileError.invalidLine(
+                    0, "Duplicate bird group name: \(group.name)")
+            }
+
+            groupCodeIndex[group.code] = group
+            groupNameIndex[group.name] = group
+        }
+
+        self.groups = groups
+    }
+}
+
+//public func loadTaxonomy(from taxaURL: URL, groupsURL: URL? = nil) throws -> Taxonomy {
+//
+//    let useGroups = groupsURL != nil
+//    let taxa = try readTaxa(from: taxaURL)
+//    let taxonomy = try Taxonomy(taxa: taxa, useGroups: useGroups)
+//    if useGroups {
+//        let groups = try readGroups(url: groupsURL!, taxonomy: taxonomy)
+//        //taxonomy.addGroups(groups)
+//        print("WE JUST READ \(groups.count) GROUPS")
+//    }
+//    return taxonomy
+//}
+
 public func loadTaxonomy(from taxaURL: URL, groupsURL: URL? = nil) throws -> Taxonomy {
 
-    let useGroups = groupsURL != nil
     let taxa = try readTaxa(from: taxaURL)
-    let taxonomy = try Taxonomy(taxa: taxa, useGroups: useGroups)
-    if useGroups {
-        let groups = try readGroups(url: groupsURL!, taxonomy: taxonomy)
-        //taxonomy.addGroups(groups)
-        print("WE JUST READ \(groups.count) GROUPS")
+
+    let taxonomy = try Taxonomy(
+        taxa: taxa,
+        useGroups: groupsURL != nil
+    )
+
+    if let groupsURL {
+        let groups = try readGroups(url: groupsURL, taxonomy: taxonomy)
+        try taxonomy.addGroups(groups)
     }
+
     return taxonomy
 }

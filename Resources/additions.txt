@@ -300,6 +300,7 @@ Yellow-rumped Warbler :  11 pines
 
 o: s santino
 d: 18 oct 2026
+spLn: 2 prob red-throated
 Canada Goose :  16
 Mallard :  3
 American Black Duck :  8
