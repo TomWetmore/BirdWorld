@@ -132,3 +132,14 @@ public enum Level: String, CaseIterable {
         }
     }
 }
+
+extension Taxon: Hashable {
+
+    public static func == (lhs: Taxon, rhs: Taxon) -> Bool {
+        lhs === rhs
+    }
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(ObjectIdentifier(self))
+    }
+}

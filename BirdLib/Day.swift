@@ -144,3 +144,29 @@ private extension Day {
         return (year, month, day)
     }
 }
+
+public extension Day {
+
+    /// Return the quarter-month index (0...47) of a Day.
+    var quarterMonthIndex: Int {
+
+        let (_, month, day) = components
+
+        let boundaries: (Int, Int, Int) = switch month {
+        case 2:
+            (7, 14, 21)
+        case 4, 6, 9, 11:
+            (7, 15, 22)
+        default:
+            (8, 16, 23)
+        }
+
+        let (b1, b2, b3) = boundaries
+        let offset = (month - 1) * 4
+
+        if day <= b1 { return offset }
+        if day <= b2 { return offset + 1 }
+        if day <= b3 { return offset + 2 }
+        return offset + 3
+    }
+}

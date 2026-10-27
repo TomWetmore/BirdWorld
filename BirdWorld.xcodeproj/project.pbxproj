@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2604FD02308412AA009696AF /* libBirdLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2604FB0C30840CB8009696AF /* libBirdLib.a */; platformFilters = (macos, ); };
 		26E768E83090EF8300A1560D /* libBirdLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2604FB0C30840CB8009696AF /* libBirdLib.a */; };
+		26E768F73091630F00A1560D /* libBirdLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2604FB0C30840CB8009696AF /* libBirdLib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,10 +27,25 @@
 			remoteGlobalIDString = 2604FB0B30840CB8009696AF;
 			remoteInfo = BirdLib;
 		};
+		26E768F53091630600A1560D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000000000000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2604FB0B30840CB8009696AF;
+			remoteInfo = BirdLib;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		26E768DC3090EDAE00A1560D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolder = None;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		26E768EC3091622800A1560D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolder = None;
@@ -43,6 +59,7 @@
 		000000000000000000000120 /* BirdTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BirdTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2604FB0C30840CB8009696AF /* libBirdLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBirdLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E768DE3090EDAE00A1560D /* MergeAdditions */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MergeAdditions; sourceTree = BUILT_PRODUCTS_DIR; };
+		26E768EE3091622800A1560D /* FortyEight */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FortyEight; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -117,14 +134,14 @@
 			path = Java;
 			sourceTree = "<group>";
 		};
-		26E768D23090ECF600A1560D /* MergeAdditions */ = {
+		26E768DF3090EDAE00A1560D /* MergeAdditions */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = MergeAdditions;
 			sourceTree = "<group>";
 		};
-		26E768DF3090EDAE00A1560D /* MergeAdditions */ = {
+		26E768EF3091622800A1560D /* FortyEight */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MergeAdditions;
+			path = FortyEight;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -147,6 +164,12 @@
 				26E768E83090EF8300A1560D /* libBirdLib.a in Frameworks */,
 			);
 		};
+		26E768EB3091622800A1560D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				26E768F73091630F00A1560D /* libBirdLib.a in Frameworks */,
+			);
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -159,8 +182,8 @@
 				2604FEFC3085A267009696AF /* Resources */,
 				2604FB1030840D47009696AF /* BirdLib */,
 				000000000000000000000010 /* BirdTest */,
-				26E768D23090ECF600A1560D /* MergeAdditions */,
 				26E768DF3090EDAE00A1560D /* MergeAdditions */,
+				26E768EF3091622800A1560D /* FortyEight */,
 				2604FD01308412AA009696AF /* Frameworks */,
 				000000000000000000000020 /* Products */,
 			);
@@ -172,6 +195,7 @@
 				000000000000000000000120 /* BirdTest */,
 				2604FB0C30840CB8009696AF /* libBirdLib.a */,
 				26E768DE3090EDAE00A1560D /* MergeAdditions */,
+				26E768EE3091622800A1560D /* FortyEight */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -251,6 +275,27 @@
 			productReference = 26E768DE3090EDAE00A1560D /* MergeAdditions */;
 			productType = "com.apple.product-type.tool";
 		};
+		26E768ED3091622800A1560D /* FortyEight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26E768F23091622800A1560D /* Build configuration list for PBXNativeTarget "FortyEight" */;
+			buildPhases = (
+				26E768EA3091622800A1560D /* Sources */,
+				26E768EB3091622800A1560D /* Frameworks */,
+				26E768EC3091622800A1560D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26E768F63091630600A1560D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				26E768EF3091622800A1560D /* FortyEight */,
+			);
+			name = FortyEight;
+			productName = FortyEight;
+			productReference = 26E768EE3091622800A1560D /* FortyEight */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -269,6 +314,9 @@
 						LastSwiftMigration = 2710;
 					};
 					26E768DD3090EDAE00A1560D = {
+						CreatedOnToolsVersion = 27.1;
+					};
+					26E768ED3091622800A1560D = {
 						CreatedOnToolsVersion = 27.1;
 					};
 				};
@@ -290,6 +338,7 @@
 				000000000000000100000000 /* BirdTest */,
 				2604FB0B30840CB8009696AF /* BirdLib */,
 				26E768DD3090EDAE00A1560D /* MergeAdditions */,
+				26E768ED3091622800A1560D /* FortyEight */,
 			);
 		};
 /* End PBXProject section */
@@ -310,6 +359,11 @@
 			files = (
 			);
 		};
+		26E768EA3091622800A1560D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -325,6 +379,11 @@
 			isa = PBXTargetDependency;
 			target = 2604FB0B30840CB8009696AF /* BirdLib */;
 			targetProxy = 26E768E63090EF6B00A1560D /* PBXContainerItemProxy */;
+		};
+		26E768F63091630600A1560D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2604FB0B30840CB8009696AF /* BirdLib */;
+			targetProxy = 26E768F53091630600A1560D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -550,6 +609,36 @@
 			};
 			name = Release;
 		};
+		26E768F33091622800A1560D /* Debug configuration for PBXNativeTarget "FortyEight" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 22WT5TK79S;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		26E768F43091622800A1560D /* Release configuration for PBXNativeTarget "FortyEight" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 22WT5TK79S;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -582,6 +671,14 @@
 			buildConfigurations = (
 				26E768E33090EDAE00A1560D /* Debug configuration for PBXNativeTarget "MergeAdditions" */,
 				26E768E43090EDAE00A1560D /* Release configuration for PBXNativeTarget "MergeAdditions" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		26E768F23091622800A1560D /* Build configuration list for PBXNativeTarget "FortyEight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26E768F33091622800A1560D /* Debug configuration for PBXNativeTarget "FortyEight" */,
+				26E768F43091622800A1560D /* Release configuration for PBXNativeTarget "FortyEight" */,
 			);
 			defaultConfigurationName = Release;
 		};
