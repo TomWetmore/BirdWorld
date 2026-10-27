@@ -28,6 +28,16 @@ public enum RecordKind {
             return group.name
         }
     }
+
+    public var order: Int {
+
+        switch self {
+        case .species(let taxon):
+            return taxon.order!
+        case .group(let group):
+            return group.order
+        }
+    }
 }
 
 /// BirdRecord ("Sighting"). It has a kind (species or group), and can have optional
@@ -36,7 +46,7 @@ public enum RecordKind {
 public struct BirdRecord: CustomStringConvertible {
 
     public let kind: RecordKind
-    let date: Day?
+    public let date: Day?
     public let location: String?
     public let observer: String?
     public let notes: String?
@@ -64,5 +74,10 @@ public struct BirdRecord: CustomStringConvertible {
             buffer += ": \(observer)"
         }
         return buffer
+    }
+
+
+    var annualLine: String {
+        "\(date!): \(notes ?? ""): \(observer ?? "")"
     }
 }

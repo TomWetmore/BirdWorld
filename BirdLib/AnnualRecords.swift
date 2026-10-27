@@ -61,3 +61,27 @@ public func readAnnualRecords(from url: URL, taxonomy: Taxonomy) throws -> [Bird
     }
     return records
 }
+
+public func writeAnnualRecords(_ records: [BirdRecord], to url: URL) throws {
+
+    var output = ""
+    var previousOrder: Int?
+
+    for record in records {
+
+        // Start a new species/group section.
+        if record.kind.order != previousOrder {
+            if previousOrder != nil {
+                output += "\n"
+            }
+
+            output += "\(record.kind.name)\n"
+            previousOrder = record.kind.order
+        }
+
+        // Write the observation.
+        output += "\(record.annualLine)\n"
+    }
+
+    try output.write(to: url, atomically: true, encoding: .utf8)
+}

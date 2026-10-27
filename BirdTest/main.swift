@@ -21,11 +21,10 @@ func main () {
     }
 }
 
-
 func testOne() throws {
 
+    // Create a Taxonomy with my current taxa and group files.
     let taxonomy = try loadTaxonomy(from: taxaURL, groupsURL: groupsURL)
-    print("GOT THE TAXONOMY IN THE MAIN FUNCTION")
 
     // Get the BirdRecords from an additions file.
     let records = try readAdditionRecords(from: additionsURL, taxonomy: taxonomy)
