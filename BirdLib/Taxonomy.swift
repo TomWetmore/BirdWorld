@@ -3,7 +3,7 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 18 October 2026.
-//  Last changed on 26 October 2026.
+//  Last changed on 29 October 2026.
 //
 
 import Foundation
@@ -35,6 +35,8 @@ public final class Taxonomy {
 
     public private(set) var groupCodeIndex: [String: BirdGroup] = [:]
     public private(set) var groupNameIndex: [String: BirdGroup] = [:]
+
+    public private(set) var abbreviationIndex: [String: Taxon] = [:]
 
 }
 
@@ -130,11 +132,12 @@ extension Taxonomy {
 
     /// Lookup a Species Taxon using three indexes.
     /// May add the banding code index later.
-    func getSpecies(_ string: String) -> Taxon? {
-
+    ///
+    public func getSpecies(_ string: String) -> Taxon? {
         codeIndex[string]
             ?? englishNameIndex[string]
             ?? scientificNameIndex[string]
+            ?? abbreviationIndex[prepareName(string)]
     }
 
     /// Lookup a BirdGroup using the code and name indices.

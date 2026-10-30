@@ -3,19 +3,21 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 19 October 2026.
-//  Last changed on 24 October 2026.
+//  Last changed on 29 October 2026.
 //
 
 import Foundation
 
 /// A line of fields read from a delimited file.
+///
 public struct DelimitedLine {
 
-    public let number: Int
+    public let number: Int  // Line number.
     public let fields: [String]
 }
 
 /// Read a delimited text file one line at a time.
+///
 public final class DelimitedFile {
 
     private let handle: FileHandle

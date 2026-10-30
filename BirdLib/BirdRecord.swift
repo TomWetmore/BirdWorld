@@ -81,3 +81,30 @@ public struct BirdRecord: CustomStringConvertible {
         "\(date!): \(notes ?? ""): \(observer ?? "")"
     }
 }
+
+/// Create a Dictionary with species Taxa as keys and quarter-month integer arrays as
+/// values.
+///
+public func quarterMonthCounts (_ records: [BirdRecord]) -> [Taxon: [Int]] {
+
+    // Create a map from species Taxa to the sets of days on which recorded.
+    var daysBySpecies: [Taxon: Set<Day>] = [:]
+    for record in records {
+        guard case .species(let taxon) = record.kind,
+              let day = record.date else {
+            continue
+        }
+        daysBySpecies[taxon, default: []].insert(day)
+    }
+
+    // Create a map from species Taxa to the arrays of their quarter-monthly counts.
+    var countsBySpecies: [Taxon: [Int]] = [:]
+    for (species, days) in daysBySpecies {
+        var counts = Array(repeating: 0, count: 48)
+        for day in days {
+            counts[day.quarterMonthIndex] += 1
+        }
+        countsBySpecies[species] = counts
+    }
+    return countsBySpecies
+}
