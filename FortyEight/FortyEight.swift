@@ -3,7 +3,7 @@
 //  FortyEight
 //
 //  Created by Thomas Wetmore on 27 October 2026.
-//  Last changed on 28 October 2026.
+//  Last changed on 2 November 2026.
 //
 
 import Foundation
@@ -22,7 +22,7 @@ struct FortyEight {
 
     static func main() throws {
 
-        // Create a Taxonomy with the current taxa (not using groups).
+        // Create a Taxonomy with a taxa and groups file.
         let taxonomy = try loadTaxonomy(from: taxaURL, groupsURL: groupsURL)
 
         // Get the BirdRecords from an annual file.
@@ -34,7 +34,7 @@ struct FortyEight {
             return false
         }
 
-        // Filter out the BirdGroups becuase we don't count in this report.
+        // Filter out the BirdGroups because we don't count them in this report.
         records = records.filter {
             if case .species = $0.kind { return true }
             return false

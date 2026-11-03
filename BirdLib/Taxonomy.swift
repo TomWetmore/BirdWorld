@@ -3,7 +3,7 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 18 October 2026.
-//  Last changed on 29 October 2026.
+//  Last changed on 2 November 2026.
 //
 
 import Foundation
@@ -199,4 +199,25 @@ public func loadTaxonomy(from taxaURL: URL, groupsURL: URL? = nil) throws -> Tax
     }
 
     return taxonomy
+}
+
+/// Piggy-back on methods defined on Array<Taxon>.
+///
+extension Taxonomy {
+
+    public func assignOrder(at level: Level) {
+        roots.assignOrder(at: level)
+    }
+
+    /// Visit every taxon in preorder and perform a function.
+    ///
+    func traverse(_ action: (Taxon) throws -> Void) rethrows {
+
+        for taxon in roots {
+            try action(taxon)
+            try taxon.children.traverse(action)
+        }
+    }
+
+    
 }

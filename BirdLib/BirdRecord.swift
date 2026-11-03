@@ -3,7 +3,7 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 21 October 2026.
-//  Last changed on 23 October 2026.
+//  Last changed on 2 November 2026.
 //
 
 import Foundation
@@ -87,7 +87,7 @@ public struct BirdRecord: CustomStringConvertible {
 ///
 public func quarterMonthCounts (_ records: [BirdRecord]) -> [Taxon: [Int]] {
 
-    // Create a map from species Taxa to the sets of days on which recorded.
+    // First create a map from species to the sets of days on which recorded.
     var daysBySpecies: [Taxon: Set<Day>] = [:]
     for record in records {
         guard case .species(let taxon) = record.kind,
@@ -97,10 +97,10 @@ public func quarterMonthCounts (_ records: [BirdRecord]) -> [Taxon: [Int]] {
         daysBySpecies[taxon, default: []].insert(day)
     }
 
-    // Create a map from species Taxa to the arrays of their quarter-monthly counts.
+    // Then create a map from the species to quarter-monthly count arrays.
     var countsBySpecies: [Taxon: [Int]] = [:]
     for (species, days) in daysBySpecies {
-        var counts = Array(repeating: 0, count: 48)
+        var counts = Array(repeating: 0, count: 48)  // Each array is 48 integers.
         for day in days {
             counts[day.quarterMonthIndex] += 1
         }

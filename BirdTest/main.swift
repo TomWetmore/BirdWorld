@@ -3,7 +3,7 @@
 // BirdTest
 //
 // Created by Thomas Wetmore on 17 October 2026.
-// Last changed on 29 October 2026.
+// Last changed on 2 November 2026.
 //
 
 import Foundation
@@ -16,12 +16,22 @@ let abbvsURL = URL(fileURLWithPath: "~/Desktop/BirdWorld/Resources/abbvs.txt")
 
 func main () {
     do {
+        try testZero()
         //try testOne()
         //try testTwo()
-        try testThree()
+        //try testThree()
     } catch {
         print("Caught top error: \(error)")
     }
+}
+
+func testZero() throws {
+
+    let taxonomy = try loadTaxonomy(from: taxaURL)
+    taxonomy.assignOrder(at: .order)
+    taxonomy.assignOrder(at: .family)
+    taxonomy.show(through: .family)
+
 }
 
 func testOne() throws {

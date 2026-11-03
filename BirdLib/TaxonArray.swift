@@ -3,41 +3,47 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 24 October 2026.
-//  Last changed on 24 October 2026.
+//  Last changed on 2 November 2026.
 //
+//  A Taxonomy is primarily an Array<Taxon>, so it is useful to use Array<Taxon>
+//  as its own type in some contexts. This file provides useful methods on
+//  Array<Taxon> that can be used by Taxonomy or from other contexts with access
+//  to Array<Taxon>'s.
 
 import Foundation
 
 extension Array<Taxon> {
 
-    /// Return the species at or below a Taxon in an Array<Taxon>.
+    /// Return the species Taxa tht are at or below a Taxon in an Array<Taxon>.
     ///
     public var species: [Taxon] {
 
         return taxa(of: .species)
     }
 
-    /// Return the genera at or below a Taxon in an Array<Taxon>.
+    /// Return the genera Taxa that are at or below a Taxon in an Array<Taxon>.
     ///
     public var genera: [Taxon] {
 
         return taxa(of: .genus)
     }
 
-    /// Return the genera at or below a Taxon in an Array<Taxon>.
+    /// Return the family Taxa that are at or below a Taxon in an Array<Taxon>.
     ///
     public var families: [Taxon] {
 
         return taxa(of: .family)
     }
 
-    /// Return all Taxa at a specific level at or below a Taxon in an Array<Taxon>.
+    /// Return all Taxa of a specific level that are at or below the Taxa in an Array<Taxon>.
     ///
     func taxa(of level: Level) -> [Taxon] {
 
         var result: [Taxon] = []
 
+        // Internal visit funtion.
         func visit(_ taxon: Taxon) {
+
             if taxon.level == level {
                 result.append(taxon)
                 return
@@ -49,13 +55,15 @@ extension Array<Taxon> {
                 visit(child)
             }
         }
+
+        // Traverse self by visiting each of its root Taxa.
         for taxon in self {
             visit(taxon)
         }
         return result
     }
 
-    /// Show the forest of Taxa through the specified level.
+    /// Show the forest of Taxa through to the specified level.
     ///
     public func show(through level: Level, indent: Int = 0) {
         for taxon in self {
@@ -63,11 +71,11 @@ extension Array<Taxon> {
         }
     }
 
-    /// Assign sequential order numbers to taxa at the specified level.
+    /// Assign sequential order numbers to all taxa at a specified level.
     ///
     public func assignOrder(at level: Level) {
         for (index, taxon) in taxa(of: level).enumerated() {
-            taxon.order = index
+            taxon.order = index + 1
         }
     }
 }

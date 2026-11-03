@@ -3,7 +3,7 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 22 October 2026.
-//  Last changed on 24 October 2026.
+//  Last changed on 2 November 2026.
 //
 
 import Foundation
@@ -148,6 +148,7 @@ private extension Day {
 public extension Day {
 
     /// Return the quarter-month index (0...47) of a Day.
+    ///
     var quarterMonthIndex: Int {
 
         let (_, month, day) = components
