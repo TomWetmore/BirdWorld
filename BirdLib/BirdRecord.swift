@@ -3,23 +3,25 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 21 October 2026.
-//  Last changed on 2 November 2026.
+//  Last changed on 4 November 2026.
 //
 
 import Foundation
 
-// Area and Location may become their own types; leave them Strings for now.
+// Area and Location may become their own types; use Strings for now.
 //
 typealias Area = String
 typealias Location = String
 
-/// BirdRecords are either a species or a group.
+/// A BirdRecord is either a species or a group.
 ///
 public enum RecordKind {
 
     case species(Taxon)
     case group(BirdGroup)
 
+    /// Return the name of BirdRecord.
+    ///
     public var name: String {
         switch self {
         case .species(let taxon):
@@ -29,11 +31,14 @@ public enum RecordKind {
         }
     }
 
-    public var order: Int {
+    /// Return the order of a BirdRecord
+    public var order: Int? {
 
         switch self {
+
         case .species(let taxon):
             return taxon.order!
+
         case .group(let group):
             return group.order
         }
@@ -107,4 +112,60 @@ public func quarterMonthCounts (_ records: [BirdRecord]) -> [Taxon: [Int]] {
         countsBySpecies[species] = counts
     }
     return countsBySpecies
+}
+
+extension Array<BirdRecord> {
+
+    /// Sort BirdRecords by taxonomic order, then date.
+    mutating func sortTaxonomically() throws {
+
+        // Check that all records have order numbers and dates.
+        guard allSatisfy({
+            $0.kind.order != nil && $0.date != nil
+        }) else {
+            throw RecordFileError.missingOrderOrDate
+        }
+
+        // Perform the sort.
+        sort {
+            if $0.kind.order! != $1.kind.order! {
+                return $0.kind.order! < $1.kind.order!
+            }
+            return $0.date! < $1.date!
+        }
+    }
+}
+
+//extension Array<BirdRecord> {
+//
+//    /// Sort BirdRecords by taxonomic order, then date.
+//    mutating func sortTaxonomically() {
+//        sort {
+//            if $0.kind.order! != $1.kind.order! {
+//                return $0.kind.order! < $1.kind.order!
+//            }
+//            return $0.date! < $1.date!
+//        }
+//    }
+//}
+
+extension Array<BirdRecord> {
+
+    /// Append records and sort the combined collection.
+    ///
+    public mutating func merge(_ additions: [BirdRecord]) throws {
+        append(contentsOf: additions)
+        try sortTaxonomically()
+    }
+}
+
+extension Array<BirdRecord> {
+
+    /// Return the combined records in taxonomic order.
+    func merging(_ other: [BirdRecord]) throws -> [BirdRecord] {
+        var result = self
+        result.append(contentsOf: other)
+        try result.sortTaxonomically()
+        return result
+    }
 }

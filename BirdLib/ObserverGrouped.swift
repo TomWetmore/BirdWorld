@@ -1,26 +1,24 @@
 //
-//  QuickRecords.swift
+//  ObserverGrouped.swift
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 22 October 2026.
-//  Last changed on 22 October 2026.
+//  Last changed on 4 November 2026.
 //
 
 import Foundation
 
-/// Read an additions observation file. Each section begins with an observer line,
+/// Read an observer grouped file. Each section begins with an observer line,
 /// followed by a date line, followed by zero or more bird observation lines.
 ///
-public func readAdditionRecords(from url: URL, taxonomy: Taxonomy) throws -> [BirdRecord] {
+public func readObserverGroupedRecords(from url: URL, taxonomy: Taxonomy)
+        throws -> [BirdRecord] {
 
     let file = try DelimitedFile(url)
     var records: [BirdRecord] = []
     let location = "Plum Island"
 
-    var observer: String?
-    var day: Day?
-
-    /// States the following record loop can be in.
+    /// States the record loop can be in.
     ///
     enum State {
 
@@ -30,7 +28,7 @@ public func readAdditionRecords(from url: URL, taxonomy: Taxonomy) throws -> [Bi
     }
     var state = State.expectingObserver
 
-    // Loop over all lines in the file.
+    // Loop over the lines in the file.
     //
     while let line = try file.getFields() {
 
@@ -102,4 +100,5 @@ public func readAdditionRecords(from url: URL, taxonomy: Taxonomy) throws -> [Bi
 
 public enum RecordFileError: Error {
     case invalidLine(Int, String)
+    case missingOrderOrDate
 }

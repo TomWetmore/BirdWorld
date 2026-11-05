@@ -40,7 +40,7 @@ func testOne() throws {
     let taxonomy = try loadTaxonomy(from: taxaURL, groupsURL: groupsURL)
 
     // Get the BirdRecords from an additions file.
-    let records = try readAdditionRecords(from: additionsURL, taxonomy: taxonomy)
+    let records = try readObserverGroupedRecords(from: additionsURL, taxonomy: taxonomy)
 
     // Show the Records.
     for record in records {
@@ -53,7 +53,7 @@ func testOne() throws {
 func testTwo() throws {
     let taxonomy = try loadTaxonomy(from: taxaURL)
 
-    let abbvs = try readAbbreviations(from: abbvsURL, taxonomy: taxonomy)
+    let abbvs = try readAliases(from: abbvsURL, taxonomy: taxonomy)
 
     var count = 1
     for (str, species) in abbvs {
@@ -65,7 +65,7 @@ func testTwo() throws {
 
 func testThree() throws {
     let taxonomy = try loadTaxonomy(from: taxaURL)
-    let abbvs = try readAbbreviations(from: abbvsURL, taxonomy: taxonomy)
+    let abbvs = try readAliases(from: abbvsURL, taxonomy: taxonomy)
 
     let sorted = abbvs.sorted {
         if $0.value.order! != $1.value.order! {

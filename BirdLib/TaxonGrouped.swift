@@ -1,16 +1,16 @@
 //
-//  AnnualRecords.swift
+//  TaxonGrouped.swift
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 22 October 2026.
-//  Last changed on 22 October 2026.
+//  Last changed on 4 November 2026.
 //
 
 import Foundation
 
 /// Read an annual records file.
 ///
-public func readAnnualRecords(from url: URL, taxonomy: Taxonomy) throws -> [BirdRecord] {
+public func readTaxonGroupedRecords(from url: URL, taxonomy: Taxonomy) throws -> [BirdRecord] {
 
     let file = try DelimitedFile(url)
     var records: [BirdRecord] = []

@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		2604FD02308412AA009696AF /* libBirdLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2604FB0C30840CB8009696AF /* libBirdLib.a */; platformFilters = (macos, ); };
+		263BB55D309BDE420036534D /* libBirdLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2604FB0C30840CB8009696AF /* libBirdLib.a */; };
 		26E768E83090EF8300A1560D /* libBirdLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2604FB0C30840CB8009696AF /* libBirdLib.a */; };
 		26E768F73091630F00A1560D /* libBirdLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2604FB0C30840CB8009696AF /* libBirdLib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		2604FD03308412AA009696AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000000000000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2604FB0B30840CB8009696AF;
+			remoteInfo = BirdLib;
+		};
+		263BB55B309BDE370036534D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 000000000000000000000000 /* Project object */;
 			proxyType = 1;
@@ -37,6 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		263BB4FE309A92110036534D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolder = None;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		26E768DC3090EDAE00A1560D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			dstPath = /usr/share/man/man1/;
@@ -58,6 +74,7 @@
 /* Begin PBXFileReference section */
 		000000000000000000000120 /* BirdTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BirdTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2604FB0C30840CB8009696AF /* libBirdLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBirdLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		263BB500309A92110036534D /* FortyEightFull */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FortyEightFull; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E768DE3090EDAE00A1560D /* MergeAdditions */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MergeAdditions; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E768EE3091622800A1560D /* FortyEight */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FortyEight; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -66,17 +83,17 @@
 		2604FB1430840D7A009696AF /* Exceptions for "BirdLib" folder in "BirdLib" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Abbreviations.swift,
-				AdditionRecords.swift,
-				AnnualRecords.swift,
+				Aliases.swift,
 				BirdGroup.swift,
 				BirdRecord.swift,
 				Day.swift,
 				DelimitedFile.swift,
+				ObserverGrouped.swift,
 				ReadTaxa.swift,
 				Species.swift,
 				Taxon.swift,
 				TaxonArray.swift,
+				TaxonGrouped.swift,
 				Taxonomy.swift,
 			);
 			target = 2604FB0B30840CB8009696AF /* BirdLib */;
@@ -84,17 +101,17 @@
 		2604FB1530840D9C009696AF /* Exceptions for "BirdLib" folder in "BirdTest" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Abbreviations.swift,
-				AdditionRecords.swift,
-				AnnualRecords.swift,
+				Aliases.swift,
 				BirdGroup.swift,
 				BirdRecord.swift,
 				Day.swift,
 				DelimitedFile.swift,
+				ObserverGrouped.swift,
 				ReadTaxa.swift,
 				Species.swift,
 				Taxon.swift,
 				TaxonArray.swift,
+				TaxonGrouped.swift,
 				Taxonomy.swift,
 			);
 			target = 000000000000000100000000 /* BirdTest */;
@@ -131,6 +148,11 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		263BB501309A92110036534D /* FortyEightFull */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = FortyEightFull;
+			sourceTree = "<group>";
+		};
 		265601C03089F81A00828CDD /* Java */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Java;
@@ -160,6 +182,12 @@
 			files = (
 			);
 		};
+		263BB4FD309A92110036534D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				263BB55D309BDE420036534D /* libBirdLib.a in Frameworks */,
+			);
+		};
 		26E768DB3090EDAE00A1560D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
@@ -186,6 +214,7 @@
 				000000000000000000000010 /* BirdTest */,
 				26E768DF3090EDAE00A1560D /* MergeAdditions */,
 				26E768EF3091622800A1560D /* FortyEight */,
+				263BB501309A92110036534D /* FortyEightFull */,
 				2604FD01308412AA009696AF /* Frameworks */,
 				000000000000000000000020 /* Products */,
 			);
@@ -198,6 +227,7 @@
 				2604FB0C30840CB8009696AF /* libBirdLib.a */,
 				26E768DE3090EDAE00A1560D /* MergeAdditions */,
 				26E768EE3091622800A1560D /* FortyEight */,
+				263BB500309A92110036534D /* FortyEightFull */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -256,6 +286,27 @@
 			productReference = 2604FB0C30840CB8009696AF /* libBirdLib.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		263BB4FF309A92110036534D /* FortyEightFull */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 263BB504309A92110036534D /* Build configuration list for PBXNativeTarget "FortyEightFull" */;
+			buildPhases = (
+				263BB4FC309A92110036534D /* Sources */,
+				263BB4FD309A92110036534D /* Frameworks */,
+				263BB4FE309A92110036534D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				263BB55C309BDE370036534D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				263BB501309A92110036534D /* FortyEightFull */,
+			);
+			name = FortyEightFull;
+			productName = FortyEightFull;
+			productReference = 263BB500309A92110036534D /* FortyEightFull */;
+			productType = "com.apple.product-type.tool";
+		};
 		26E768DD3090EDAE00A1560D /* MergeAdditions */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26E768E23090EDAE00A1560D /* Build configuration list for PBXNativeTarget "MergeAdditions" */;
@@ -305,7 +356,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2710;
+				LastSwiftUpdateCheck = 2720;
 				LastUpgradeCheck = 2710;
 				TargetAttributes = {
 					000000000000000100000000 = {
@@ -314,6 +365,9 @@
 					2604FB0B30840CB8009696AF = {
 						CreatedOnToolsVersion = 27.1;
 						LastSwiftMigration = 2710;
+					};
+					263BB4FF309A92110036534D = {
+						CreatedOnToolsVersion = 27.2;
 					};
 					26E768DD3090EDAE00A1560D = {
 						CreatedOnToolsVersion = 27.1;
@@ -341,6 +395,7 @@
 				2604FB0B30840CB8009696AF /* BirdLib */,
 				26E768DD3090EDAE00A1560D /* MergeAdditions */,
 				26E768ED3091622800A1560D /* FortyEight */,
+				263BB4FF309A92110036534D /* FortyEightFull */,
 			);
 		};
 /* End PBXProject section */
@@ -352,6 +407,11 @@
 			);
 		};
 		2604FB0930840CB8009696AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		263BB4FC309A92110036534D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
 			);
@@ -376,6 +436,11 @@
 			);
 			target = 2604FB0B30840CB8009696AF /* BirdLib */;
 			targetProxy = 2604FD03308412AA009696AF /* PBXContainerItemProxy */;
+		};
+		263BB55C309BDE370036534D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2604FB0B30840CB8009696AF /* BirdLib */;
+			targetProxy = 263BB55B309BDE370036534D /* PBXContainerItemProxy */;
 		};
 		26E768E73090EF6B00A1560D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -581,6 +646,36 @@
 			};
 			name = Release;
 		};
+		263BB505309A92110036534D /* Debug configuration for PBXNativeTarget "FortyEightFull" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 22WT5TK79S;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		263BB506309A92110036534D /* Release configuration for PBXNativeTarget "FortyEightFull" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 22WT5TK79S;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		26E768E33090EDAE00A1560D /* Debug configuration for PBXNativeTarget "MergeAdditions" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -665,6 +760,14 @@
 			buildConfigurations = (
 				2604FB0E30840CB8009696AF /* Debug configuration for PBXNativeTarget "BirdLib" */,
 				2604FB0F30840CB8009696AF /* Release configuration for PBXNativeTarget "BirdLib" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		263BB504309A92110036534D /* Build configuration list for PBXNativeTarget "FortyEightFull" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				263BB505309A92110036534D /* Debug configuration for PBXNativeTarget "FortyEightFull" */,
+				263BB506309A92110036534D /* Release configuration for PBXNativeTarget "FortyEightFull" */,
 			);
 			defaultConfigurationName = Release;
 		};

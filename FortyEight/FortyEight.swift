@@ -26,7 +26,7 @@ struct FortyEight {
         let taxonomy = try loadTaxonomy(from: taxaURL, groupsURL: groupsURL)
 
         // Get the BirdRecords from an annual file.
-        var records = try readAnnualRecords(from: sightingsURL, taxonomy: taxonomy)
+        var records = try readTaxonGroupedRecords(from: sightingsURL, taxonomy: taxonomy)
         print("\(records.count) records were read from an annual file")
 
         totalReports = records.count {

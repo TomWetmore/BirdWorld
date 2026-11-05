@@ -1,9 +1,9 @@
 //
-//  Abbreviations.swift
+//  Aliases.swift
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 29 October 2026.
-//  Last changed on 29 October 2026.
+//  Last changed on 3 November 2026.
 //
 
 import Foundation
@@ -15,27 +15,27 @@ public enum BirdWorldError: Error {
     case fileFormat(String)
 }
 
-/// Read the abbreviation definitions and build an index from
-/// alternative bird names to their Taxa.
+/// Read the alias definitions and build an index from the aliases
+/// to their Taxa.
 ///
-public func readAbbreviations(from url: URL, taxonomy: Taxonomy) throws -> [String: Taxon] {
+public func readAliases(from url: URL, taxonomy: Taxonomy) throws -> [String: Taxon] {
 
     let file = try DelimitedFile(url, separator: ":")
-    var abbreviations: [String: Taxon] = [:]
+    var aliases: [String: Taxon] = [:]
 
     while let line = try file.getFields() {
 
-        let fields = line.fields  // Two fields: a species code and a pattern.
+        let fields = line.fields  // Two fields: a species code and an alias.
         let line = line.number
 
         guard fields.count == 2 else {
-            throw BirdWorldError.fileFormat("line \(line): bad abbreviation")
+            throw BirdWorldError.fileFormat("line \(line): bad alias")
         }
 
         let code = fields[0]
         let definition = fields[1]
 
-        // Parse the abbreviation pattern.
+        // Parse the alias pattern.
         var pattern = TextPattern(definition)
         let strings = try pattern.expand()
 
@@ -48,15 +48,15 @@ public func readAbbreviations(from url: URL, taxonomy: Taxonomy) throws -> [Stri
         for string in strings {
             let key = prepareName(string)
 
-            guard abbreviations[key] == nil else {
-                throw BirdWorldError.fileFormat("line \(line): duplicate abbreviation \(key)")
+            guard aliases[key] == nil else {
+                throw BirdWorldError.fileFormat("line \(line): duplicate alias \(key)")
             }
 
-            abbreviations[key] = taxon
+            aliases[key] = taxon
         }
     }
 
-    return abbreviations
+    return aliases
 }
 
 /// A TextPattern defines a set of strings. In BirdWorld the set of strings are all
