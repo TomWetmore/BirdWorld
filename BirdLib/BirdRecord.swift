@@ -3,7 +3,7 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 21 October 2026.
-//  Last changed on 4 November 2026.
+//  Last changed on 5 November 2026.
 //
 
 import Foundation
@@ -81,19 +81,19 @@ public struct BirdRecord: CustomStringConvertible {
         return buffer
     }
 
-
     var annualLine: String {
         "\(date!): \(notes ?? ""): \(observer ?? "")"
     }
 }
 
-/// Create a Dictionary with species Taxa as keys and quarter-month integer arrays as
-/// values.
+/// From an Array of BirdRecords create the Dictionary that maps Species Taxa to their
+/// quarter-month Int occurence arrays.
 ///
 public func quarterMonthCounts (_ records: [BirdRecord]) -> [Taxon: [Int]] {
 
-    // First create a map from species to the sets of days on which recorded.
+    // Create the Map from the Species to the Sets of Days on which recorded.
     var daysBySpecies: [Taxon: Set<Day>] = [:]
+
     for record in records {
         guard case .species(let taxon) = record.kind,
               let day = record.date else {
@@ -102,8 +102,9 @@ public func quarterMonthCounts (_ records: [BirdRecord]) -> [Taxon: [Int]] {
         daysBySpecies[taxon, default: []].insert(day)
     }
 
-    // Then create a map from the species to quarter-monthly count arrays.
+    // Create the Map from the Species to their quarter-monthly count arrays.
     var countsBySpecies: [Taxon: [Int]] = [:]
+    
     for (species, days) in daysBySpecies {
         var counts = Array(repeating: 0, count: 48)  // Each array is 48 integers.
         for day in days {
@@ -135,19 +136,6 @@ extension Array<BirdRecord> {
         }
     }
 }
-
-//extension Array<BirdRecord> {
-//
-//    /// Sort BirdRecords by taxonomic order, then date.
-//    mutating func sortTaxonomically() {
-//        sort {
-//            if $0.kind.order! != $1.kind.order! {
-//                return $0.kind.order! < $1.kind.order!
-//            }
-//            return $0.date! < $1.date!
-//        }
-//    }
-//}
 
 extension Array<BirdRecord> {
 

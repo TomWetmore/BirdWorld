@@ -1,5 +1,3 @@
-class: Aves
-
 order: Anseriformes
 
 family: Anatidae
@@ -490,7 +488,7 @@ UpSa: Upland Sandpiper: Bartramia longicauda: UPSA
 
 genus: Numenius
 BTCl: Bristle-thighed Curlew: Numenius tahitiensis: BTCU
-Whim: Whimbrel: Numenius phaeopus: WHIM
+Whim: Hudsonian Whimbrel: Numenius hudsonicus: WHIM
 LiCl: Little Curlew: Numenius minutus: LICU
 EsCl: Eskimo Curlew: Numenius borealis: ESCU
 LBCl: Long-billed Curlew: Numenius americanus: LBCU
@@ -571,7 +569,8 @@ SoSa: Solitary Sandpiper: Tringa solitaria: SOSA
 GTat: Gray-tailed Tattler: Tringa brevipes: GTTA
 WTat: Wandering Tattler: Tringa incana: WATA
 LYel: Lesser Yellowlegs: Tringa flavipes: LEYE
-Will: Willet: Tringa semipalmata: WILL
+Will: Saltmarsh Willet: Tringa semipalmata: WILL
+PWil: Prairie Willet: Tringa inornata
 SpRs: Spotted Redshank: Tringa erythropus: SPRE
 CGrn: Common Greenshank: Tringa nebularia: COMG
 GYel: Greater Yellowlegs: Tringa melanoleuca: GRYE
@@ -681,7 +680,7 @@ RBGu: Ring-billed Gull: Larus delawarensis: RBGU
 WeGu: Western Gull: Larus occidentalis: WEGU
 YFGu: Yellow-footed Gull: Larus livens: YFGU
 CaGu: California Gull: Larus californicus: CAGU
-HeGu: Herring Gull: Larus argentatus: HERG
+HeGu: American Herring Gull: Larus argentatus: HERG
 YLGu: Yellow-legged Gull: Larus michahellis: YLGU
 ThGu: Thayer's Gull: Larus thayeri: THGU
 IcGu: Iceland Gull: Larus glaucoides: ICGU
@@ -749,7 +748,7 @@ family: Gaviidae
 
 genus: Gavia
 RTLn: Red-throated Loon: Gavia stellata: RTLO
-ArLn: Arctic Loon: Gavia arctica
+ArLn: Arctic Loon: Gavia arctica: ARLO
 PaLn: Pacific Loon: Gavia pacifica: PALO
 CoLn: Common Loon: Gavia immer: COLO
 YBLn: Yellow-billed Loon: Gavia adamsii: YBLO
@@ -907,10 +906,10 @@ genus: Butorides
 GnHn: Green Heron: Butorides virescens: GRHE
 
 genus: Nycticorax
-BCNH: Black-crowned Night-Heron: Nycticorax nycticorax: BCNH
+BCNH: Black-crowned Night Heron: Nycticorax nycticorax: BCNH
 
 genus: Nyctanassa
-YCNH: Yellow-crowned Night-Heron: Nyctanassa violacea: YCNH
+YCNH: Yellow-crowned Night Heron: Nyctanassa violacea: YCNH
 
 family: Threskiornithidae
 
@@ -1298,7 +1297,7 @@ CaVi: Cassin's Vireo: Vireo cassinii: CAVI
 BHVi: Blue-headed Vireo: Vireo solitarius: BHVI
 PlVi: Plumbeous Vireo: Vireo plumbeus: PLVI
 PhVi: Philadelphia Vireo: Vireo philadelphicus: PHVI
-WaVi: Warbling Vireo: Vireo gilvus: WAVI
+WaVi: Eastern Warbling Vireo: Vireo gilvus: WAVI
 REVi: Red-eyed Vireo: Vireo olivaceus: REVI
 YGVi: Yellow-green Vireo: Vireo flavoviridis: YGVI
 BWVi: Black-whiskered Vireo: Vireo altiloquus: BWVI
@@ -1477,13 +1476,13 @@ genus: Catherpes
 CnWn: Canyon Wren: Catherpes mexicanus: CANW
 
 genus: Troglodytes
-HoWn: House Wren: Troglodytes aedon: HOWR
+HoWn: Northern House Wren: Troglodytes aedon: HOWR
 PaWn: Pacific Wren: Troglodytes pacificus
 WiWn: Winter Wren: Troglodytes hiemalis: WIWR
 
 genus: Cistothorus
 SeWn: Sedge Wren: Cistothorus platensis: SEWR
-MaWn: Marsh Wren: Cistothorus palustris: MAWR
+MaWn: Eastern Marsh Wren: Cistothorus palustris: MAWR
 
 genus: Thryothorus
 CaWn: Carolina Wren: Thryothorus ludovicianus: CARW
@@ -1886,7 +1885,7 @@ TPar: Tropical Parula: Setophaga pitiayumi: TRPA
 MagW: Magnolia Warbler: Setophaga magnolia: MAWA
 BBrW: Bay-breasted Warbler: Setophaga castanea: BBWA
 BkbW: Blackburnian Warbler: Setophaga fusca: BLBW
-YelW: Yellow Warbler: Setophaga petechia: YWAR
+YelW: Northern Yellow Warbler: Setophaga aestiva: YWAR
 CSiW: Chestnut-sided Warbler: Setophaga pensylvanica: CSWA
 BkpW: Blackpoll Warbler: Setophaga striata: BLPW
 BBlW: Black-throated Blue Warbler: Setophaga caerulescens: BTBW

@@ -3,7 +3,7 @@
 // BirdTest
 //
 // Created by Thomas Wetmore on 17 October 2026.
-// Last changed on 2 November 2026.
+// Last changed on 5 November 2026.
 //
 
 import Foundation
@@ -53,7 +53,7 @@ func testOne() throws {
 func testTwo() throws {
     let taxonomy = try loadTaxonomy(from: taxaURL)
 
-    let abbvs = try readAliases(from: abbvsURL, taxonomy: taxonomy)
+    let abbvs: [Alias: Taxon] = try readAliases(from: abbvsURL, taxonomy: taxonomy)
 
     var count = 1
     for (str, species) in abbvs {

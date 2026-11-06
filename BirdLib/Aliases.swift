@@ -3,25 +3,23 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 29 October 2026.
-//  Last changed on 3 November 2026.
+//  Last changed on 5 November 2026.
 //
 
 import Foundation
 
-/// MOVE ELSEWHERE
-///
-public enum BirdWorldError: Error {
+public typealias Alias = String
 
-    case fileFormat(String)
-}
+/// An alias is a String that refers to one Taxon. Aliases are defined using a pattern
+/// language, left over from an earlier feature. If pattern features are used then each
+/// line can define more than one alias.
 
-/// Read the alias definitions and build an index from the aliases
-/// to their Taxa.
+/// Read the alias definitions URL and build an index from aliases to their Taxa.
 ///
-public func readAliases(from url: URL, taxonomy: Taxonomy) throws -> [String: Taxon] {
+public func readAliases(from url: URL, taxonomy: Taxonomy) throws -> [Alias: Taxon] {
 
     let file = try DelimitedFile(url, separator: ":")
-    var aliases: [String: Taxon] = [:]
+    var aliases: [Alias: Taxon] = [:]
 
     while let line = try file.getFields() {
 
@@ -45,13 +43,12 @@ public func readAliases(from url: URL, taxonomy: Taxonomy) throws -> [String: Ta
         }
 
         // Normalize and insert each generated string.
-        for string in strings {
-            let key = prepareName(string)
+        for alias in strings {
+            let key = prepareName(alias)
 
             guard aliases[key] == nil else {
                 throw BirdWorldError.fileFormat("line \(line): duplicate alias \(key)")
             }
-
             aliases[key] = taxon
         }
     }
@@ -59,7 +56,7 @@ public func readAliases(from url: URL, taxonomy: Taxonomy) throws -> [String: Ta
     return aliases
 }
 
-/// A TextPattern defines a set of strings. In BirdWorld the set of strings are all
+/// A TextPattern defines a set of strings. In BirdWorld the strings are all
 /// valid String that can identify a species Taxon.
 ///
 public struct TextPattern {
@@ -73,14 +70,14 @@ public struct TextPattern {
 
     /// Parse the pattern and return its possible strings.
     ///
-    public mutating func expand() throws -> Set<String> {
+    public mutating func expand() throws -> Set<Alias> {
 
-        let strings = try parseAlternatives()
+        let aliases = try parseAlternatives()
 
         guard position == characters.count else {
             throw PatternError("unexpected character at position \(position)")
         }
-        return strings
+        return aliases
     }
 
     /// Parse alternatives separated by vertical bars.
@@ -181,4 +178,3 @@ public struct PatternError: Error, CustomStringConvertible {
 func prepareName(_ name: String) -> String {
     String(name.lowercased().filter { $0.isLetter })
 }
-

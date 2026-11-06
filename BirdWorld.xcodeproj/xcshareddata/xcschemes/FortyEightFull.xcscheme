@@ -52,11 +52,23 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "/Users/ttw4/Desktop/BirdWorld/Resources/taxa"
+            argument = "/Users/ttw4/Desktop/BirdWorld/Resources/taxa.txt"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "/Users/ttw4/Desktop/BirdWorld/Resources/groups.txt"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "/Users/ttw4/Desktop/BirdWorld/Resources/aliases.txt"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "/Users/ttw4/WebSitePages/Current/tom/birds/pisightings2025.txt"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "/Users/ttw4/WebSitePages/Current/tom/birds/pisightings2026.txt"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

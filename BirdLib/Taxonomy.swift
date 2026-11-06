@@ -3,7 +3,7 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 18 October 2026.
-//  Last changed on 2 November 2026.
+//  Last changed on 5 November 2026.
 //
 
 import Foundation
@@ -36,8 +36,7 @@ public final class Taxonomy {
     public private(set) var groupCodeIndex: [String: BirdGroup] = [:]
     public private(set) var groupNameIndex: [String: BirdGroup] = [:]
 
-    public private(set) var abbreviationIndex: [String: Taxon] = [:]
-
+    public private(set) var aliasIndex: [Alias: Taxon] = [:]
 }
 
 /// Create a Taxonomy from an ordered list of Taxons.
@@ -70,7 +69,7 @@ private func makeTaxonomy(from taxa: [Taxon]) -> [Taxon] {
 ///
 extension Taxonomy {
 
-    /// Makes the Taxonomy's indexes.
+    /// Make the Taxonomy's indexes.
     ///
     private func makeIndexes(_ requirements: SpeciesRequirements) throws {
 
@@ -130,17 +129,17 @@ extension Taxonomy {
 ///
 extension Taxonomy {
 
-    /// Lookup a Species Taxon using three indexes.
+    /// Look up a species Taxon using three indexes.
     /// May add the banding code index later.
     ///
     public func getSpecies(_ string: String) -> Taxon? {
         codeIndex[string]
             ?? englishNameIndex[string]
             ?? scientificNameIndex[string]
-            ?? abbreviationIndex[prepareName(string)]
+            ?? aliasIndex[prepareName(string)]
     }
 
-    /// Lookup a BirdGroup using the code and name indices.
+    /// Look up a BirdGroup using the code and name indices.
     ///
     func getGroup(_ string: String) -> BirdGroup? {
 
@@ -149,6 +148,7 @@ extension Taxonomy {
 }
 
 /// Display methods.
+///
 extension Taxonomy {
 
     public func show(through level: Level) {
@@ -183,16 +183,30 @@ extension Taxonomy {
     }
 }
 
+///
+///
+extension Taxonomy {
+    
+    fileprivate func loadAliases(from url: URL) throws {
+        aliasIndex = try readAliases(from: url, taxonomy: self)
+    }
+}
+
 /// Load a Taxonomy from a taxa file. If a group file is provided also load the
 /// BirdGroups.
 ///
-public func loadTaxonomy(from taxaURL: URL, groupsURL: URL? = nil) throws -> Taxonomy {
-
-    // Read the Taxa file and create the Taxonomy.
-    let taxa: [Taxon] = try readTaxa(from: taxaURL)
+public func loadTaxonomy(
+    from taxaURL: URL,
+    groupsURL: URL? = nil,
+    aliasesURL: URL? = nil
+) throws -> Taxonomy {
+    let taxa = try readTaxa(from: taxaURL)
     let taxonomy = try Taxonomy(taxa: taxa)
 
-    // If there is a group file read the groups and add them to the Taxonomy.
+    if let aliasesURL {
+        try taxonomy.loadAliases(from: aliasesURL)
+    }
+
     if let groupsURL {
         let groups = try readGroups(url: groupsURL, taxonomy: taxonomy)
         try taxonomy.addGroups(groups)
@@ -201,11 +215,12 @@ public func loadTaxonomy(from taxaURL: URL, groupsURL: URL? = nil) throws -> Tax
     return taxonomy
 }
 
-/// Piggy-back on methods defined on Array<Taxon>.
+/// Piggy-back Array<Taxon> methods.
 ///
 extension Taxonomy {
 
     public func assignOrder(at level: Level) {
+
         roots.assignOrder(at: level)
     }
 
@@ -219,5 +234,4 @@ extension Taxonomy {
         }
     }
 
-    
 }
