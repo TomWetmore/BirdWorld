@@ -3,12 +3,12 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 17 October 2026.
-//  Last changed on 22 October 2026.
+//  Last changed on 6 November 2026.
 //
 
 import Foundation
 
-/// Read Taxa from a colon-delimited file.
+/// Read Taxa from a DelimitedFile.
 ///
 public func readTaxa(from url: URL) throws -> [Taxon] {
 
@@ -40,8 +40,7 @@ public func readTaxa(from url: URL) throws -> [Taxon] {
                 level: .species,
                 code: fields[0],
                 englishName: fields[1],
-                scientificName: fields[2],
-                bandingCode: fields.count == 4 ? fields[3] : nil))
+                scientificName: fields[2]))
         }
     }
 

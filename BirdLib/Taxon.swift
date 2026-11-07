@@ -3,7 +3,7 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 17 October 2026.
-//  Last changed on 24 October 2026
+//  Last changed on 6 November 2026
 //
 
 import Foundation
@@ -18,7 +18,6 @@ public final class Taxon: CustomStringConvertible {
     public let code: String? // Wetmore four-letter code for species/groups.
     public let englishName: String?
     public let scientificName: String?
-    public let bandingCode: String?  // USFWS banding code.
     public var order: Int? = nil
 
     public weak var parent: Taxon? = nil
@@ -28,13 +27,12 @@ public final class Taxon: CustomStringConvertible {
     /// it will not be very interesting.
     ///
     public init(level: Level, code: String? = nil, englishName: String? = nil,
-                scientificName: String? = nil, bandingCode: String? = nil) {
+                scientificName: String? = nil) {
 
         self.level = level
         self.code = code
         self.englishName = englishName
         self.scientificName = scientificName
-        self.bandingCode = bandingCode
     }
 }
 

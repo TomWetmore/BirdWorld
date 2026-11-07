@@ -3,7 +3,7 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 18 October 2026.
-//  Last changed on 5 November 2026.
+//  Last changed on 7 November 2026.
 //
 
 import Foundation
@@ -26,7 +26,6 @@ public final class Taxonomy {
     public private(set) var englishNameIndex: [String : Taxon] = [:]
     public private(set) var scientificNameIndex: [String : Taxon] = [:]
     public private(set) var codeIndex: [String : Taxon] = [:]
-    public private(set) var bandingCodeIndex: [String : Taxon] = [:]
 
     // Fleshed out if BirdGroups are used.
     public private(set) var higherTaxonIndex: [String : Taxon] = [:]
@@ -101,17 +100,15 @@ extension Taxonomy {
             // Add the field to its index.
             index[value] = species
         }
-        // Index the species on the two codes and the two names.
+        // Index the species on the code and the two names.
         for species in self.species {
 
             try insert(species.code, into: &codeIndex, for: species,
-                field: "four-letter code", requirement: requirements.code)
+                field: "four letter code", requirement: requirements.code)
             try insert(species.englishName, into: &englishNameIndex, for: species,
                 field: "English name", requirement: requirements.englishName)
             try insert(species.scientificName, into: &scientificNameIndex, for: species,
                 field: "scientific name", requirement: requirements.scientificName)
-            try insert(species.bandingCode, into: &bandingCodeIndex, for: species,
-                field: "banding code", requirement: requirements.bandingCode)
         }
 
         // Index the higher level taxa. For now only index the scientific name.
@@ -130,7 +127,6 @@ extension Taxonomy {
 extension Taxonomy {
 
     /// Look up a species Taxon using three indexes.
-    /// May add the banding code index later.
     ///
     public func getSpecies(_ string: String) -> Taxon? {
         codeIndex[string]
