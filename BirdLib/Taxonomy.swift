@@ -182,20 +182,20 @@ extension Taxonomy {
 ///
 ///
 extension Taxonomy {
-    
+
+    /// Load Aliases from an aliases DelimitedFile.
+    ///
     fileprivate func loadAliases(from url: URL) throws {
+
         aliasIndex = try readAliases(from: url, taxonomy: self)
     }
 }
 
-/// Load a Taxonomy from a taxa file. If a group file is provided also load the
-/// BirdGroups.
+/// Load a Taxonomy from a taxa file, and optionally from a groups and/or aliases file.
 ///
-public func loadTaxonomy(
-    from taxaURL: URL,
-    groupsURL: URL? = nil,
-    aliasesURL: URL? = nil
-) throws -> Taxonomy {
+public func loadTaxonomy(from taxaURL: URL, groupsURL: URL? = nil, aliasesURL: URL? = nil)
+        throws -> Taxonomy {
+
     let taxa = try readTaxa(from: taxaURL)
     let taxonomy = try Taxonomy(taxa: taxa)
 

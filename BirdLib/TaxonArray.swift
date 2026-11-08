@@ -3,18 +3,16 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 24 October 2026.
-//  Last changed on 2 November 2026.
+//  Last changed on 7 November 2026.
 //
-//  A Taxonomy is primarily an Array<Taxon>, so it is useful to use Array<Taxon>
-//  as its own type in some contexts. This file provides useful methods on
-//  Array<Taxon> that can be used by Taxonomy or from other contexts with access
-//  to Array<Taxon>'s.
+//  A Taxonomy is primarily an Array<Taxon>, and it is useful to extend
+//  Array<Taxon> in some contexts.
 
 import Foundation
 
 extension Array<Taxon> {
 
-    /// Return the species Taxa tht are at or below a Taxon in an Array<Taxon>.
+    /// Return the species Taxa that are at or below a Taxon in an Array<Taxon>.
     ///
     public var species: [Taxon] {
 

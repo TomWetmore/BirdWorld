@@ -3,13 +3,13 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 17 October 2026.
-//  Last changed on 6 November 2026
+//  Last changed on 7 November 2026
 //
 
 import Foundation
 
 /// Taxon is a fundamental type in the Bird World. Each Taxon represents one element in a
-/// Taxonomy. Each Taxon has a Level (e.g., order, family, species), and a name. Taxa at
+/// Taxonomy. Each Taxon has a Level (e.g., order, family, species), and names. Taxa at
 /// different levels are not yet there own types, though some may become so in the future.
 ///
 public final class Taxon: CustomStringConvertible {
@@ -18,13 +18,13 @@ public final class Taxon: CustomStringConvertible {
     public let code: String? // Wetmore four-letter code for species/groups.
     public let englishName: String?
     public let scientificName: String?
-    public var order: Int? = nil
+    public var order: Int? = nil  // Optional: may not be needed in some applications.
 
     public weak var parent: Taxon? = nil
     public var children: [Taxon] = []
 
-    /// Create a Taxon. Only level is required, though without at least one name property,
-    /// it will not be very interesting.
+    /// Create a Taxon. Only the Level is required. TODO: Think about requiring at least
+    /// one name to be present.
     ///
     public init(level: Level, code: String? = nil, englishName: String? = nil,
                 scientificName: String? = nil) {
@@ -57,6 +57,7 @@ extension Taxon {
     /// The description of a single Taxon, made up of the level and the name.
     ///
     public var description: String {
+
         if let order {
             "\(order). \(level.rawValue): \(name)"
         } else {
@@ -64,7 +65,7 @@ extension Taxon {
         }
     }
 
-    /// The display name of a Taxon. Shows the available.
+    /// The display name of a Taxon. Shows the available names.
     ///
     public var name: String {
 

@@ -14,7 +14,7 @@ public typealias Alias = String
 /// language, left over from an earlier feature. If pattern features are used then each
 /// line can define more than one alias.
 
-/// Read the alias definitions URL and build an index from aliases to their Taxa.
+/// Read the alias definitions and build an index from aliases to their Taxa.
 ///
 public func readAliases(from url: URL, taxonomy: Taxonomy) throws -> [Alias: Taxon] {
 
@@ -27,7 +27,7 @@ public func readAliases(from url: URL, taxonomy: Taxonomy) throws -> [Alias: Tax
         let line = line.number
 
         guard fields.count == 2 else {
-            throw BirdWorldError.fileFormat("line \(line): bad alias")
+            throw BirdWorldError.fileFormat("line: \(line): bad alias line")
         }
 
         let code = fields[0]
@@ -135,7 +135,7 @@ public struct TextPattern {
         return [String(character)]
     }
 
-    /// Concatenate every string in the first set with every string in the second set.
+    /// Concatenate every String in the first Set with every String in the second Set.
     ///
     private func concatenate(_ first: Set<String>, _ second: Set<String>) -> Set<String> {
 
