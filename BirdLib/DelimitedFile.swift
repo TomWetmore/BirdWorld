@@ -3,7 +3,7 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 19 October 2026.
-//  Last changed on 29 October 2026.
+//  Last changed on 8 November 2026.
 //
 
 import Foundation
@@ -31,8 +31,10 @@ public final class DelimitedFile {
     private var position = 0
     private var atEOF = false
 
-    /// Open a delimited file for reading.
+    /// Open a DelimitedFile for reading.
+    ///
     public init(_ url: URL, separator: Character = ":") throws {
+
         self.handle = try FileHandle(forReadingFrom: url)
         self.separator = separator
     }
@@ -41,7 +43,8 @@ public final class DelimitedFile {
         try? handle.close()
     }
 
-    /// Return the next nonempty line as fields, or nil at EOF.
+    /// Return the next DelimitedLine, or nil at EOF.
+    ///
     public func getFields() throws -> DelimitedLine? {
 
         while let text = try readLine() {
@@ -60,8 +63,8 @@ public final class DelimitedFile {
         return nil
     }
 
-    /// Read the next physical line from the file.
-    /// Recognizes LF and CRLF line endings.
+    /// Read the next line from the file, recognizing LF and CRLF line endings.
+    ///
     private func readLine() throws -> String? {
 
         while true {

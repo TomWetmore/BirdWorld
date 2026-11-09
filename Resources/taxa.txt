@@ -682,7 +682,7 @@ YFGu: Yellow-footed Gull: Larus livens
 CaGu: California Gull: Larus californicus
 HeGu: American Herring Gull: Larus argentatus
 YLGu: Yellow-legged Gull: Larus michahellis
-ThGu: Thayer's Gull: Larus thayeri
+ThGu: Iceland Gull: Larus glaucoides
 IcGu: Iceland Gull: Larus glaucoides
 LBGu: Lesser Black-backed Gull: Larus fuscus
 SBGu: Slaty-backed Gull: Larus schistisagus

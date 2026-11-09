@@ -50,6 +50,23 @@
             ReferencedContainer = "container:BirdWorld.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "/Users/ttw4/Desktop/BirdWorld/Resources/pisightings2026.txt"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "/Users/ttw4/Desktop/BirdWorld/Resources/additions.txt"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "BIRDWORLD_DATA"
+            value = "/Users/ttw4/Desktop/BirdWorld/Resources/"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

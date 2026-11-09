@@ -24,7 +24,7 @@ public func readTaxonGroupedRecords(from url: URL, taxonomy: Taxonomy) throws ->
 
         // Lines have one or three fields.
         guard fields.count == 1 || fields.count == 3 else {
-            throw RecordFileError.invalidLine(lineNumber, "Wrong number of fiedls")
+            throw RecordFileError.invalidLine(lineNumber, "Wrong number of fields")
         }
 
         // Handle a species or group name line.

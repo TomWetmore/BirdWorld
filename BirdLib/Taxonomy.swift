@@ -94,9 +94,9 @@ extension Taxonomy {
                 return
             }
             // Check uniqueness.
-            guard index[value] == nil else {
-                throw TaxaFileError.invalidLine(0, "duplicate \(field): \(value)")
-            }
+//            guard index[value] == nil else {
+//                throw TaxaFileError.invalidLine(0, "duplicate \(field): \(value)")
+//            }
             // Add the field to its index.
             index[value] = species
         }
