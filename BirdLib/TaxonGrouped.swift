@@ -3,7 +3,7 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 22 October 2026.
-//  Last changed on 4 November 2026.
+//  Last changed on 9 November 2026.
 //
 
 import Foundation
@@ -62,19 +62,19 @@ public func readTaxonGroupedRecords(from url: URL, taxonomy: Taxonomy) throws ->
     return records
 }
 
-public func writeAnnualRecords(_ records: [BirdRecord], to url: URL) throws {
+/// Convert an Array of taxon-grouped BirdRecords to a String.
+///
+public func taxonGroupedText(_ records: [BirdRecord]) -> String {
 
     var output = ""
     var previousOrder: Int?
 
     for record in records {
-
         // Start a new species/group section.
         if record.kind.order != previousOrder {
             if previousOrder != nil {
                 output += "\n"
             }
-
             output += "\(record.kind.name)\n"
             previousOrder = record.kind.order
         }
@@ -83,5 +83,12 @@ public func writeAnnualRecords(_ records: [BirdRecord], to url: URL) throws {
         output += "\(record.annualLine)\n"
     }
 
-    try output.write(to: url, atomically: true, encoding: .utf8)
+    return output
+}
+
+/// Write an Array of taxon grouped BirdRecords to a URL.
+///
+public func writeTaxonGroupedRecords(_ records: [BirdRecord], to url: URL) throws {
+
+    try taxonGroupedText(records).write(to: url, atomically: true, encoding: .utf8)
 }

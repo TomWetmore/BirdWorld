@@ -3,7 +3,7 @@
 //  MergeAdditions
 //
 //  Created by Thomas Wetmore on 27 October 2026.
-//  Last changed on 8 November 2026.
+//  Last changed on 9 November 2026.
 //
 //  This program reads a species-grouped and an observer-grouped file of BirdRecords.
 //  The BirdRecords are merged together and then written out as an updated species-
@@ -53,7 +53,8 @@ struct MergeAnnual {
         print("\(records.count) records merged from the annual and additions files")
 
         // Write the BirdRecords as a merged species grouped file.
-        try writeAnnualRecords(records, to: testOutURL)
+        //try writeTaxonGroupedRecords(records, to: testOutURL)
+        print(taxonGroupedText(records), terminator: "")
     }
 }
 
