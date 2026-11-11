@@ -7,22 +7,16 @@
 	<key>WorksheetContents</key>
 	<string># BIRLD WORLD WORKSHEET
 # Created on 9 November 2026 by Thomas Wetmore.
-# Last changed on 9 November 2026.
+# Last changed on 11 November 2026.
 #
 
 export BIRDWORLD_DATA="/Users/ttw4/Desktop/BirdWorld/Resources"
-echo $BIRDWORLD_DATA
 
 ## TEST THE MERGE PROGRAM
-
 MergeAdditions $BIRDWORLD_DATA/pisightings2026.txt $BIRDWORLD_DATA/additions.txt &gt;$BIRDWORLD_DATA/out.txt
 
-
-
-
-
-
-
+## TEST THE BASIC FORTY EIGHT PROGRAM -- PROBABLY WON'T STAND THE TEST OF TIME.
+FortyEight $BIRDWORLD_DATA/pisightings2026.txt &gt;$BIRDWORLD_DATA/out.txt
 
 </string>
 </dict>

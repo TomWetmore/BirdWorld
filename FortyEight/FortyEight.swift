@@ -3,7 +3,7 @@
 //  FortyEight
 //
 //  Created by Thomas Wetmore on 27 October 2026.
-//  Last changed on 2 November 2026.
+//  Last changed on 11 November 2026.
 //
 
 import Foundation
@@ -12,29 +12,34 @@ import BirdLib
 @main
 struct FortyEight {
 
-    static let taxaURL = URL(fileURLWithPath: "/Users/ttw4/Desktop/BirdWorld/Resources/taxa")
-    static let groupsURL = URL(fileURLWithPath: "/Users/ttw4/Desktop/BirdWorld/Resources/groups")
-    static let sightingsURL = URL(fileURLWithPath: "/Users/ttw4/Desktop/BirdWorld/Resources/pisightings2026.txt")
-    static let testOutURL = URL(fileURLWithPath: "/Users/ttw4/Desktop/BirdWorld/Resources/testout.txt")
     static let htmlBase = "/Users/ttw4/Desktop/BirdWorld/Resources/HTML/FortyEight/"
     static let headerURL = URL(fileURLWithPath: htmlBase + "header.html")
     static var totalReports: Int = 0
 
     static func main() throws {
 
-        // Create a Taxonomy with a taxa and groups file.
-        let taxonomy = try loadTaxonomy(from: taxaURL, groupsURL: groupsURL)
+        // Create the Taxonomy using resource files from the BIRDWORLD_DATA directory.
+        guard let path = ProcessInfo.processInfo.environment["BIRDWORLD_DATA"] else {
+            throw RuntimeError("BIRDWORLD_DATA is not defined")
+        }
+        let directory = URL(fileURLWithPath: path, isDirectory: true)
+        let taxaURL = directory.appendingPathComponent("taxa.txt")
+        let groupsURL = directory.appendingPathComponent("groups.txt")
+        let aliasesURL = directory.appendingPathComponent("aliases.txt")
+        let taxonomy = try loadTaxonomy(from: taxaURL, groupsURL: groupsURL,
+                                        aliasesURL: aliasesURL)
 
-        // Get the BirdRecords from an annual file.
+        // Convert the command line argument to a file URL, and read a taxon-grouped file.
+        var urls: [URL] = CommandLine.arguments.dropFirst().map {
+            URL(fileURLWithPath: $0)
+        }
+        let sightingsURL = urls.removeFirst()
+
+        // Get the BirdRecords from a taxon-grouped file.
         var records = try readTaxonGroupedRecords(from: sightingsURL, taxonomy: taxonomy)
         print("\(records.count) records were read from an annual file")
 
-        totalReports = records.count {
-            if case .species = $0.kind { return true }
-            return false
-        }
-
-        // Filter out the BirdGroups because we don't count them in this report.
+        // Filter out non-species taxa.
         records = records.filter {
             if case .species = $0.kind { return true }
             return false
@@ -43,12 +48,14 @@ struct FortyEight {
         // Get the quarter-month counts for the BirdRecords.
         let countsBySpecies = quarterMonthCounts(records)
 
-        // Get the array of species with counts in taxonomic order.
-        let species = countsBySpecies.keys.sorted {
+        // Get the species in an array in taxonomic order.
+        let species: [Taxon] = countsBySpecies.keys.sorted {
             $0.order! < $1.order!
         }
 
-        let html = try generateHTML(species: species, records: records, counts: countsBySpecies)
+        // Generate an HTML page with the data.
+        let html = try generateHTML(species: species, records: records,
+                                    counts: countsBySpecies)
         print(html)
 
         // Debug for now: Show the results.
@@ -57,4 +64,14 @@ struct FortyEight {
 //            print("\(taxon.englishName!),\(counts.map(String.init).joined(separator: ","))")
 //        }
     }
+}
+
+public struct RuntimeError: Error {
+
+    var message: String
+
+    init(_ message: String) {
+        self.message = message
+    }
+
 }
