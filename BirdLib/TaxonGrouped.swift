@@ -3,7 +3,7 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 22 October 2026.
-//  Last changed on 9 November 2026.
+//  Last changed on 13 November 2026.
 //
 
 import Foundation
@@ -49,11 +49,11 @@ public func readTaxonGroupedRecords(from url: URL, taxonomy: Taxonomy) throws ->
             let notes = fields[1]
             let observer = fields[2]
 
-            guard let date = Day(dateString) else {
+            guard let range = DayRange(dateString) else {
                 throw RecordFileError.invalidLine(
                     lineNumber, "Invalid date: \(dateString)")
             }
-            let record = BirdRecord(kind: currentKind, date: date,
+            let record = BirdRecord(kind: currentKind, range: range,
                                     location: "Plum Island", observer: observer,
                                     notes: notes)
             records.append(record)

@@ -3,7 +3,7 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 22 October 2026.
-//  Last changed on 2 November 2026.
+//  Last changed on 13 November 2026.
 //
 
 import Foundation
@@ -26,55 +26,66 @@ public struct Day: Hashable, Comparable, CustomStringConvertible {
         number = Self.daysFromCivil(year, month, day)
     }
 
-    /// Parse a date such as "18 oct 2026".
-    /// Month names are case-insensitive.
+    /// Parse a date such as "18 oct 2026". Month names are case-insensitive.
+    ///
     public init?(_ text: String) {
 
         let parts = text.split(whereSeparator: \.isWhitespace)
-        guard parts.count == 3,
-              let day = Int(parts[0]),
+        guard parts.count == 3, let day = Int(parts[0]),
               let year = Int(parts[2]),
-              let month = Self.monthNumber(String(parts[1]))
-        else {
+              let month = Self.monthNumber(String(parts[1])) else {
             return nil
         }
-
         self.init(year: year, month: month, day: day)
     }
 
-    /// Construct directly from an integer day number.
+    /// Construct a Day directly from an integer day number.
+    ///
     public init(number: Int) {
+
         self.number = number
     }
 
     /// Return the year, month, and day.
+    ///
     public var components: (year: Int, month: Int, day: Int) {
+
         Self.civilFromDays(number)
     }
 
     /// Display as "18 Oct 2026".
+    ///
     public var description: String {
+
         let (year, month, day) = components
         return "\(day) \(Self.monthNames[month - 1]) \(year)"
     }
 
-    /// Compare two days.
+    /// Compare two Days.
+    ///
     public static func < (lhs: Day, rhs: Day) -> Bool {
+
         lhs.number < rhs.number
     }
 
-    /// Number of days between two dates.
+    /// Number of days between two Days.
+    ///
     public static func - (lhs: Day, rhs: Day) -> Int {
+
         lhs.number - rhs.number
     }
 
     /// Add a number of days.
+    ///
     public static func + (lhs: Day, rhs: Int) -> Day {
+
         Day(number: lhs.number + rhs)
     }
 
     /// Subtract a number of days.
+    ///
     public static func - (lhs: Day, rhs: Int) -> Day {
+
         Day(number: lhs.number - rhs)
     }
 }
@@ -169,5 +180,73 @@ public extension Day {
         if day <= b2 { return offset + 1 }
         if day <= b3 { return offset + 2 }
         return offset + 3
+    }
+}
+
+/// A DayRange is a sequence of Days.
+///
+public struct DayRange {
+
+    public let start: Day
+    public let end: Day
+
+    public init?(_ text: String) {
+
+        if let day = Day(text) {
+            start = day
+            end = day
+            return
+        }
+
+        let endpoints = text.split(
+            omittingEmptySubsequences: false,
+            whereSeparator: { $0 == "-" || $0 == "–" }
+        )
+        guard endpoints.count == 2,
+              let lastDay = Day(String(endpoints[1]))
+        else { return nil }
+
+        let startParts = endpoints[0].split(whereSeparator: \.isWhitespace)
+        let endParts = endpoints[1].split(whereSeparator: \.isWhitespace)
+
+        let startText: String
+        switch startParts.count {
+        case 1:
+            // 23-26 Oct 2004
+            startText = "\(startParts[0]) \(endParts[1]) \(endParts[2])"
+        case 2:
+            // 23 Oct - 05 Nov 2004
+            startText = "\(startParts[0]) \(startParts[1]) \(endParts[2])"
+        default:
+            return nil
+        }
+
+        guard let firstDay = Day(startText), firstDay <= lastDay else {
+            return nil
+        }
+
+        start = firstDay
+        end = lastDay
+    }
+
+    public var isSingleDay: Bool {
+        start == end
+    }
+
+    public var midpoint: Day {
+        start + (end - start) / 2
+    }
+
+    public var description: String {
+        
+        if isSingleDay {
+            return start.description
+        }
+
+        // The range parser expects the shared year at the end.
+        let startWithoutYear = start.description.split(separator: " ")
+            .dropLast()
+            .joined(separator: " ")
+        return "\(startWithoutYear) - \(end)"
     }
 }

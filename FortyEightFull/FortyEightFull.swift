@@ -2,8 +2,8 @@
 //  main.swift
 //  FortyEightFull
 //
-//  Created by Thomas Wetmore on 11/3/26.
-//  Last changed on 5 November 2026.
+//  Created by Thomas Wetmore on 3 November 2026.
+//  Last changed on 13 November 2026.
 //
 
 import Foundation
@@ -24,30 +24,39 @@ struct FortyEightFull {
 
     static func doit() throws {
 
+        // Create the Taxonomy using resource files found in the directory defined
+        // by the BIRDWORLD_DATA environment variable.
+        guard let path = ProcessInfo.processInfo.environment["BIRDWORLD_DATA"] else {
+            throw RuntimeError("BIRDWORLD_DATA is not defined")
+        }
+        let directory = URL(fileURLWithPath: path, isDirectory: true)
+        let taxaURL = directory.appendingPathComponent("taxa.txt")
+        let groupsURL = directory.appendingPathComponent("groups.txt")
+        let aliasesURL = directory.appendingPathComponent("aliases.txt")
+        let taxonomy = try loadTaxonomy(from: taxaURL, groupsURL: groupsURL, aliasesURL: aliasesURL)
+
         // Convert the command line arguments into file URLs.
-        var urls: [URL] = CommandLine.arguments.dropFirst().map {
+        let urls: [URL] = CommandLine.arguments.dropFirst().map {
             URL(fileURLWithPath: $0)
         }
+        print("CONVERTED \(urls.count) record files.")  // TODO: DEBUG: REMOVE.
 
-        // There must be at least four URLs for the taxa, groups, and aliases.
-        guard urls.count > 3 else {
+        // There must be at least one URLs for taxon-grouped record files.
+        guard urls.count >= 1 else {
             throw ProgramError.argumentCount
         }
-        guard !urls.isEmpty else {
-            throw ProgramError.missingTaxonomyURL
-        }
 
-        // Load a Taxonomy from the first three URLs.
-        let taxaURL = urls.removeFirst()
-        let groupsURL = urls.removeFirst()
-        let aliasesURL = urls.removeFirst()
-        let taxonomy = try loadTaxonomy(from: taxaURL, groupsURL: groupsURL,
-                                        aliasesURL: aliasesURL)
-
-        // The remaining URLs should be taxon-grouped files.
+        // Process the taxon-grouped record files.
         var allRecords = [BirdRecord]()
         for url in urls {
-            let records = try readTaxonGroupedRecords(from: url, taxonomy: taxonomy)
+            print("processing: \(url)")
+            var records = try readTaxonGroupedRecords(from: url, taxonomy: taxonomy)
+
+            // Filter out non-species taxa.
+            records = records.filter {
+                if case .species = $0.kind { return true }
+                return false
+            }
             try allRecords.merge(records)
         }
         print("\(allRecords.count)")
@@ -70,3 +79,12 @@ struct FortyEightFull {
     }
 }
 
+public struct RuntimeError: Error {
+
+    var message: String
+
+    init(_ message: String) {
+        self.message = message
+    }
+
+}

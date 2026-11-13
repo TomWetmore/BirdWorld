@@ -10,6 +10,8 @@
 # Last changed on 11 November 2026.
 #
 
+export BIRDWORLD="/Users/ttw4/Desktop/BirdWorld"
+export RECORDS=$BIRDWORLD/Records
 export BIRDWORLD_DATA="/Users/ttw4/Desktop/BirdWorld/Resources"
 
 ## TEST THE MERGE PROGRAM
@@ -17,6 +19,35 @@ MergeAdditions $BIRDWORLD_DATA/pisightings2026.txt $BIRDWORLD_DATA/additions.txt
 
 ## TEST THE BASIC FORTY EIGHT PROGRAM -- PROBABLY WON'T STAND THE TEST OF TIME.
 FortyEight $BIRDWORLD_DATA/pisightings2026.txt &gt;$BIRDWORLD_DATA/out.txt
+
+## TEST THE FORTY EIGHT FULL PROGRAM
+FortyEightFull $RECORDS/pisightings20??.txt  &gt;$BIRDWORLD_DATA/out.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </string>
 </dict>

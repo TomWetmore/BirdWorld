@@ -3,7 +3,7 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 21 October 2026.
-//  Last changed on 5 November 2026.
+//  Last changed on 13 November 2026.
 //
 
 import Foundation
@@ -49,18 +49,17 @@ public enum RecordKind {
 /// date, location, observer, and notes.
 ///
 public struct BirdRecord: CustomStringConvertible {
-
+    
     public let kind: RecordKind
-    public let date: Day?
+    public let range: DayRange?
     public let location: String?
     public let observer: String?
     public let notes: String?
 
-    init(kind: RecordKind, date: Day? = nil, location: String? = nil,
-         observer: String? = nil, notes: String? = nil) {
-
+    init(kind: RecordKind, range: DayRange? = nil,
+         location: String? = nil, observer: String? = nil, notes: String? = nil) {
         self.kind = kind
-        self.date = date
+        self.range = range
         self.location = location
         self.observer = observer
         self.notes = notes
@@ -68,8 +67,8 @@ public struct BirdRecord: CustomStringConvertible {
 
     public var description: String {
         var buffer = ""
-        if let date {
-            buffer += "\(date)"
+        if let range {
+            buffer += "\(range)"
         }
         buffer += " \(kind.name)"
         if let notes {
@@ -82,7 +81,7 @@ public struct BirdRecord: CustomStringConvertible {
     }
 
     var annualLine: String {
-        "\(date!): \(notes ?? ""): \(observer ?? "")"
+        "\(range!): \(notes ?? ""): \(observer ?? "")"
     }
 }
 
@@ -96,7 +95,7 @@ public func quarterMonthCounts (_ records: [BirdRecord]) -> [Taxon: [Int]] {
 
     for record in records {
         guard case .species(let taxon) = record.kind,
-              let day = record.date else {
+              let day = record.range?.midpoint else {
             continue
         }
         daysBySpecies[taxon, default: []].insert(day)
@@ -117,22 +116,22 @@ public func quarterMonthCounts (_ records: [BirdRecord]) -> [Taxon: [Int]] {
 
 extension Array<BirdRecord> {
 
-    /// Sort BirdRecords by taxonomic order, then date.
+    /// Sort BirdRecords by taxonomic order, then by the start of the date range.
     mutating func sortTaxonomically() throws {
-
-        // Check that all records have order numbers and dates.
-        guard allSatisfy({
-            $0.kind.order != nil && $0.date != nil
-        }) else {
+        
+        guard allSatisfy({ $0.kind.order != nil && $0.range != nil }) else {
             throw RecordFileError.missingOrderOrDate
         }
 
-        // Perform the sort.
-        sort {
-            if $0.kind.order! != $1.kind.order! {
-                return $0.kind.order! < $1.kind.order!
+        sort { first, second in
+            let firstOrder = first.kind.order!
+            let secondOrder = second.kind.order!
+
+            if firstOrder != secondOrder {
+                return firstOrder < secondOrder
             }
-            return $0.date! < $1.date!
+
+            return first.range!.start < second.range!.start
         }
     }
 }

@@ -24,7 +24,7 @@ public func readObserverGroupedRecords(from url: URL, taxonomy: Taxonomy)
 
         case expectingObserver
         case expectingDate(observer: String)
-        case readingRecords(observer: String, day: Day)
+        case readingRecords(observer: String, range: DayRange)
     }
     var state = State.expectingObserver
 
@@ -52,13 +52,13 @@ public func readObserverGroupedRecords(from url: URL, taxonomy: Taxonomy)
             state = .expectingDate(observer: value)
 
         case .expectingDate(let observer):
-            guard key == "d", let day = Day(value) else {
+            guard key == "d", let range = DayRange(value) else {
                 throw RecordFileError.invalidLine(
                     line, "Expected valid date line")
             }
-            state = .readingRecords(observer: observer, day: day)
+            state = .readingRecords(observer: observer, range: range)
 
-        case .readingRecords(let observer, let day):
+        case .readingRecords(let observer, let range):
             if key == "o" {
                 guard !value.isEmpty else {
                     throw RecordFileError.invalidLine(
@@ -81,8 +81,7 @@ public func readObserverGroupedRecords(from url: URL, taxonomy: Taxonomy)
 
             records.append(BirdRecord(
                 kind: kind,
-                date: day,
-                //species: taxon,
+                range: range,
                 location: location,
                 observer: observer,
                 notes: value))
