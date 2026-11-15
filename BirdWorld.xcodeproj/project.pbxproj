@@ -84,14 +84,13 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Aliases.swift,
-				BirdGroup.swift,
 				BirdRecord.swift,
 				Day.swift,
 				DelimitedFile.swift,
 				Errors.swift,
 				ObserverGrouped.swift,
 				ReadTaxa.swift,
-				Species.swift,
+				SpeciesGroup.swift,
 				Taxon.swift,
 				TaxonArray.swift,
 				TaxonGrouped.swift,
@@ -103,14 +102,13 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Aliases.swift,
-				BirdGroup.swift,
 				BirdRecord.swift,
 				Day.swift,
 				DelimitedFile.swift,
 				Errors.swift,
 				ObserverGrouped.swift,
 				ReadTaxa.swift,
-				Species.swift,
+				SpeciesGroup.swift,
 				Taxon.swift,
 				TaxonArray.swift,
 				TaxonGrouped.swift,

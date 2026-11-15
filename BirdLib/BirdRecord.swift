@@ -18,7 +18,7 @@ typealias Location = String
 public enum RecordKind {
 
     case species(Taxon)
-    case group(BirdGroup)
+    case group(SpeciesGroup)
 
     /// Return the name of BirdRecord.
     ///

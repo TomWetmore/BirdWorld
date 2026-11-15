@@ -1,16 +1,18 @@
 //
-//  BirdGroup.swift
+//  TaxonGroup.swift
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 23 October 2026.
-//  Last changed on 24 October 2026.
+//  Last changed on 14 November 2026.
 //
 
 import Foundation
 
-final public class BirdGroup {
+/// A SpeciesGroup is a group of species.
+///
+final public class SpeciesGroup {
 
-    let code: String  // Four letter wetmore code.
+    let code: String  // Four letter code.
     let name: String  // Display name.
     let taxa: [Taxon]  // Taxa making it up.
     let order: Int  // "Order" of last species in the group.
@@ -24,7 +26,7 @@ final public class BirdGroup {
     }
 }
 
-extension BirdGroup {
+extension SpeciesGroup {
 
     var description: String {
         return "\(code) \(name)"
@@ -33,10 +35,10 @@ extension BirdGroup {
 
 /// Read a file with group information and return an array of BirdGroups.
 ///
-func readGroups(url: URL, taxonomy: Taxonomy) throws -> [BirdGroup] {
+func readGroups(url: URL, taxonomy: Taxonomy) throws -> [SpeciesGroup] {
 
     let file = try DelimitedFile(url)
-    var groups: [BirdGroup] = []
+    var groups: [SpeciesGroup] = []
 
     // Loop over all lines in the file.
     while let line = try file.getFields() {
@@ -80,7 +82,7 @@ func readGroups(url: URL, taxonomy: Taxonomy) throws -> [BirdGroup] {
             let order = species.compactMap(\.order).max() else {
             throw RecordFileError.invalidLine(line, "Missing order number in bird group: \(key)")
         }
-        let group = BirdGroup(code: key, name: name, taxa: taxa, order: order)
+        let group = SpeciesGroup(code: key, name: name, taxa: taxa, order: order)
         groups.append(group)
     }
     return groups

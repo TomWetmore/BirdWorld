@@ -3,7 +3,7 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 18 October 2026.
-//  Last changed on 7 November 2026.
+//  Last changed on 15 November 2026.
 //
 
 import Foundation
@@ -13,12 +13,14 @@ public final class Taxonomy {
     public let roots: [Taxon]
     public let species: [Taxon]
 
-    public init(taxa: [Taxon]/*, useGroups: Bool = false*/) throws {
+    /// Create a Taxonomy.
+    ///
+    public init(taxa: [Taxon]) throws {
 
         roots = makeTaxonomy(from: taxa)
         roots.assignOrder(at: .species)
         species = roots.species
-        try makeIndexes(SpeciesRequirements())
+        try makeIndexes()
     }
 
     // Stored indexes.
@@ -30,35 +32,57 @@ public final class Taxonomy {
     // Fleshed out if BirdGroups are used.
     public private(set) var higherTaxonIndex: [String : Taxon] = [:]
 
-    public private(set) var groups: [BirdGroup] = []
+    public private(set) var groups: [SpeciesGroup] = []
 
-    public private(set) var groupCodeIndex: [String: BirdGroup] = [:]
-    public private(set) var groupNameIndex: [String: BirdGroup] = [:]
+    public private(set) var groupCodeIndex: [String: SpeciesGroup] = [:]
+    public private(set) var groupNameIndex: [String: SpeciesGroup] = [:]
 
     public private(set) var aliasIndex: [Alias: Taxon] = [:]
 }
 
-/// Create a Taxonomy from an ordered list of Taxons.
+/// Create a Taxonomy from an Array of Taxa in depth-first preorder. A Taxonomy is a
+/// tree if the first Taxon is the ancestor of all the others; otherwise it is a forest.
+/// In both cases the Taxonomy is returned as an Array of roots. If is is a tree the
+/// Array has one root.
+///
+/// Each taxon attaches to the nearest preceding taxon whose level is higher. If no
+/// such Taxon exists, it becomes a root. Levels may skip. Roots and siblings keep their
+/// input order.
+///
+/// The input Taxa must be distinct with no parents or children.
 ///
 private func makeTaxonomy(from taxa: [Taxon]) -> [Taxon] {
 
-    var roots: [Taxon] = []
-    var stack: [Taxon] = []
+    assert(
+        taxa.allSatisfy { $0.parent == nil && $0.children.isEmpty },
+        "makeTaxonomy requires taxa with no parent or children."
+    )
+    assert(
+        Set(taxa.map { ObjectIdentifier($0) }).count == taxa.count,
+        "makeTaxonomy requires distinct Taxon instances."
+    )
+
+    var roots: [Taxon] = []  // The forest of roots.
+    var path: [Taxon] = []  // The current path from a root to the last Taxon.
 
     for taxon in taxa {
 
-        // Remove taxa that cannot be the parent of this taxon.
-        while let last = stack.last,
+        // Remove taxa from the path that cannot be the parent of this Taxon.
+        while let last = path.last,
               last.level.depth >= taxon.level.depth {
-            stack.removeLast()
+            path.removeLast()
         }
-        if let parent = stack.last {
+
+        // If the path is not empty, its last Taxon is the parent of this Taxon.
+        if let parent = path.last {
             parent.children.append(taxon)
             taxon.parent = parent
+        // Otherwise this Taxon is a new root Taxon.
         } else {
             roots.append(taxon)
         }
-        stack.append(taxon)
+
+        path.append(taxon)
     }
 
     return roots
@@ -70,54 +94,37 @@ extension Taxonomy {
 
     /// Make the Taxonomy's indexes.
     ///
-    private func makeIndexes(_ requirements: SpeciesRequirements) throws {
+    private func makeIndexes() throws {
 
-        /// Internal function that adds an entry to an index.
+        /// Insert an entry into one of the indexes.
         func insert(_ value: String?, into index: inout [String: Taxon],
-            for species: Taxon, field: String, requirement: Requirement) throws {
+            for taxon: Taxon, field: String) throws {
 
-            // Check the presence requirement.
-            switch requirement {
-            case .mustbe:
-                guard value != nil else {
-                    throw TaxaFileError.invalidLine(0, "missing \(field)")
-                }
-            case .cannotbe:
-                if let value {
-                    throw TaxaFileError.invalidLine(0, "unexpected \(field): \(value)")
-                }
-            case .canbe:
-                break
-            }
-            // If the field is absent, there is nothing to index.
             guard let value else {
                 return
             }
-            // Check uniqueness.
-//            guard index[value] == nil else {
-//                throw TaxaFileError.invalidLine(0, "duplicate \(field): \(value)")
-//            }
-            // Add the field to its index.
-            index[value] = species
+            // Add the value to the index (not checking for uniqueness).
+            index[value] = taxon
         }
-        // Index the species on the code and the two names.
+
+        // Index the species on the code and names.
         for species in self.species {
 
             try insert(species.code, into: &codeIndex, for: species,
-                field: "four letter code", requirement: requirements.code)
+                field: "species code")
             try insert(species.englishName, into: &englishNameIndex, for: species,
-                field: "English name", requirement: requirements.englishName)
+                field: "English name")
             try insert(species.scientificName, into: &scientificNameIndex, for: species,
-                field: "scientific name", requirement: requirements.scientificName)
+                field: "scientific name")
         }
 
-        // Index the higher level taxa. For now only index the scientific name.
+        // Index higher level taxa -- for now only index the scientific name.
         try roots.traverse { taxon in
             guard taxon.level.depth < Level.species.depth else { // Taxa above species.
                 return
             }
             try insert(taxon.scientificName, into: &higherTaxonIndex,
-                       for: taxon, field: "scientific name", requirement: .canbe)
+                       for: taxon, field: "scientific name")
         }
     }
 }
@@ -126,9 +133,10 @@ extension Taxonomy {
 ///
 extension Taxonomy {
 
-    /// Look up a species Taxon using three indexes.
+    /// Look up a species Taxon using four indexes.
     ///
     public func getSpecies(_ string: String) -> Taxon? {
+
         codeIndex[string]
             ?? englishNameIndex[string]
             ?? scientificNameIndex[string]
@@ -137,7 +145,7 @@ extension Taxonomy {
 
     /// Look up a BirdGroup using the code and name indices.
     ///
-    func getGroup(_ string: String) -> BirdGroup? {
+    func getGroup(_ string: String) -> SpeciesGroup? {
 
         groupCodeIndex[string] ?? groupNameIndex[string]
     }
@@ -156,9 +164,9 @@ extension Taxonomy {
 
 extension Taxonomy {
 
-    /// Add BirdGroups to this Taxonomy and build their indexes.
+    /// Add TaxonGroups to this Taxonomy and build their indexes.
     ///
-    func addGroups(_ groups: [BirdGroup]) throws {
+    func addGroups(_ groups: [SpeciesGroup]) throws {
 
         for group in groups {
             guard groupCodeIndex[group.code] == nil else {
