@@ -85,12 +85,38 @@ public struct BirdRecord: CustomStringConvertible {
     }
 }
 
+/// From a dictionary mapping species to sets of days, create a dictionary
+/// mapping species to their quarter-month occurrence arrays.
+///
+public func quarterMonthCounts(
+    _ daysBySpecies: [Taxon: Set<Day>]
+) -> [Taxon: [Int]] {
+
+    var countsBySpecies: [Taxon: [Int]] = [:]
+
+    for (species, days) in daysBySpecies {
+        var counts = Array(repeating: 0, count: 48)
+
+        for day in days {
+            counts[day.quarterMonthIndex] += 1
+        }
+
+        countsBySpecies[species] = counts
+    }
+
+    return countsBySpecies
+}
+
 /// From an Array of BirdRecords create the Dictionary that maps Species Taxa to their
 /// quarter-month Int occurence arrays.
 ///
-public func quarterMonthCounts (_ records: [BirdRecord]) -> [Taxon: [Int]] {
+/// From an array of BirdRecords, create a dictionary mapping species
+/// to their quarter-month occurrence arrays.
+///
+public func quarterMonthCounts(
+    _ records: [BirdRecord]
+) -> [Taxon: [Int]] {
 
-    // Create the Map from the Species to the Sets of Days on which recorded.
     var daysBySpecies: [Taxon: Set<Day>] = [:]
 
     for record in records {
@@ -98,22 +124,12 @@ public func quarterMonthCounts (_ records: [BirdRecord]) -> [Taxon: [Int]] {
               let day = record.range?.midpoint else {
             continue
         }
+
         daysBySpecies[taxon, default: []].insert(day)
     }
 
-    // Create the Map from the Species to their quarter-monthly count arrays.
-    var countsBySpecies: [Taxon: [Int]] = [:]
-    
-    for (species, days) in daysBySpecies {
-        var counts = Array(repeating: 0, count: 48)  // Each array is 48 integers.
-        for day in days {
-            counts[day.quarterMonthIndex] += 1
-        }
-        countsBySpecies[species] = counts
-    }
-    return countsBySpecies
+    return quarterMonthCounts(daysBySpecies)
 }
-
 extension Array<BirdRecord> {
 
     /// Sort BirdRecords by taxonomic order, then by the start of the date range.

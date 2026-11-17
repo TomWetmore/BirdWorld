@@ -3,23 +3,23 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 23 October 2026.
-//  Last changed on 16 November 2026.
+//  Last changed on 17 November 2026.
 //
 
 import Foundation
 
-/// A SpeciesGroup is a group of species. Each has a code by which it is indexed, and a
+/// A SpeciesGroup is an arbitrary group of species. Each group has an index code, and a
 /// display name used in outputs. Each SpeciesGroup is defined by an Array of Strings
-/// that define its species. The Strings can be species codes or names, or the names of
-/// higher level taxa. The Strings are resolved into a list of Taxa when a definition is
-/// read.
+/// that define its species. The Strings can be species codes or species, names, or the
+/// names of higher level taxa. The Strings are resolved into a list of Taxa when a
+/// definition is read.
 ///
 final public class SpeciesGroup: CustomStringConvertible {
 
-    let code: String  // Four letter code.
-    let name: String  // Display name.
-    let taxa: [Taxon]  // Taxa making it up.
-    let order: Int  // Order number of last species in the group.
+    let code: String   // Four letter code.
+    let name: String   // Display name.
+    let taxa: [Taxon]  // Taxa content.
+    let order: Int     // Order of last species in the group.
 
     /// Create a SpeciesGroup from its components.
     ///
@@ -34,21 +34,22 @@ final public class SpeciesGroup: CustomStringConvertible {
     /// Return a description of this SpeciesGroup.
     ///
     public var description: String {
+
         return "\(code) \(name)"
     }
 }
 
-/// Read a file with group information and return an array of SpeciesGroups. Each line in the
-/// file has three fields. The first is the code for the group. The second is the display name
-/// for the group. The last is a list of codes and names that specify the species in the
-/// group. TODO: Group codes are not currently allowed in the list of codes and names.
+/// Read a DelimitedFile with group information and return an array of SpeciesGroups. Each
+/// line in the file has three fields. The first is the group code and the second is its
+/// display name. The third is a list of codes and names that specify the species in the
+/// group.
 ///
 func readGroups(url: URL, taxonomy: Taxonomy) throws -> [SpeciesGroup] {
 
     let file = try DelimitedFile(url)
     var groups: [SpeciesGroup] = []
 
-    // Loop over all lines in the file.
+    // Iterate over the lines.
     while let line = try file.getFields() {
 
         let fields = line.fields
@@ -64,14 +65,16 @@ func readGroups(url: URL, taxonomy: Taxonomy) throws -> [SpeciesGroup] {
         let contents = fields[2]
 
         // Split contents into parts; each part refers to a Taxon.
-        let parts = contents.split {$0.isWhitespace || $0 == ","}.map(String.init)
+        let parts = contents.split(separator: ",").map {
+            $0.trimmingCharacters(in: .whitespacesAndNewlines)
+        }
+        //let parts = contents.split {$0.isWhitespace || $0 == ","}.map(String.init)
 
         // The Taxa (species or higher level) making up this SpeciesGroup.
         var taxa: [Taxon] = []
 
         // Each part should either be a species identified by code or name, or by a
         // higher level Taxon identified by name.
-        // TODO: Would it be possible to add other Group codes to the list?
         for part in parts {
 
             guard let taxon = taxonomy.getSpecies(part)

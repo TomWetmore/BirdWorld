@@ -3,12 +3,12 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 22 October 2026.
-//  Last changed on 13 November 2026.
+//  Last changed on 17 November 2026.
 //
 
 import Foundation
 
-/// Read an annual records file.
+/// Read an a Taxon grouped records file.
 ///
 public func readTaxonGroupedRecords(from url: URL, taxonomy: Taxonomy) throws -> [BirdRecord] {
 

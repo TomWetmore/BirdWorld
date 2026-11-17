@@ -46,23 +46,27 @@ struct FortyEightFull {
             throw ProgramError.argumentCount
         }
 
-        // Process the taxon-grouped record files.
-        var allRecords = [BirdRecord]()
-        for url in urls {
-            print("processing: \(url)")
-            var records = try readTaxonGroupedRecords(from: url, taxonomy: taxonomy)
+        var daysBySpecies: [Taxon: Set<Day>] = [:]  // All Days a Species was seen.
 
-            // Filter out non-species taxa.
-            records = records.filter {
-                if case .species = $0.kind { return true }
-                return false
+        // Process the taxon-grouped record files.
+        var recordCount = 0
+        for url in urls {
+
+            print("processing: \(url)")  // DEBUG
+            let records = try readTaxonGroupedRecords(from: url, taxonomy: taxonomy)
+            recordCount += records.count
+
+            for record in records {
+                guard case .species(let taxon) = record.kind,
+                      let day = record.range?.midpoint else {
+                    continue
+                }
+                daysBySpecies[taxon, default: []].insert(day)
             }
-            try allRecords.merge(records)
         }
-        print("\(allRecords.count)")
 
         // Get the quarter month counts from the full set of records.
-        let quarterCounts: [Taxon: [Int]] = quarterMonthCounts(allRecords)
+        let quarterCounts: [Taxon: [Int]] = quarterMonthCounts(daysBySpecies)
 
         // Get the array of species with counts in taxonomic order.
         let species = quarterCounts.keys.sorted {
