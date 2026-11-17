@@ -12,7 +12,7 @@ import Foundation
 
 extension Array<Taxon> {
 
-    /// Return the species Taxa that are at or below a Taxon in an Array<Taxon>.
+    /// Return all the species Taxa that are at or below a Taxon in an Array<Taxon>.
     ///
     public var species: [Taxon] {
 
@@ -34,16 +34,20 @@ extension Array<Taxon> {
     }
 
     /// Return all Taxa of a specific level that are at or below the Taxa in an Array<Taxon>.
+    /// Taxa are deduped and ordered as found.
     ///
     func taxa(of level: Level) -> [Taxon] {
 
         var result: [Taxon] = []
+        var seen: Set<ObjectIdentifier> = []
 
         // Internal visit funtion.
         func visit(_ taxon: Taxon) {
 
             if taxon.level == level {
-                result.append(taxon)
+                if seen.insert(ObjectIdentifier(taxon)).inserted {
+                    result.append(taxon)
+                }
                 return
             }
             guard taxon.level.depth < level.depth else {
@@ -54,7 +58,7 @@ extension Array<Taxon> {
             }
         }
 
-        // Traverse self by visiting each of its root Taxa.
+        // Traverse self by visiting each root.
         for taxon in self {
             visit(taxon)
         }
@@ -64,6 +68,7 @@ extension Array<Taxon> {
     /// Show the forest of Taxa through to the specified level.
     ///
     public func show(through level: Level, indent: Int = 0) {
+
         for taxon in self {
             taxon.show(through: level, indent: indent)
         }
