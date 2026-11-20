@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CurrentWorkingDirectory</key>
-	<string>/Users/ttw4</string>
+	<string>/Users/ttw4/Documents/Codex/2026-11-19/i-x20/outputs</string>
 	<key>WorksheetContents</key>
 	<string># BIRLD WORLD WORKSHEET
 # Created on 9 November 2026 by Thomas Wetmore.
@@ -25,6 +25,9 @@ FortyEight $BIRDWORLD_DATA/pisightings2026.txt
 ## TEST THE FORTY EIGHT FULL PROGRAM
 FortyEightFull $RECORDS/pisightings20??.txt 
 #&gt;$BIRDWORLD_DATA/out.txt
+
+
+
 
 
 

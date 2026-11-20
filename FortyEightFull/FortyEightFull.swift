@@ -3,7 +3,7 @@
 //  FortyEightFull
 //
 //  Created by Thomas Wetmore on 3 November 2026.
-//  Last changed on 13 November 2026.
+//  Last changed on 19 November 2026.
 //
 
 import Foundation
@@ -24,8 +24,7 @@ struct FortyEightFull {
 
     static func doit() throws {
 
-        // Create the Taxonomy using resource files found in the directory defined
-        // by the BIRDWORLD_DATA environment variable.
+        // Create the Taxonomy from resource files.
         guard let path = ProcessInfo.processInfo.environment["BIRDWORLD_DATA"] else {
             throw RuntimeError("BIRDWORLD_DATA is not defined")
         }
@@ -35,20 +34,21 @@ struct FortyEightFull {
         let aliasesURL = directory.appendingPathComponent("aliases.txt")
         let taxonomy = try loadTaxonomy(from: taxaURL, groupsURL: groupsURL, aliasesURL: aliasesURL)
 
-        // Convert the command line arguments into file URLs.
+        // Convert the command line arguments to file URLs.
         let urls: [URL] = CommandLine.arguments.dropFirst().map {
             URL(fileURLWithPath: $0)
         }
-        print("CONVERTED \(urls.count) record files.")  // TODO: DEBUG: REMOVE.
-
-        // There must be at least one URLs for taxon-grouped record files.
         guard urls.count >= 1 else {
             throw ProgramError.argumentCount
         }
 
-        var daysBySpecies: [Taxon: Set<Day>] = [:]  // All Days a Species was seen.
+        var daysBySpecies: [Taxon: Set<Day>] = [:]
+        var daysByYearBySpecies: [Year: [Taxon: Set<Day>]] = [:]
 
         // Process the taxon-grouped record files.
+        let clock = ContinuousClock()
+        let start = clock.now
+
         var recordCount = 0
         for url in urls {
 
@@ -62,13 +62,18 @@ struct FortyEightFull {
                     continue
                 }
                 daysBySpecies[taxon, default: []].insert(day)
+
+                let year = day.components.year
+                daysByYearBySpecies[year, default: [:]][taxon, default: []].insert(day)
             }
         }
+        print("Read \(recordCount) records in \(start.duration(to: clock.now))")
+
 
         // Get the quarter month counts from the full set of records.
         let quarterCounts: [Taxon: [Int]] = quarterMonthCounts(daysBySpecies)
 
-        // Get the array of species with counts in taxonomic order.
+        // Get the array of species Taxa with counts in taxonomic order.
         let species = quarterCounts.keys.sorted {
             $0.order! < $1.order!
         }
@@ -77,6 +82,23 @@ struct FortyEightFull {
         for taxon in species {
             let counts = quarterCounts[taxon]!
             print("\(taxon.englishName!),\(counts.map(String.init).joined(separator: ","))")
+        }
+
+        var countsByYear: [Year: [Taxon: [Int]]] = [:]
+
+        for (year, daysBySpecies) in daysByYearBySpecies {
+            countsByYear[year] = quarterMonthCounts(daysBySpecies)
+        }
+
+        // Debug for now: show the complete set of quarter counts per year per species.
+        let years = countsByYear.keys.min()!...countsByYear.keys.max()!
+
+        for taxon in species {
+            print(taxon.englishName!)
+            for year in years {
+                let counts = countsByYear[year]?[taxon] ?? Array(repeating: 0, count: 48)
+                print("\(year),\(counts.map(String.init).joined(separator: ","))")
+            }
         }
 
         // Generate the HTML report.

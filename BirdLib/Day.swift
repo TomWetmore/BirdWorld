@@ -3,13 +3,16 @@
 //  BirdLib
 //
 //  Created by Thomas Wetmore on 22 October 2026.
-//  Last changed on 13 November 2026.
+//  Last changed on 19 November 2026.
 //
 
 import Foundation
 
+public typealias Year = Int
+
 /// A calendar day, independent of time and time zone.
-/// Internally represented as days since January 1, 1970.
+/// Internally represented as days since 1 January 1970.
+///
 public struct Day: Hashable, Comparable, CustomStringConvertible {
 
     public let number: Int
@@ -58,7 +61,7 @@ public struct Day: Hashable, Comparable, CustomStringConvertible {
     public var description: String {
 
         let (year, month, day) = components
-        return "\(day) \(Self.monthNames[month - 1]) \(year)"
+        return "\(day) \(Self.lowercaseMonthNames[month - 1]) \(year)"
     }
 
     /// Compare two Days.
@@ -94,23 +97,24 @@ public struct Day: Hashable, Comparable, CustomStringConvertible {
 
 private extension Day {
 
-    static let monthNames = [
-        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    static let lowercaseMonthNames = [
+        "jan", "feb", "mar", "apr", "may", "jun",
+        "jul", "aug", "sep", "oct", "nov", "dec"
     ]
 
     static func monthNumber(_ name: String) -> Int? {
-        let name = name.lowercased()
-        return monthNames.firstIndex {
-            $0.lowercased() == name
-        }.map { $0 + 1 }
+
+        lowercaseMonthNames.firstIndex(of: name.lowercased())
+            .map { $0 + 1 }
     }
 
     static func isLeapYear(_ year: Int) -> Bool {
+
         year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)
     }
 
     static func daysInMonth(year: Int, month: Int) -> Int {
+
         switch month {
         case 2:
             return isLeapYear(year) ? 29 : 28
@@ -123,6 +127,7 @@ private extension Day {
 
     /// Convert Gregorian year/month/day to days since 1970-01-01.
     /// Based on Howard Hinnant's civil calendar algorithms.
+    ///
     static func daysFromCivil(_ year: Int, _ month: Int, _ day: Int) -> Int {
 
         let y = year - (month <= 2 ? 1 : 0)
@@ -135,7 +140,8 @@ private extension Day {
         return era * 146097 + doe - 719468
     }
 
-    /// Convert days since 1970-01-01 to Gregorian year/month/day.
+    /// Convert days since 1 January 1970 to Gregorian year, month, day.
+    ///
     static func civilFromDays(_ number: Int) -> (year: Int, month: Int, day: Int) {
 
         let z = number + 719468
